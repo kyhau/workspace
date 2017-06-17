@@ -1,11 +1,16 @@
 # workspace-win
 
+- https://www.jetbrains.com/pycharm/
+- https://git-scm.com/download/win
+- https://www.sourcetreeapp.com/ 
+- PuTTY https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+- SuperPuTTY https://github.com/jimradford/superputty
 - Sysinternals Suite https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
-- SuperPutty https://github.com/jimradford/superputty
 - RDC Man https://www.microsoft.com/en-au/download/details.aspx?id=44989
-- https://cyberduck.io
 - https://docs.docker.com/docker-for-windows/install/
-- https://www.keepassx.org/
+- https://cyberduck.io
+- https://www.pgadmin.org/download/
 - https://www.wireshark.org/#download
+- https://www.keepassx.org/
 - https://sourceforge.net/projects/dos2unix/
 - http://kdiff3.sourceforge.net/
