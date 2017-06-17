@@ -8,6 +8,7 @@
 - Sysinternals Suite https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
 - RDC Man https://www.microsoft.com/en-au/download/details.aspx?id=44989
 - https://docs.docker.com/docker-for-windows/install/
+- https://notepad-plus-plus.org/
 - https://cyberduck.io
 - https://www.pgadmin.org/download/
 - https://www.wireshark.org/#download
