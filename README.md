@@ -3,6 +3,7 @@
 - https://www.jetbrains.com/pycharm/
 - https://git-scm.com/download/win
 - https://www.sourcetreeapp.com/ 
+- http://jupyter.org/install.html
 - PuTTY https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 - SuperPuTTY https://github.com/jimradford/superputty
 - Sysinternals Suite https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
