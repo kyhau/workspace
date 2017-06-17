@@ -7,3 +7,4 @@
 - https://docs.docker.com/docker-for-windows/install/
 - https://www.keepassx.org/
 - https://www.wireshark.org/#download
+- https://sourceforge.net/projects/dos2unix/
