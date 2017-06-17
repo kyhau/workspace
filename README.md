@@ -8,3 +8,4 @@
 - https://www.keepassx.org/
 - https://www.wireshark.org/#download
 - https://sourceforge.net/projects/dos2unix/
+- http://kdiff3.sourceforge.net/
