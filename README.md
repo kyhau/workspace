@@ -8,6 +8,7 @@
 - SuperPuTTY https://github.com/jimradford/superputty
 - Sysinternals Suite https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
 - RDC Man https://www.microsoft.com/en-au/download/details.aspx?id=44989
+- https://github.com/awslabs/aws-shell
 - https://docs.docker.com/docker-for-windows/install/
 - https://notepad-plus-plus.org/
 - https://cyberduck.io
