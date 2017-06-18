@@ -12,6 +12,7 @@
 - https://docs.docker.com/docker-for-windows/install/
 - https://notepad-plus-plus.org/
 - https://cyberduck.io
+- https://mountainduck.io/
 - https://www.pgadmin.org/download/
 - https://www.wireshark.org/#download
 - https://www.keepassx.org/
