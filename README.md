@@ -1,8 +1,9 @@
 # workspace-win
 
-- https://www.jetbrains.com/pycharm/
+- https://www.python.org/downloads/windows/
 - https://git-scm.com/download/win
 - https://www.sourcetreeapp.com/ 
+- https://www.jetbrains.com/pycharm/
 - http://jupyter.org/install.html
 - PuTTY https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 - SuperPuTTY https://github.com/jimradford/superputty
