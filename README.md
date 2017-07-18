@@ -19,3 +19,4 @@
 - https://www.keepassx.org/
 - https://sourceforge.net/projects/dos2unix/
 - http://kdiff3.sourceforge.net/
+- https://windirstat.net/
