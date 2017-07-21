@@ -12,6 +12,7 @@
 - https://github.com/awslabs/aws-shell
 - https://docs.docker.com/docker-for-windows/install/
 - https://notepad-plus-plus.org/
+- http://s3browser.com/
 - https://cyberduck.io
 - https://mountainduck.io/
 - https://www.pgadmin.org/download/
