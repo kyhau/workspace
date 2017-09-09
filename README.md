@@ -21,3 +21,4 @@
 - https://sourceforge.net/projects/dos2unix/
 - http://kdiff3.sourceforge.net/
 - https://windirstat.net/
+- Ubuntu on Windows 10 https://msdn.microsoft.com/en-au/commandline/wsl/install_guide
