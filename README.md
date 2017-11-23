@@ -1,24 +1,24 @@
 # workspace-win
 
-- https://www.python.org/downloads/windows/
-- https://git-scm.com/download/win
-- https://www.sourcetreeapp.com/ 
-- https://www.jetbrains.com/pycharm/
-- http://jupyter.org/install.html
+- Python https://www.python.org/downloads/windows/
+- Git https://git-scm.com/download/win
+- SourceTree https://www.sourcetreeapp.com/ 
+- PyChram https://www.jetbrains.com/pycharm/
+- Jupyter http://jupyter.org/install.html
 - PuTTY https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 - SuperPuTTY https://github.com/jimradford/superputty
 - Sysinternals Suite https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
 - RDC Man https://www.microsoft.com/en-au/download/details.aspx?id=44989
-- https://github.com/awslabs/aws-shell
-- https://docs.docker.com/docker-for-windows/install/
-- https://notepad-plus-plus.org/
-- http://s3browser.com/
-- https://cyberduck.io
-- https://mountainduck.io/
-- https://www.pgadmin.org/download/
-- https://www.wireshark.org/#download
-- https://www.keepassx.org/
-- https://sourceforge.net/projects/dos2unix/
-- http://kdiff3.sourceforge.net/
-- https://windirstat.net/
+- AWS-Shell https://github.com/awslabs/aws-shell
+- Docker https://docs.docker.com/docker-for-windows/install/
+- Notepad++ https://notepad-plus-plus.org/
+- KeePassXC https://keepassxc.org/download
+- S3 Browser http://s3browser.com/
+- CyberDuck https://cyberduck.io
+- MountainDuck https://mountainduck.io/
+- PgAdmin https://www.pgadmin.org/download/
+- WireShark https://www.wireshark.org/#download
+- Dos2Unix https://sourceforge.net/projects/dos2unix/
+- kdiff3 http://kdiff3.sourceforge.net/
+- WindDirStat https://windirstat.net/
 - Ubuntu on Windows 10 https://msdn.microsoft.com/en-au/commandline/wsl/install_guide
