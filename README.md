@@ -12,14 +12,15 @@
 - AWS-Shell https://github.com/awslabs/aws-shell
 - Docker https://docs.docker.com/docker-for-windows/install/
 - Notepad++ https://notepad-plus-plus.org/
+- Ubuntu on Windows 10 https://msdn.microsoft.com/en-au/commandline/wsl/install_guide
 - KeePassXC https://keepassxc.org/download
 - S3 Browser http://s3browser.com/
 - CyberDuck https://cyberduck.io
 - MountainDuck https://mountainduck.io/
 - PgAdmin https://www.pgadmin.org/download/
+- Postman https://www.getpostman.com/postman
+- OpenVPN Client https://openvpn.net/index.php/open-source/downloads.html
 - WireShark https://www.wireshark.org/#download
 - Dos2Unix https://sourceforge.net/projects/dos2unix/
 - kdiff3 http://kdiff3.sourceforge.net/
 - WindDirStat https://windirstat.net/
-- Ubuntu on Windows 10 https://msdn.microsoft.com/en-au/commandline/wsl/install_guide
-- OpenVPN Client https://openvpn.net/index.php/open-source/downloads.html
