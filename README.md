@@ -10,7 +10,7 @@
 - Sysinternals Suite https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
 - RDC Man https://www.microsoft.com/en-au/download/details.aspx?id=44989
 - AWS-Shell https://github.com/awslabs/aws-shell
-- Docker https://docs.docker.com/docker-for-windows/install/
+- Docker https://docs.docker.com/docker-for-windows/install/ ; see also [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?)
 - Notepad++ https://notepad-plus-plus.org/
 - Ubuntu on Windows 10 https://msdn.microsoft.com/en-au/commandline/wsl/install_guide
 - KeePassXC https://keepassxc.org/download
