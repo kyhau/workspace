@@ -9,21 +9,29 @@
 :: Packages - see https://chocolatey.org/packages
 
 choco install -y ^
+  avastfreeantivirus ^
   notepadplusplus ^
   googlechrome ^
   firefox ^
+  signal ^
   putty ^
   superputty ^
+  rdcman ^
   keepassxc ^
   git ^
   sourcetree ^
   pycharm-community ^
-  cyberduck ^
   docker-for-windows ^
-  qgis ^
+  cyberduck ^
+  postman ^
+  7zip ^
+  kdiff3 ^
+  pgadmin4 ^
+  qgis
 
-choco install python3 -y --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python36'"
-choco install python2 -y --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python27'"
+choco install -y openvpn --params="'/SELECT_OPENVPNGUI=1'"
+choco install -y python3 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python36'"
+choco install -y python2 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python27'"
 
 
 :: Confirm what have been installed
