@@ -24,9 +24,10 @@ choco install -y ^
   docker-for-windows ^
   cyberduck ^
   postman ^
-  7zip ^
   kdiff3 ^
   pgadmin4 ^
+  wireshark ^
+  windirstat ^
   qgis
 
 choco install -y openvpn --params="'/SELECT_OPENVPNGUI=1'"
