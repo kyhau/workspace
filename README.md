@@ -1,6 +1,6 @@
 # workspace-win
 
-- Install [Chocolatey](https://chocolatey.org) for package management with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat).
+Install [Chocolatey](https://chocolatey.org) for package management with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat).
 
 - Python https://www.python.org/downloads/windows/
 - Git https://git-scm.com/download/win
