@@ -28,7 +28,8 @@ choco install -y ^
   pgadmin4 ^
   wireshark ^
   windirstat ^
-  qgis
+  qgis ^
+  nodejs
 
 choco install -y openvpn --params="'/SELECT_OPENVPNGUI=1'"
 choco install -y python3 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python36'"
