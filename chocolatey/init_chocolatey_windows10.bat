@@ -21,11 +21,13 @@ choco install -y ^
   git ^
   sourcetree ^
   pycharm-community ^
+  jre8 ^
   docker-for-windows ^
   cyberduck ^
   postman ^
   kdiff3 ^
   pgadmin4 ^
+  winrar ^
   wireshark ^
   windirstat ^
   qgis ^
