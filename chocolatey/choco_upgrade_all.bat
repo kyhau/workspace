@@ -8,4 +8,4 @@ ECHO Started: %DATE:~10,4%-%DATE:~7,2%-%DATE:~4,2%-%TIME:~0,2%-%TIME:~3,2%-%TIME
 ECHO Upgrading packages ...
 CALL choco upgrade -y all
 
-EXIT /B 1
+EXIT /B 0
