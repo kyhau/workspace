@@ -30,8 +30,14 @@ choco install -y ^
   winrar ^
   wireshark ^
   windirstat ^
-  qgis ^
-  nodejs
+  qgis
+
+
+:: Dev - nodejs
+choco install -y nodejs
+
+:: Dev - scala
+choco install -y sbt scala
 
 choco install -y openvpn --params="'/SELECT_OPENVPNGUI=1'"
 choco install -y python3 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python36'"
