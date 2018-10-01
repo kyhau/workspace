@@ -10,6 +10,7 @@
 
 choco install -y ^
   avastfreeantivirus ^
+  nordvpn ^
   notepadplusplus ^
   googlechrome ^
   firefox ^
