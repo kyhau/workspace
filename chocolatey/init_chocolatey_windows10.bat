@@ -11,24 +11,29 @@
 choco install -y ^
   avastfreeantivirus ^
   nordvpn ^
-  notepadplusplus ^
   googlechrome ^
-  firefox ^
+  notepadplusplus ^
+  itunes^
   signal ^
   putty ^
   superputty ^
   rdcman ^
-  keepassxc ^
   git ^
   sourcetree ^
   pycharm-community ^
-  jre8 ^
   docker-for-windows ^
   cyberduck ^
-  postman ^
-  kdiff3 ^
-  pgadmin4 ^
   winrar ^
+  activepresenter
+
+
+choco install -y ^
+  firefox ^
+  jre8 ^
+  kdiff3 ^
+  keepassxc ^
+  pgadmin4 ^
+  postman ^
   wireshark ^
   windirstat ^
   qgis
