@@ -8,7 +8,7 @@ https://medium.com/@sebagomez/installing-the-docker-client-on-ubuntus-windows-su
 https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/)
 - [Install bridgy (= ssh + tmux + sshfs + cloud inventory search)](https://github.com/wagoodman/bridgy)
 
-#### Update .bashrc
+## Update .bashrc
 
 ```
 export NVM_DIR="$HOME/.nvm"
