@@ -126,6 +126,7 @@ export DOCKER_HOST=localhost:2375
 # virtualenvwrapper settings
 export WORKON_HOME=/mnt/c/Workspace/envs
 mkdir -p $WORKON_HOME
+source `which virtualenvwrapper.sh`
 
 # Aliases
 alias k-update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
