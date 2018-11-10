@@ -119,15 +119,13 @@ fi
 ##########################################################################
 # My settings
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
-
+# Use Docker for Windows
+export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 export DOCKER_HOST=localhost:2375
 
-# https://github.com/wagoodman/bridgy
-export PATH=${HOME}/.local/bin:$PATH
+# virtualenvwrapper settings
+export WORKON_HOME=/mnt/c/Workspace/envs
+mkdir -p $WORKON_HOME
 
+# Aliases
 alias k-update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
