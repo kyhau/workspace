@@ -119,12 +119,16 @@ fi
 ##########################################################################
 # My settings
 
+# Speed up update process
+# sudo cp /etc/apt/sources.list /etc/apt/sources.list.bkup
+# sudo sed -i "s/archive.ubuntu.com\/ubuntu/mirror.aarnet.edu.au\/pub\/ubuntu\/archive/" /etc/apt/sources.list
+
 # Use Docker for Windows
 export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 export DOCKER_HOST=localhost:2375
 
 # virtualenvwrapper settings
-export WORKON_HOME=/mnt/c/Workspace/envs
+export WORKON_HOME=/mnt/c/Workspace/.virtualenvs
 mkdir -p $WORKON_HOME
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
