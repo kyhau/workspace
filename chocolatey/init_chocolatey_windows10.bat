@@ -6,49 +6,42 @@
 :: Installing chocolatey from Powershell
 :: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Packages - see https://chocolatey.org/packages
 
 choco install -y ^
   avastfreeantivirus ^
-  nordvpn ^
-  googlechrome ^
-  notepadplusplus ^
-  itunes^
-  signal ^
-  putty ^
-  superputty ^
-  rdcman ^
-  git ^
-  sourcetree ^
-  pycharm-community ^
-  docker-for-windows ^
   cyberduck ^
-  winrar ^
-  activepresenter
+  docker-for-windows ^
+  git ^
+  googlechrome ^
+  itunes^
+  notepadplusplus ^
+  nordvpn ^
+  putty ^
+  pycharm-community ^
+  rdcman ^
+  signal ^
+  sourcetree ^
+  superputty ^
+  winrar
+::  activepresenter ^
+::  firefox ^
+::  jre8 ^
+::  kdiff3 ^
+::  keepassxc ^
+::  openvpn --params="'/SELECT_OPENVPNGUI=1'" ^
+::  pgadmin4 ^
+::  postman ^
+::  qgis ^
+::  wireshark ^
+::  windirstat
 
-
-choco install -y ^
-  firefox ^
-  jre8 ^
-  kdiff3 ^
-  keepassxc ^
-  pgadmin4 ^
-  postman ^
-  wireshark ^
-  windirstat ^
-  qgis
-
-
-:: Dev - nodejs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: Dev
+choco install -y python3 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python37'"
 choco install -y nodejs
-
-:: Dev - scala
-choco install -y sbt scala
-
-choco install -y openvpn --params="'/SELECT_OPENVPNGUI=1'"
-choco install -y python3 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python36'"
-choco install -y python2 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python27'"
-
+::choco install -y sbt scala
 
 :: Confirm what have been installed
 choco list --localonly

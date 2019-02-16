@@ -1,4 +1,4 @@
-virtualenv
+virtualenvwrapper-win
 aws-shell
 aws-sam-cli
 awsebcli
