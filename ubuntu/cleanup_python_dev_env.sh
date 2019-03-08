@@ -3,11 +3,11 @@
 #echo "Folder size: $(du -sh)" .
 
 declare -a FOLDERS=(
+  "env"
+  "env_*"
   ".tox"
   "*.egg-info"
   "__pycache__"
-  "env"
-  "env_*"
 )
 declare -a FILES=(
   ".coverage"
