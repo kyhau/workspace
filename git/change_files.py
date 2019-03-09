@@ -13,4 +13,4 @@ def run(dir_name, from_str, to_str):
             with open(p, mode="w") as file2:
                 file2.write(content)
 
-run(dir_name="/mnt/c/Workspace/bitbucket", from_str="https://bitbucket.org/biarrinetworks", to_str="git@bitbucket.org:biarrinetworks")
+run(dir_name="/mnt/c/Workspace/bitbucket", from_str="https://bitbucket.org/xxx", to_str="git@bitbucket.org:xxx")
