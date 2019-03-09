@@ -28,6 +28,7 @@ choco install -y ^
 ::  activepresenter ^
 ::  dependencywalker ^
 ::  firefox ^
+::  google-backup-and-sync ^
 ::  jre8 ^
 ::  kdiff3 ^
 ::  keepassxc ^
