@@ -17,8 +17,11 @@ Install [Chocolatey](https://chocolatey.org) for package management and install 
 - [Speed up Ubuntu update process](
   https://github.com/Microsoft/WSL/issues/2477):
   [`.bashrc`](ubuntu/.bashrc)
-- Setup Python: [`setup_python.sh`](ubuntu/setup_python.sh)
+- Setup Python: [`setup_python.sh`](python/setup_python.sh)
 - Setup `virutalenvwrapper`: [`.bashrc`](ubuntu/.bashrc)
+- See also "[Chmod/Chown WSL Improvements](
+  https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/)".
+
 
 ## Useful packages
 
