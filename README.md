@@ -1,40 +1,55 @@
-# workspace-win
+# Workspace
 
-Install [Chocolatey](https://chocolatey.org) for package management with 
+Install [Chocolatey](https://chocolatey.org) for package management and install some packages with 
 [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat).
 
-- [Python](https://www.python.org/downloads/windows/)
+## Ubuntu on Windows 10
+
+- [Install Windows Subsystem for Linux (WSL) on Windows 10](
+  https://msdn.microsoft.com/en-au/commandline/wsl/install_guide).
+- Set symbolic links to the corresponding Windows home folders:
+  - `~/.aws`  (`ln -s /mnt/c/Users/xxxx/.aws`)
+  - [`~/.bashrc`](ubuntu/.bashrc)
+  - `~/.ssh/` (`ln -s /mnt/c/Users/xxxx/.ssh`)
+- [Running Docker on WSL](
+  https://davidburela.wordpress.com/2018/06/27/running-docker-on-wsl-windows-subsystem-for-linux/):
+  [`.bashrc`](ubuntu/.bashrc)
+- [Speed up Ubuntu update process](
+  https://github.com/Microsoft/WSL/issues/2477):
+  [`.bashrc`](ubuntu/.bashrc)
+- Setup Python: [`setup_python.sh`](ubuntu/setup_python.sh)
+- Setup `virutalenvwrapper`: [`.bashrc`](ubuntu/.bashrc)
+
+## Useful packages
+
+- [AWS-Shell](https://github.com/awslabs/aws-shell)
+- [CyberDuck](https://cyberduck.io)
+- [DependencyWalker](http://www.dependencywalker.com)
+- [Docker](https://docs.docker.com/docker-for-windows/install)
+- [Dos2Unix](https://sourceforge.net/projects/dos2unix)
 - [Git](https://git-scm.com/download/win)
-- [SourceTree](https://www.sourcetreeapp.com/)
-- [PyChram](https://www.jetbrains.com/pycharm/)
 - [Jupyter](http://jupyter.org/install.html)
+- [kdiff3](http://kdiff3.sourceforge.net)
+- [KeePassXC](https://keepassxc.org/download)
+- [MountainDuck](https://mountainduck.io)
+- [Node.js](https://nodejs.org)
+- [Notepad++](https://notepad-plus-plus.org)
+- [OpenVPN Client](https://openvpn.net/index.php/open-source/downloads.html)
+- [PgAdmin](https://www.pgadmin.org/download)
+- [Postman](https://www.getpostman.com/postman)
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+- [PyChram](https://www.jetbrains.com/pycharm)
+- [Python](https://www.python.org/downloads/windows)
+- [RDC Man](https://www.microsoft.com/en-au/download/details.aspx?id=44989)
+- [S3 Browser](http://s3browser.com)
+- [SourceTree](https://www.sourcetreeapp.com)
 - [SuperPuTTY](https://github.com/jimradford/superputty)
 - [Sysinternals Suite](https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx)
-- [RDC Man](https://www.microsoft.com/en-au/download/details.aspx?id=44989)
-- [AWS-Shell](https://github.com/awslabs/aws-shell)
-- [Docker](https://docs.docker.com/docker-for-windows/install/)
-  (see also [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](
-  https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?))
-- [Notepad++](https://notepad-plus-plus.org/)
-- [KeePassXC](https://keepassxc.org/download)
-- [S3 Browser](http://s3browser.com/)
-- [CyberDuck](https://cyberduck.io)
-- [MountainDuck](https://mountainduck.io/)
-- [PgAdmin](https://www.pgadmin.org/download/)
-- [Postman](https://www.getpostman.com/postman)
-- [OpenVPN Client](https://openvpn.net/index.php/open-source/downloads.html)
 - [WireShark](https://www.wireshark.org/#download)
-- [Dos2Unix](https://sourceforge.net/projects/dos2unix/)
-- [kdiff3](http://kdiff3.sourceforge.net/)
-- [WindDirStat](https://windirstat.net/)
+- [WindDirStat](https://windirstat.net)
 
-## Additional set up for Ubuntu on Windows 10
+## Docker-for-Windows on MacBook Pro
 
-- [Install Ubuntu on Windows 10](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide)
-
-- Resolved: [apt-get update/upgrade/install downloads packages at unacceptably slow speeds](https://github.com/Microsoft/WSL/issues/2477) 
-
-   See `SvenGroot`'s comment on 8 Mar:
-   
-   > Ubuntu on WSL uses the Ubuntu's main archive mirror, which may not be the fastest option depending on your location. Could those who are having this issue try choosing a local mirror from](https://launchpad.net/ubuntu/+archivemirrors (tip: most countries have a mirror like us.archive.ubuntu.com, so you can try that for your country before scouring the list), updating /etc/apt/sources.list to use that mirror instead of archive.ubuntu.com, and see if that improves your download speed?
+- For MacBook Pro Windows user, see also
+  "[Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](
+  https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?)".

@@ -24,6 +24,7 @@ choco install -y ^
   signal ^
   sourcetree ^
   superputty ^
+  sysinternals --params "/InstallDir:C:\Sysinternals" ^
   winrar
 ::  activepresenter ^
 ::  dependencywalker ^

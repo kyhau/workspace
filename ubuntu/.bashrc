@@ -119,7 +119,7 @@ fi
 ##########################################################################
 # My settings
 
-# Speed up update process
+# Speed up update process (see https://github.com/Microsoft/WSL/issues/2477); see `SvenGroot`'s comment on 2018-03-08)
 # sudo cp /etc/apt/sources.list /etc/apt/sources.list.bkup
 # sudo sed -i "s/archive.ubuntu.com\/ubuntu/mirror.aarnet.edu.au\/pub\/ubuntu\/archive/" /etc/apt/sources.list
 
