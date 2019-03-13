@@ -135,3 +135,4 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Aliases
 alias k-update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
+alias cleanup-dev='. /mnt/c/Workspace/github/workspace/python/cleanup_python_dev_env.sh'
