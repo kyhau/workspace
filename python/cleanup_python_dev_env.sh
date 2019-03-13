@@ -3,15 +3,17 @@
 #echo "Folder size: $(du -sh)" .
 
 declare -a FOLDERS=(
+  "build"
   "env"
   "env_*"
+  ".pytest_cache"
   ".tox"
   "*.egg-info"
   "__pycache__"
 )
 declare -a FILES=(
   ".coverage"
-  "coverage_py*.xml"
+  "coverage-py*.xml"
   "junit-py*.xml"
 )
 
