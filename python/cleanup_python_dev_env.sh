@@ -4,8 +4,10 @@
 
 declare -a FOLDERS=(
   "build"
+  "dist"
   "env"
   "env_*"
+  ".cache"
   ".pytest_cache"
   ".tox"
   "*.egg-info"
@@ -13,8 +15,11 @@ declare -a FOLDERS=(
 )
 declare -a FILES=(
   ".coverage"
-  "coverage-py*.xml"
+  "coverage_py*.xml"
+  "gurobi.log"
+  "flake8.log"
   "junit-py*.xml"
+  "pylint.log"
 )
 
 delete_stuff() {
