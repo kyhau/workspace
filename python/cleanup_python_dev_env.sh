@@ -15,7 +15,7 @@ declare -a FOLDERS=(
 )
 declare -a FILES=(
   ".coverage"
-  "coverage_py*.xml"
+  "coverage*.xml"
   "gurobi.log"
   "flake8.log"
   "junit-py*.xml"

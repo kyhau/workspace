@@ -13,8 +13,8 @@ choco install -y ^
   avastfreeantivirus ^
   cyberduck ^
   docker-for-windows ^
+  firefox ^
   git ^
-  googlechrome ^
   itunes^
   notepadplusplus ^
   nordvpn ^
@@ -29,6 +29,7 @@ choco install -y ^
 ::  activepresenter ^
 ::  dependencywalker ^
 ::  firefox ^
+::  googlechrome ^
 ::  google-backup-and-sync ^
 ::  jre8 ^
 ::  kdiff3 ^
