@@ -1,4 +1,19 @@
 import os
+import sys
+
+opt = "github" if len(sys.argv) == 1 else sys.argv[1]
+print(f"Started processing {opt} repos...")
+
+OPTS = {
+    "bitbucket": {
+        "account": "kyhau",
+        "site": "bitbucket.org"
+    },
+    "github": {
+        "account": "kyhau",
+        "site": "github.com",
+    },
+}
 
 
 def run(dir_name, from_str, to_str):
@@ -13,4 +28,8 @@ def run(dir_name, from_str, to_str):
             with open(p, mode="w") as file2:
                 file2.write(content)
 
-run(dir_name="/mnt/c/Workspace/bitbucket", from_str="https://bitbucket.org/xxx", to_str="git@bitbucket.org:xxx")
+run(
+    dir_name=f"/mnt/c/Workspace/{opt}",
+    from_str=f"https://{OPTS[opt]['site']}/{OPTS[opt]['account']}",
+    to_str=f"git@{OPTS[opt]['site']}:{OPTS[opt]['account']}"
+)
