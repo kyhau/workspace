@@ -11,14 +11,13 @@ Install [Chocolatey](https://chocolatey.org) for package management and install 
   - `~/.aws`  (`ln -s /mnt/c/Users/xxxx/.aws`)
   - [`~/.bashrc`](ubuntu/.bashrc)
   - `~/.ssh/` (`ln -s /mnt/c/Users/xxxx/.ssh`)
-- [Running Docker on WSL](
-  https://davidburela.wordpress.com/2018/06/27/running-docker-on-wsl-windows-subsystem-for-linux/):
-  [`.bashrc`](ubuntu/.bashrc)
-- [Speed up Ubuntu update process](
-  https://github.com/Microsoft/WSL/issues/2477):
-  [`.bashrc`](ubuntu/.bashrc)
+- [`~/.bashrc`](ubuntu/.bashrc) includes
+    - [Running Docker on WSL](
+      https://davidburela.wordpress.com/2018/06/27/running-docker-on-wsl-windows-subsystem-for-linux/)
+    - [Speed up Ubuntu update process](
+      https://github.com/Microsoft/WSL/issues/2477)
+    - Setup `virutalenvwrapper`
 - Setup Python: [`setup_python.sh`](python/setup_python.sh)
-- Setup `virutalenvwrapper`: [`.bashrc`](ubuntu/.bashrc)
 - See also "[Chmod/Chown WSL Improvements](
   https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/)".
 
