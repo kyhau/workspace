@@ -16,10 +16,11 @@ declare -a FOLDERS=(
 declare -a FILES=(
   ".coverage"
   "coverage*.xml"
-  "gurobi.log"
   "flake8.log"
   "junit-py*.xml"
   "pylint.log"
+  "gurobi.log"
+  "pyinstaller_out.log"
 )
 
 delete_stuff() {
