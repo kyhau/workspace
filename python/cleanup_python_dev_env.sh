@@ -7,6 +7,7 @@ declare -a FOLDERS=(
   "dist"
   "env"
   "env_*"
+  "wheelmaker"
   ".cache"
   ".pytest_cache"
   ".tox"
