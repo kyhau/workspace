@@ -132,6 +132,8 @@ if [[ ! -d ~/.bash-my-aws ]]; then
   git clone https://github.com/bash-my-universe/bash-my-aws.git ~/.bash-my-aws
 fi
 for f in ~/.bash-my-aws/lib/*-functions; do source $f; done
+cat ~/.bash-my-aws/bash_completion.sh | awk '{print $4}' > ~/.bash-my-aws/commands.txt
+alias bash-aws-list='cat ~/.bash-my-aws/commands.txt'
 
 # virtualenvwrapper settings
 export WORKON_HOME=/mnt/c/Workspace/.virtualenvs
