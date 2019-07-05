@@ -21,7 +21,6 @@ Install [Chocolatey](https://chocolatey.org) for package management and install 
 - See also "[Chmod/Chown WSL Improvements](
   https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/)".
 
-
 ## Useful packages
 
 - [AWS-Shell](https://github.com/awslabs/aws-shell)
