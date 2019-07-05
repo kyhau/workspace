@@ -17,7 +17,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -126,6 +126,12 @@ fi
 # Use Docker for Windows
 export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 export DOCKER_HOST=localhost:2375
+
+# Install bash-my-aws
+if [[ ! -d ~/.bash-my-aws ]]; then
+  git clone https://github.com/bash-my-universe/bash-my-aws.git ~/.bash-my-aws
+  for f in ~/.bash-my-aws/lib/*-functions; do source $f; done
+fi
 
 # virtualenvwrapper settings
 export WORKON_HOME=/mnt/c/Workspace/.virtualenvs
