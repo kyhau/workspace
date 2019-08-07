@@ -2,7 +2,7 @@
 
 # A simple script for comparing some S3 command's on object with/without encryption enabled.
 
-TEST_BUCKET=filestore-dev    # A bucket that has no default bucket encryption setting
+TEST_BUCKET=filestore-dev            # A bucket that has no default bucket encryption setting
 UPLOAD_FILE=sse_test1/input.zip      # An input.zip from nbngreenfield
 DOWNLOAD_FILE=sse_test1/input2.zip
 
