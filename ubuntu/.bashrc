@@ -17,7 +17,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -127,6 +127,14 @@ fi
 export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 export DOCKER_HOST=localhost:2375
 
+# Set up bash-my-aws
+#if [[ ! -d ~/.bash-my-aws ]]; then
+#  git clone https://github.com/bash-my-universe/bash-my-aws.git ~/.bash-my-aws
+#fi
+#for f in ~/.bash-my-aws/lib/*-functions; do source $f; done
+#cat ~/.bash-my-aws/bash_completion.sh | awk '{print $4}' > ~/.bash-my-aws/commands.txt
+#alias bash-aws-list='cat ~/.bash-my-aws/commands.txt'
+
 # virtualenvwrapper settings
 export WORKON_HOME=/mnt/c/Workspace/.virtualenvs
 mkdir -p $WORKON_HOME
@@ -134,5 +142,5 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Aliases
-alias k-update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 alias cleanup-dev='. /mnt/c/Workspace/github/workspace/python/cleanup_python_dev_env.sh'
+alias k-update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'

@@ -7,6 +7,7 @@ declare -a FOLDERS=(
   "dist"
   "env"
   "env_*"
+  "wheelmaker"
   ".cache"
   ".pytest_cache"
   ".tox"
@@ -14,12 +15,13 @@ declare -a FOLDERS=(
   "__pycache__"
 )
 declare -a FILES=(
-  ".coverage"
+  ".coverage*"
   "coverage*.xml"
-  "gurobi.log"
   "flake8.log"
   "junit-py*.xml"
   "pylint.log"
+  "gurobi.log"
+  "pyinstaller_out.log"
 )
 
 delete_stuff() {

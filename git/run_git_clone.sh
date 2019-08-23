@@ -1,3 +1,4 @@
+#!/bin/bash
 
 declare -a arr=(
   "xxx"
