@@ -15,7 +15,7 @@ declare -a FOLDERS=(
   "__pycache__"
 )
 declare -a FILES=(
-  ".coverage"
+  ".coverage*"
   "coverage*.xml"
   "flake8.log"
   "junit-py*.xml"
