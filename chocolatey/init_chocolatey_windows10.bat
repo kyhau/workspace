@@ -15,6 +15,7 @@ choco install -y ^
   docker-for-windows ^
   firefox ^
   git ^
+  gitkraken ^
   itunes^
   notepadplusplus ^
   nordvpn ^
@@ -22,13 +23,13 @@ choco install -y ^
   pycharm-community ^
   rdcman ^
   signal ^
+  slack ^
   sourcetree ^
   superputty ^
   sysinternals --params "/InstallDir:C:\Sysinternals" ^
   winrar
 ::  activepresenter ^
 ::  dependencywalker ^
-::  firefox ^
 ::  googlechrome ^
 ::  google-backup-and-sync ^
 ::  jre8 ^
@@ -45,7 +46,9 @@ choco install -y ^
 :: Dev
 ::choco install -y python3 --version 3.6 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python36_64'"
 choco install -y python3 --override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python37'"
+
 choco install -y nodejs
+
 ::choco install -y sbt scala
 
 :: Confirm what have been installed
