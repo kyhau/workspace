@@ -143,5 +143,5 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Aliases
 alias cleanup-dev='. /mnt/c/Workspace/github/workspace/python/cleanup_python_dev_env.sh'
-alias dos2unix='find . -type f -print0 | xargs -0 dos2unix'
+alias dos2unix-r='find . -type f -print0 | xargs -0 dos2unix'
 alias k-update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
