@@ -22,6 +22,7 @@ choco install -y ^
   putty ^
   pycharm-community ^
   rdcman ^
+  saml2aws ^
   signal ^
   slack ^
   superputty ^
