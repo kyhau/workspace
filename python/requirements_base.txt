@@ -1,5 +1,6 @@
 virtualenvwrapper-win
 aws-shell
+aws-cdk.core
 aws-sam-cli
 awsebcli
 pipdeptree
