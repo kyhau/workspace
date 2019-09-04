@@ -1,5 +1,6 @@
-virtualenvwrapper-win
+virtualenvwrapper-win  # windows only
 aws-shell
-aws-sam-cli
-awsebcli
-pipdeptree
+
+# aws-sam-cli
+# awsebcli
+# pipdeptree

@@ -1,0 +1,6 @@
+ansible   # linux only
+awscli
+boto3
+cfn-lint
+yq
+yamllint
