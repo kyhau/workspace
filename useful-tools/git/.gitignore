@@ -1,0 +1,26 @@
+# Ignore files created by IDEs
+.idea/
+.vscode/
+# Ignore files built by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.dll
+*.lib
+*.sbr
+# Ignore thumbnails created by windows
+Thumbs.db

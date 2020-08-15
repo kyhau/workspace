@@ -1,0 +1,12 @@
+#!/bin/bash
+# Set aliases for some generic scripts
+
+WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+alias cleanup-dev='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
+alias pip-delete-cache='. ${WORKSPACE_REPO_HOME}/python/python/delete_pip_cache.sh'
+alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/python/run_pip_upgrade_all.sh'
+alias rename-files='python ${WORKSPACE_REPO_HOME}/python/rename_files.py'
+
+alias disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
+alias reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
