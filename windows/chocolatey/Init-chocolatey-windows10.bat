@@ -35,6 +35,7 @@ choco install -y ^
 ::  gh ^
 ::  googlechrome ^
 ::  google-backup-and-sync ^
+::  graphviz ^
 ::  jre8 ^
 ::  kdiff3 ^
 ::  keepassxc ^
