@@ -70,7 +70,7 @@ if (Test-Path 'C:\Program Files\Microsoft VS Code Insiders\Code - Insiders.exe' 
 }
 
 if (Test-Path C:\Workspaces\github\workspace -PathType Container) {
-  Set-Alias -Name pip-delete-cache -Value 'C:\Workspaces\github\workspace\useful-tools\python\delete_pip_cache.bat'
+  Set-Alias -Name delete-cache-pip -Value 'C:\Workspaces\github\workspace\useful-tools\python\delete_pip_cache.bat'
   Set-Alias -Name pip-upgrade-all -Value 'C:\Workspaces\github\workspace\useful-tools\python\run_pip_upgrade_all.bat'
 }
 

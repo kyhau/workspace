@@ -22,9 +22,9 @@ declare -a FILES=(
   "coverage*.xml"
   "flake8.log"
   "junit-py*.xml"
-  "pylint.log"
   "gurobi.log"
   "pyinstaller_out.log"
+  "pylint.log"
 )
 
 delete_stuff() {
