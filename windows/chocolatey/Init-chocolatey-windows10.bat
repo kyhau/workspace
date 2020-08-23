@@ -17,13 +17,16 @@ choco install -y ^
   firefox ^
   git ^
   gitkraken ^
-  itunes^
-  nano^
+  itunes ^
+  jq ^
+  nano ^
+  nodejs ^
   notepadplusplus ^
   nordvpn ^
   protonvpn ^
   putty ^
   pycharm-community ^
+  python3 --version 3.8 -override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python38'" ^
   signal ^
   sysinternals --params "/InstallDir:C:\Sysinternals" ^
   vscode ^
@@ -33,6 +36,7 @@ choco install -y ^
 ::  dependencywalker ^
 ::  everything ^
 ::  gh ^
+::  golang ^
 ::  googlechrome ^
 ::  google-backup-and-sync ^
 ::  graphviz ^
@@ -55,18 +59,6 @@ choco install -y ^
 :: Install wireshark and winpcap (winpcap is the capture library required for wireshark)
 ::  winpcap ^
 ::  wireshark ^
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:: Dev
-choco install -y python3 ---version 3.8 -override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python38'"
-
-choco install jq
-
-choco install -y golang
-
-choco install -y nodejs
-
-::choco install -y sbt scala
 
 :: Confirm what have been installed
 choco list --localonly
