@@ -64,13 +64,15 @@ Set-Alias -Name k-docker-rm-all-containers -Value Remove-AllContainers
 Function Get-ContainerIPAddress { param ([string] $id) & docker inspect --format '{{ .NetworkSettings.Networks.nat.IPAddress }}' $id }
 Set-Alias -Name k-docker-get-container-ip -Value Get-ContainerIPAddress
 
+Function Delete-Cache-Pip { Remove-Item $env:LocalAppData\pip\Cache -Recurse}
+Set-Alias -Name k-delete-cache-pip -Value Delete-Cache-Pip
+
 if (Test-Path 'C:\Program Files\Microsoft VS Code Insiders\Code - Insiders.exe' -PathType Leaf) {
   Function Start-Code { Start-Process code-insiders }
   Set-Alias -Name code -Value Start-Code
 }
 
 if (Test-Path C:\Workspaces\github\workspace -PathType Container) {
-  Set-Alias -Name delete-cache-pip -Value 'C:\Workspaces\github\workspace\useful-tools\python\delete_pip_cache.bat'
   Set-Alias -Name pip-upgrade-all -Value 'C:\Workspaces\github\workspace\useful-tools\python\run_pip_upgrade_all.bat'
 }
 
