@@ -1,10 +1,12 @@
 # Useful Links
 
-### Online tools
-- https://mxtoolbox.com/subnetcalculator.aspx
+- [Public Cloud Services Comparison](http://comparecloud.in/)
+- [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/)
 - https://www.digitalattackmap.com/
 - https://cybermap.kaspersky.com/
-- https://landscape.cncf.io/
+
+### Online tools
+- [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
 
 ### Coding
 - Amazon Honeycode https://builder.honeycode.aws/
