@@ -4,6 +4,7 @@
 - https://mxtoolbox.com/subnetcalculator.aspx
 - https://www.digitalattackmap.com/
 - https://cybermap.kaspersky.com/
+- https://landscape.cncf.io/
 
 ### Coding
 - Amazon Honeycode https://builder.honeycode.aws/
