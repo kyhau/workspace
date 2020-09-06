@@ -29,7 +29,7 @@ choco install -y ^
   python3 --version 3.8 -override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python38'" ^
   signal ^
   sysinternals --params "/InstallDir:C:\Sysinternals" ^
-  vscode ^
+  vscode-insiders.install
   winrar
 ::  activepresenter ^
 ::  avastfreeantivirus ^
