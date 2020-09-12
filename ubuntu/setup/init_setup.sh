@@ -48,6 +48,7 @@ sudo apt install -y git
 
 echo "CheckPt: Setup git global configs"
 git config --global core.autocrlf false
+git config --global color.ui auto
 
 touch "/mnt/c/Users/${UNAME}/.gitignore"
 ln -s "/mnt/c/Users/${UNAME}/.gitignore" "$HOME/.gitignore"
