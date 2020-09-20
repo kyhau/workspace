@@ -3,7 +3,7 @@
 for D in *; do
   if [ -d "${D}" ]; then
     echo "--------------------------------------------------------------------------------"
-    echo "${D}"
+    echo "Checking ${D}/"
     cd ${D}
 
     git ls-files --others --exclude-standard
@@ -11,5 +11,3 @@ for D in *; do
     cd ..
   fi
 done
-
-

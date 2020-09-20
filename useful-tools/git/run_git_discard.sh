@@ -2,7 +2,7 @@
 
 for D in *; do
   if [ -d "${D}" ]; then
-    echo "Checking ${D}"
+    echo "Checking ${D}/"
     cd ${D}
 
     if [ -d ".git" ]; then
