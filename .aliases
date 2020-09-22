@@ -21,3 +21,5 @@ alias rename-files='python ${WORKSPACE_REPO_HOME}/useful-tools/python/rename_fil
 
 alias disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
 alias reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
+
+alias ipam-search-ip='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/phpipam_api_helper.py'
