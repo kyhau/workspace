@@ -23,3 +23,4 @@ alias disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt
 alias reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
 
 alias ipam-search-ip='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/phpipam_api_helper.py'
+alias panos-search-fw-rules='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/panos_api_helper.py'
