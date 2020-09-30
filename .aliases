@@ -16,6 +16,7 @@ alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-o
 alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
 alias git-ls-untracked='git ls-files --others --exclude-standard'
 alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
+alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
 
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
 alias rename-files='python ${WORKSPACE_REPO_HOME}/useful-tools/python/rename_files.py'
