@@ -12,7 +12,6 @@
 choco install -y ^
   awscli ^
   awstools.powershell ^
-  cyberduck ^
   docker-for-windows ^
   firefox ^
   git ^
@@ -33,6 +32,8 @@ choco install -y ^
   winrar
 ::  activepresenter ^
 ::  avastfreeantivirus ^
+::  cloudformation-guard --version=1.0.0 ^
+::  cyberduck ^
 ::  dependencywalker ^
 ::  everything ^
 ::  gh ^
