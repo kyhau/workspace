@@ -25,10 +25,10 @@ choco install -y ^
   protonvpn ^
   putty ^
   pycharm-community ^
-  python3 --version 3.8 -override --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python38'" ^
+  python3 --version 3.8 -override --installarguments "'/quiet InstallAllUsers=1 TargetDir=c:\Python38'" ^
   signal ^
   sysinternals --params "/InstallDir:C:\Sysinternals" ^
-  vscode-insiders.install
+  vscode-insiders.install ^
   winrar
 ::  activepresenter ^
 ::  avastfreeantivirus ^
