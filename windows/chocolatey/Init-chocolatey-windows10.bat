@@ -31,6 +31,7 @@ choco install -y ^
   vscode-insiders.install ^
   winrar
 ::  activepresenter ^
+::  androidstudio ^
 ::  avastfreeantivirus ^
 ::  cloudformation-guard --version=1.0.0 ^
 ::  cyberduck ^
