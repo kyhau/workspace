@@ -1,7 +1,13 @@
 Write-Host("Started loading " + $MyInvocation.MyCommand.Definition + "...")
 
-#Set-Location $env:USERPROFILE
-Set-Location C:\Workspaces
+$workspacesHome = $env:USERPROFILE
+if (Test-Path 'C:\Workspaces') {
+  $workspacesHome = 'C:\Workspaces'
+} elseif (Test-Path '$env:USERPROFILE\Workspaces') {
+  $workspacesHome = '$env:USERPROFILE\Workspaces'
+}
+Set-Location $workspacesHome
+
 $psScriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
 
 
@@ -72,14 +78,14 @@ if (Test-Path 'C:\Program Files\Microsoft VS Code Insiders\Code - Insiders.exe' 
   Set-Alias -Name code -Value Start-Code
 }
 
-if (Test-Path C:\Workspaces\github\workspace -PathType Container) {
-  Set-Alias -Name pip-upgrade-all -Value 'C:\Workspaces\github\workspace\useful-tools\python\run_pip_upgrade_all.bat'
+if (Test-Path $workspacesHome\github\workspace -PathType Container) {
+  Set-Alias -Name pip-upgrade-all -Value '$workspacesHome\github\workspace\useful-tools\python\run_pip_upgrade_all.bat'
 }
 
-if (Test-Path C:\Workspaces\github\vscode-configs -PathType Container) {
-  Set-Alias -Name code-diff-settings -Value 'C:\Workspaces\github\workspace\vscode\vscode-diff-settings.bat'
-  Set-Alias -Name code-configs-backup -Value 'C:\Workspaces\github\vscode-configs\vscode-backup-configs.bat'
-  Set-Alias -Name code-configs-restore-from-backup -Value 'C:\Workspaces\github\vscode-configs\vscode-restore-configs-from-backup.bat'
+if (Test-Path $workspacesHome\github\vscode-configs -PathType Container) {
+  Set-Alias -Name code-diff-settings -Value '$workspacesHome\github\workspace\vscode\vscode-diff-settings.bat'
+  Set-Alias -Name code-configs-backup -Value '$workspacesHome\github\vscode-configs\vscode-backup-configs.bat'
+  Set-Alias -Name code-configs-restore-from-backup -Value '$workspacesHome\github\vscode-configs\vscode-restore-configs-from-backup.bat'
 }
 
 
