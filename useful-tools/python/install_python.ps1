@@ -1,9 +1,10 @@
-choco install -y python3 --override 3.8 --installarguments "'/quiet  InstallAllUsers=1 TargetDir=c:\Python38'"
+[string]$LocalDir = "C:\Python39"
+
+choco install -y python3 --override 3.9 --installarguments "'/quiet InstallAllUsers=1 TargetDir=$LocalDir'"
 
 # Add to PATH
-# - C:\Python38
-# - C:\Python38\Scripts
-[string]$LocalDir = "C:\Python38"
+# - C:\Python39
+# - C:\Python39\Scripts
 Write-Host "Adding $LocalDir and $LocalDir\Scripts to System PATH if not exist..."
 $currentPath = [Environment]::GetEnvironmentVariable("PATH", "Machine")
 if ($currentPath -notlike "*$LocalDir*")
@@ -16,7 +17,7 @@ if ($currentPath -notlike "*$LocalDir*")
 
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
-C:\Python38\python get-pip.py
+C:\Python39\python get-pip.py
 pip install -U pip
 pip install -U virtualenvwrapper-win
 
