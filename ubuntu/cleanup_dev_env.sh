@@ -8,6 +8,7 @@ declare -a FOLDERS=(
   "cdk.out"
   "env"
   "env_*"
+  "node_modules"
   "wheelmaker"
   ".cache"
   ".mypy_cache"
@@ -25,6 +26,7 @@ declare -a FILES=(
   "gurobi.log"
   "pyinstaller_out.log"
   "pylint.log"
+  "yarn-error.log"
 )
 
 delete_stuff() {
