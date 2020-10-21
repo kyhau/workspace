@@ -28,6 +28,7 @@ Useful links
 - For MacBook Pro Windows user, see
   [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?).
 - https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
+- For WSL 2, unset `DOCKER_HOST`, see https://stackoverflow.com/questions/60708229/wsl2-cannot-connect-to-the-docker-daemon
 
 ### Locations of some useful files or directories
 
