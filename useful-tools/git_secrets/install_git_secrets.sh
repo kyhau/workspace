@@ -18,5 +18,7 @@ popd
 git secrets --register-aws --global
 
 # Add hooks to all your local repositories.
-git secrets --install ~/.git-templates/git-secrets
+git secrets --install -f  ~/.git-templates/git-secrets
 git config --global init.templateDir ~/.git-templates/git-secrets
+
+echo "Exiting ${0}"

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Uninstall old versions
-apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get remove docker docker-engine docker.io containerd runc
 
-apt update && apt-get install -y \
+sudo apt update && sudo apt-get install -y \
   apt-transport-https \
   ca-certificates \
   curl \
@@ -12,10 +12,9 @@ apt update && apt-get install -y \
 
 curl -fsSL --insecure https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 
 # Install the latest version of Docker Engine - Community
-apt-get update && apt-get install -y \
-  docker-ce
+sudo apt-get update && apt-get install -y docker-ce
   # docker-ce-cli containerd.io

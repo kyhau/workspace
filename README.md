@@ -22,6 +22,10 @@ Useful links
 - Note that the `umount/mount` approach in
   [Chmod/Chown WSL Improvements](https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/)
   does not work (error on re-mounting).
+- Fixing WSL2 npm issue: "/mnt/c/Program Files/nodejs/npm: /bin/sh^M: bad interpreter" (https://hackmd.io/@badging/wsl2)
+    ```
+    PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH%
+    ```
 
 ### Docker-for-Windows
 
