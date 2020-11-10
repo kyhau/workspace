@@ -4,7 +4,7 @@
 set -e
 
 echo "CheckPt: Install Homebrew to /home/linuxbrew/.linuxbrew (default)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh --insecure)"
 
 # Add Homebrew to your PATH by running the following commands. These commands work on all major flavors of Linux by
 # adding either ~/.profile on Debian/Ubuntu or ~/.bash_profile on CentOS/Fedora/RedHat:
