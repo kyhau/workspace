@@ -38,6 +38,7 @@ choco install -y ^
 ::  dependencywalker ^
 ::  everything ^
 ::  gh ^
+::  github-desktop ^
 ::  golang ^
 ::  googlechrome ^
 ::  google-backup-and-sync ^
