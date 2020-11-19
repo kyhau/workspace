@@ -5,6 +5,8 @@ WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 &&
 
 alias cleanup-dev='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
+alias reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
+
 alias delete-cache-cdk='du -sh ${HOME}/.cdk/cache/ && rm -rf ${HOME}/.cdk/cache/'
 alias delete-cache-homebrew='du -sh ${HOME}/.cache/Homebrew/ && rm -rf ${HOME}/.cache/Homebrew/'
 alias delete-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pip/'
