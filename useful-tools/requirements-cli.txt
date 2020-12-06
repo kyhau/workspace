@@ -4,7 +4,7 @@ pip
 # Useful tools
 
 #demoshell                # https://github.com/dhellmann/demoshell
-httpie
+httpie                    # https://github.com/httpie/httpie
 yq                        # Command-line YAML/XML processor - jq wrapper for YAML/XML documents
 
 
