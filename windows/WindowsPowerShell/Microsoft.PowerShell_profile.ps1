@@ -43,7 +43,7 @@ Set-Alias -Name edit -Value "$env:ProgramFiles\Notepad++\notepad++.exe"
 Set-Alias -Name grep -Value 'findstr'
 Set-Alias -Name ll -Value ls
 
-function Start-TheDay { Start firefox; Start code; Start slack; }
+Function Start-TheDay { Start firefox; Start code; Start slack; }
 Set-Alias -Name k-start-theday -Value Start-TheDay
 
 Function Get-Env-Path { $env:path }

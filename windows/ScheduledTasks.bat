@@ -9,6 +9,8 @@ powershell -Command "C:\Workspaces\github\workspace\windows\Run-WindowsUpdate.ps
 
 :: Run as User
 
+powershell -Command "C:\Workspaces\github\workspace\windows\Delete-Cache.ps1"
+
 C:\Workspaces\github\workspace\windows\DeleteChromeHistory.bat
 
 C:\Workspaces\github\workspace\vscode\backup_settings.bat
