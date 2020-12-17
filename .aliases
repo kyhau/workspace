@@ -14,6 +14,7 @@ alias delete-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/di
 alias delete-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
 
 alias git-clean='git checkout -- .'
+alias git-email='git config user.email'
 alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin'
 alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
 alias git-ls-untracked='git ls-files --others --exclude-standard'
