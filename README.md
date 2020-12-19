@@ -16,14 +16,22 @@ Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocol
     - Set up Python, Docker, Git, git_secrets, saml2aws, etc.
     - Set symlinks to the corresponding Windows home folders
 
-Useful links
+Useful notes
+- Check current distribution and version
+    ```powershell
+    wsl -l -v
+    ```
+- To converting your distro from WSL 2 back to WSL 1
+    ```powershell
+    wsl --set-version Ubuntu 1
+    ```
 - Setup `chmod/chown` support: use [`wsl.conf`](ubuntu/wsl.conf) as detailed in
   [Unable to change file permissions on Ubuntu Bash for Windows 10](https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10).
 - Note that the `umount/mount` approach in
   [Chmod/Chown WSL Improvements](https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/)
   does not work (error on re-mounting).
 - Fixing WSL2 npm issue: "/mnt/c/Program Files/nodejs/npm: /bin/sh^M: bad interpreter" (https://hackmd.io/@badging/wsl2)
-    ```
+    ```bash
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH%
     ```
 
