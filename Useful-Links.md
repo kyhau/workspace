@@ -5,6 +5,12 @@
 - https://www.digitalattackmap.com/
 - https://cybermap.kaspersky.com/
 
+### Privacy Tools
+- [PrivacyTools](https://www.privacytools.io/)
+- Pastebin Services
+    - [CryptPad](https://privatebin.info/)
+    - [PrivateBin](https://privatebin.info/)
+
 ### Online tools
 - [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
 
