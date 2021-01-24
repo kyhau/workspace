@@ -31,3 +31,6 @@ alias reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocs
 
 alias ipam-search-ip='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/phpipam_api_helper.py'
 alias panos-search-fw-rules='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/panos_api_helper.py'
+
+# Quick notes
+alias list-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
