@@ -41,6 +41,14 @@ Useful notes
   [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?).
 - https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
 - For WSL 2, unset `DOCKER_HOST`, see https://stackoverflow.com/questions/60708229/wsl2-cannot-connect-to-the-docker-daemon
+- docker-compose
+   - To install `docker-compose`: `pip install docker-compose`
+   - If see error `docker.credentials.errors.InitializationError: docker-credential-desktop.exe not installed or not available in PATH`
+      - Add `_` before `credsStore` in file ~/.docker/config.json, i.e. `{"_credsStore":"desktop.exe"}` 
+- If see error [`no matching manifest for windows/amd64 in the manifest list entries`](https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-windows-amd64-in-the-manifest-list-entries)
+   - Go to Settings: Daemon, Advanced
+   - Set the "experimental": true
+   - Restart Docker
 
 ### Locations of some useful files or directories
 
