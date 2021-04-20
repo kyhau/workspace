@@ -59,8 +59,8 @@ alias k-delete-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pi
 alias k-delete-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/distshare'
 alias k-delete-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
 
-alias k-ipam-search-ip='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/phpipam_api_helper.py'
-alias k-panos-search-fw-rules='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/panos_api_helper.py'
+alias k-ipam-helper='python ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
+alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
 
 alias k-rename-files='python ${WORKSPACE_REPO_HOME}/useful-tools/python/rename_files.py'
 

@@ -2,7 +2,7 @@
 # See also https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 set -e
 
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key C99B11DEB97541F0
 
 # If seeing error
 # ImportError: cannot import name '_gi' from partially initialized module 'gi' (most likely due to a circular import)
