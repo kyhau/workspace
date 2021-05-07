@@ -34,6 +34,8 @@ alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgr
 
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 
+alias update-ubuntu='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
+
 ################################################################################
 # custom scripts or commands
 
@@ -65,5 +67,3 @@ alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_ap
 alias k-rename-files='python ${WORKSPACE_REPO_HOME}/useful-tools/python/rename_files.py'
 
 alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
-
-alias k-update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
