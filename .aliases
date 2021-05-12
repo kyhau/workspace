@@ -15,6 +15,7 @@ alias git-ls-untracked='git ls-files --others --exclude-standard'
 alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
 alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
+alias git-pull-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
 
 ################################################################################
 # ls
