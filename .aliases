@@ -3,6 +3,8 @@
 
 WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+alias browser='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
+
 ################################################################################
 # Git
 
@@ -37,6 +39,13 @@ alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgr
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 
 alias update-ubuntu='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
+
+################################################################################
+# Cheatsheets
+
+alias cheatsheet-aws-network='browser https://github.com/kyhau/aws-notebook/blob/master/Networking.md'
+alias cheatsheet-docker='browser https://github.com/kyhau/docker-notebook/blob/master/README.md'
+alias cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/blob/master/README.md'
 
 ################################################################################
 # custom scripts or commands
