@@ -5,18 +5,11 @@ run_git_commands() {
   git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin
 }
 
-if [ -d ".git" ]; then
+for dir in $(find . -name .git -type d -prune); do
+  repo_path=$(dirname $(readlink -f "$dir"))
+  echo "Checking repo: ${repo_path}"
+  cd ${repo_path}
   run_git_commands
-else
-  for D in *; do
-    if [ -d "${D}" ]; then
-      echo "Checking ${D}/"
-      cd ${D}
-
-      if [ -d ".git" ]; then
-        run_git_commands
-      fi
-      cd ..
-    fi
-  done
-fi
+  cd - 2>&1 >/dev/null
+  echo "----------------------------------------"
+done
