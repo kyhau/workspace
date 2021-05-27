@@ -17,7 +17,9 @@ alias git-ls-untracked='git ls-files --others --exclude-standard'
 alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
 alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
+alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-pull-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
+
 
 ################################################################################
 # ls
@@ -61,7 +63,7 @@ alias k-black='black --line-length=79'
 
 alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
-alias k-degreen='chmod -R 750'
+alias k-degreen='find . -type f ! -iname "*.bat" ! -name "*.exe" ! -name "*.ps1" ! -name "*.py" ! -iname "*.sh" -print0 | xargs -0 chmod -x'
 
 alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
 alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
