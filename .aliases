@@ -3,7 +3,7 @@
 
 WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-alias browser='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
+alias browser='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
 ################################################################################
 # Git
@@ -63,7 +63,7 @@ alias k-black='black --line-length=79'
 
 alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
-alias k-degreen='find . -type f ! -iname "*.bat" ! -name "*.exe" ! -name "*.ps1" ! -name "*.py" ! -iname "*.sh" -print0 | xargs -0 chmod -x'
+alias k-degreen='find . -type f ! -iname "*.bat" ! -name "*.exe" ! -name "*.ps1" ! -iname "*.sh" -print0 | xargs -0 chmod -x'
 
 alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
 alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
