@@ -20,7 +20,7 @@ OPTS = {
 def run(dir_name, from_str, to_str):
     for d in os.listdir(dir_name):
         p = os.path.join(dir_name, d, ".git", "config")
-        
+
         if not os.path.exists(p):
             print(f"Path not found: {p}. Skipped")
             continue
@@ -35,7 +35,7 @@ def run(dir_name, from_str, to_str):
                 file2.write(content)
 
 run(
-    dir_name=f"/mnt/c/Workspaces/{opt}",
+    dir_name=f"/c/Workspaces/{opt}",
     from_str=f"https://{OPTS[opt]['site']}/{OPTS[opt]['account']}",
     to_str=f"git@{OPTS[opt]['site']}:{OPTS[opt]['account']}",
 )
