@@ -1,23 +1,9 @@
 import os
-import sys
 
-# If not arg specified, use `github`
-opt = "github" if len(sys.argv) == 1 else sys.argv[1]
-print(f"Started processing {opt} repos...")
-
-OPTS = {
-    "bitbucket": {
-        "account": "kyhau",
-        "site": "bitbucket.org"
-    },
-    "github": {
-        "account": "kyhau",
-        "site": "github.com",
-    },
-}
+DIR_NAME = os.path.abspath(".")
 
 
-def run(dir_name, from_str, to_str):
+def run(dir_name, from_str, to_str, dry_run):
     for d in os.listdir(dir_name):
         p = os.path.join(dir_name, d, ".git", "config")
 
@@ -29,13 +15,26 @@ def run(dir_name, from_str, to_str):
             content = file.read()
 
         if from_str in content:
-            print("Updating {}".format(p))
-            content = content.replace(from_str, to_str)
-            with open(p, mode="w") as file2:
-                file2.write(content)
 
-run(
-    dir_name=f"/c/Workspaces/{opt}",
-    from_str=f"https://{OPTS[opt]['site']}/{OPTS[opt]['account']}",
-    to_str=f"git@{OPTS[opt]['site']}:{OPTS[opt]['account']}",
-)
+            print(f"Updating {p}")
+
+            if dry_run is False:
+                content = content.replace(from_str, to_str)
+                with open(p, mode="w") as file2:
+                    file2.write(content)
+
+
+def https_to_ssh():
+    # From https to ssh
+    from_str="https://github.com/"
+    to_str="git@github.com:"
+    run(DIR_NAME, from_str, to_str, dry_run=False)
+
+
+def replace_str():
+    from_str="git@github.com"
+    to_str="git@me.github.com"
+    run(DIR_NAME, from_str, to_str, dry_run=False)
+
+
+replace_str()
