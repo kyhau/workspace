@@ -45,25 +45,27 @@ alias update-ubuntu='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-
 ################################################################################
 # Cheatsheets
 
-alias cheatsheet-aws-network='browser https://github.com/kyhau/aws-notebook/blob/master/Networking.md'
-alias cheatsheet-docker='browser https://github.com/kyhau/docker-notebook/blob/master/README.md'
-alias cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/blob/master/README.md'
+alias k-cheatsheet-aws-network='browser https://github.com/kyhau/aws-notebook/blob/master/Networking.md'
+alias k-cheatsheet-docker='browser https://github.com/kyhau/docker-notebook/blob/master/README.md'
+alias k-cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/blob/master/README.md'
 
 ################################################################################
 # custom scripts or commands
 
 alias dos2unix-r='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" -print0 | xargs -0 dos2unix'
 
-alias ff='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
-
-
 alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host registry.yarnpkg.com | awk '"'"'/has address/ { print $4 }'"'"' | head -n1) ; echo "${registryYarnpkgComIpAddress} registry.yarnpkg.com" | sudo tee -a /etc/hosts'
 
-alias k-black='black --line-length=79'
+alias k-black='black --line-length=99'
+# W605 Invalid escape sequence
+alias k-flake8='flake8 --ignore W605 --max-line-length 99'
+alias k-yaml='yamllint -d "{extends: relaxed, rules: {document-start: disable, line-length: disable, truthy: disable}}" .'
 
 alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
 alias k-degreen='find . -type f ! -iname "*.bat" ! -name "*.exe" ! -name "*.ps1" ! -iname "*.sh" -print0 | xargs -0 chmod -x'
+
+alias k-firefox='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
 alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
 alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
