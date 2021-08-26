@@ -38,6 +38,8 @@ alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgr
 ################################################################################
 # update
 
+alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
+
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 
 alias update-ubuntu='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
