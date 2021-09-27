@@ -65,7 +65,7 @@ alias k-yaml='yamllint -d "{extends: relaxed, rules: {document-start: disable, l
 
 alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
-alias k-degreen='find . -type f ! -iname "*.bat" ! -name "*.exe" ! -name "*.ps1" ! -iname "*.sh" -print0 | xargs -0 chmod -x'
+alias k-degreen='find . -type f ! -iname "*.bat" ! -iname "*.exe" ! -iname "*.js" ! -iname "*.ps1" ! -iname "*.sh" | -iname "*.ts" -print0 | xargs -0 chmod -x'
 
 alias k-firefox='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
