@@ -6,6 +6,12 @@ WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 &&
 alias browser='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
 ################################################################################
+# Docker
+alias docker-rm-all-unused-containers-and-images='docker system prune -a'
+alias docker-rm-containers-exited='docker rm $(docker ps -q -f status=exited)'
+alias docker-rm-images-untagged='docker images prune'
+
+################################################################################
 # Git
 
 alias git-clean='git checkout -- .'
@@ -28,6 +34,14 @@ alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls
 alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ports.md'
 alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
 alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
+
+################################################################################
+# k8s
+alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
+alias kubectl-get-events='kubectl get events'
+alias kubectl-get-namespace='kubectl get namespace'
+alias kubectl-get-pods='kubectl get pods'
+alias kubectl-get-svc='kubectl get svc'
 
 ################################################################################
 # pip
