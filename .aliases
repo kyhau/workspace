@@ -1,7 +1,7 @@
 #!/bin/bash
 # Set aliases for some generic scripts
 
-WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 alias browser='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
@@ -18,21 +18,21 @@ alias git-clean='git checkout -- .'
 alias git-config-list='git config --list'
 alias git-show-user='git config user.name && git config user.email'
 alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin'
-alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
+alias git-squash-new-start='. ${REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
 alias git-ls-untracked='git ls-files --others --exclude-standard'
-alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
-alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
+alias git-repo-latest-release='. ${REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
+alias git-repo-latest-tag='. ${REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
-alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
-alias git-pull-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
+alias git-branch-all='. ${REPO_HOME}/useful-tools/git/run_git_branch.sh'
+alias git-pull-all='. ${REPO_HOME}/useful-tools/git/run_git_pull.sh'
 
 ################################################################################
 # ls
 
-alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ip-protocols.md'
-alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ip-ranges.md'
-alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ports.md'
-alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
+alias ls-common-ip-protocols='cat ${REPO_HOME}/useful-tools/networking/ls-common-ip-protocols.md'
+alias ls-common-ip-ranges='cat ${REPO_HOME}/useful-tools/networking/ls-common-ip-ranges.md'
+alias ls-common-ports='cat ${REPO_HOME}/useful-tools/networking/ls-common-ports.md'
+alias ls-mult-byte-units='cat ${REPO_HOME}/quick-notes/multi-byte-units.txt'
 alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
 
 ################################################################################
@@ -46,14 +46,19 @@ alias kubectl-get-svc='kubectl get svc'
 ################################################################################
 # pip
 
-alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
+alias pip-upgrade-all='. ${REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
 
 ################################################################################
 # update
 
-alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
+alias update-gh='. ${REPO_HOME}/useful-tools/github/install_gh.sh'
 
-alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
+alias update-k8s-kops='. ${REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
+alias update-k8s-kubectx-and-kubens='. ${REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
+alias update-k8s-kustomize='. ${REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
+alias update-k8s-minikube='. ${REPO_HOME}/useful-tools/kubernetes/install_minikube.sh'
+
+alias update-nodejs='. ${REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 
 alias update-ubuntu='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 
@@ -76,14 +81,14 @@ alias k-black='black --line-length=99'
 alias k-flake8='flake8 --ignore W605 --max-line-length 99'
 alias k-yaml='yamllint -d "{extends: relaxed, rules: {document-start: disable, line-length: disable, truthy: disable}}" .'
 
-alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
+alias k-cleanup-dev-env='. ${REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
 alias k-degreen='find . -type f ! -iname "*.bat" ! -iname "*.exe" ! -iname "*.js" ! -iname "*.ps1" ! -iname "*.sh" ! -iname "*.ts" -print0 | xargs -0 chmod -x'
 
 alias k-firefox='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
-alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
-alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
+alias k-disable-apt-ocsp-verification='. ${REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
+alias k-reset-apt-ocsp-verification='. ${REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
 
 alias k-delete-cache-cdk='du -sh ${HOME}/.cdk/cache/ && rm -rf ${HOME}/.cdk/cache/'
 alias k-delete-cache-homebrew='du -sh ${HOME}/.cache/Homebrew/ && rm -rf ${HOME}/.cache/Homebrew/'
@@ -91,11 +96,11 @@ alias k-delete-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pi
 alias k-delete-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/distshare'
 alias k-delete-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
 
-alias k-is-ip-in-range='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
+alias k-is-ip-in-range='python ${REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
 
-alias k-ipam-helper='python ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
-alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
+alias k-ipam-helper='python ${REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
+alias k-panos-helper='python ${REPO_HOME}/../panos-api-helper/panos_api_helper.py'
 
-alias k-rename-files='python ${WORKSPACE_REPO_HOME}/useful-tools/python/rename_files.py'
+alias k-rename-files='python ${REPO_HOME}/useful-tools/python/rename_files.py'
 
-alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
+alias k-reset-clock='. ${REPO_HOME}/ubuntu/reset_clock.sh'
