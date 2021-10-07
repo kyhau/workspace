@@ -3,12 +3,12 @@
 
 set -e
 
-echo "Downloading the latest version of kustomize..."
+echo "INFO: Downloading kustomize"
 curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
 
-echo "Moving the extracted binary to ~/.local/bin..."
+echo "INFO: Moving binary to ~/.local/bin/"
 mkdir -p ~/.local/bin
 mv kustomize ~/.local/bin/
 
-echo "Checking version..."
+echo "INFO: Checking version"
 echo "kustomize version: $(kustomize version)"
