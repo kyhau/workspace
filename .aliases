@@ -38,15 +38,15 @@ alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.a
 
 ################################################################################
 # k8s
-alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
-alias kubectl-get-deployment='kubectl get deployment'
-alias kubectl-get-deployment-all-namespaces='kubectl get deployment --all-namespaces'
-alias kubectl-get-events='kubectl get events'
-alias kubectl-get-ingress='kubectl get ingress'
-alias kubectl-get-namespace='kubectl get namespace'
-alias kubectl-get-pods='kubectl get pods'
-alias kubectl-get-svc='kubectl get svc'
-alias kubectl-get-svc-all-namespaces='kubectl get svc --all-namespaces'
+alias k8s-kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
+alias k8s-kubectl-get-deployment='kubectl get deployment'
+alias k8s-kubectl-get-deployment-all-namespaces='kubectl get deployment --all-namespaces'
+alias k8s-kubectl-get-events='kubectl get events'
+alias k8s-kubectl-get-ingress='kubectl get ingress'
+alias k8s-kubectl-get-namespace='kubectl get namespace'
+alias k8s-kubectl-get-pods='kubectl get pods'
+alias k8s-kubectl-get-svc='kubectl get svc'
+alias k8s-kubectl-get-svc-all-namespaces='kubectl get svc --all-namespaces'
 
 ################################################################################
 # pip
@@ -58,6 +58,7 @@ alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgr
 
 alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
 
+alias update-k8s-helm='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_helm.sh'
 alias update-k8s-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
 alias update-k8s-kubectx-and-kubens='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
 alias update-k8s-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
