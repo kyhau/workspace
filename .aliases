@@ -38,10 +38,14 @@ alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.a
 ################################################################################
 # k8s
 alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
+alias kubectl-get-deployment='kubectl get deployment'
+alias kubectl-get-deployment-all-namespaces='kubectl get deployment --all-namespaces'
 alias kubectl-get-events='kubectl get events'
+alias kubectl-get-ingress='kubectl get ingress'
 alias kubectl-get-namespace='kubectl get namespace'
 alias kubectl-get-pods='kubectl get pods'
 alias kubectl-get-svc='kubectl get svc'
+alias kubectl-get-svc-all-namespaces='kubectl get svc --all-namespaces'
 
 ################################################################################
 # pip
