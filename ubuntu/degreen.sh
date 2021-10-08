@@ -5,10 +5,10 @@ find . -type f ! -iname "*.bat" ! -iname "*.exe" ! -iname "*.js" ! -iname "*.ps1
   -not -path "*.build/*" \
   -not -path "*.git*" \
   -not -path "*.idea/*" \
-  -not -path "*.tox/*" \
   -not -path "*.pytest_cache/*" \
+  -not -path "*.tox/*" \
+  -not -path "*.vscode/*" \
   -not -path "*__pycache__/*" \
-  -not -path "*__tests__/*" \
   -not -path "*cdk.out/*" \
   -not -path "*dist/*" \
   -not -path "*eggs/*" \
