@@ -16,15 +16,16 @@ alias docker-rm-images-untagged='docker images prune'
 
 alias git-clean='git checkout -- .'
 alias git-config-list='git config --list'
-alias git-show-user='git config user.name && git config user.email'
-alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin'
-alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
-alias git-ls-untracked='git ls-files --others --exclude-standard'
-alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
-alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
+alias git-config-show-user='git config user.name && git config user.email'
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
+alias git-commit='git commit -m'
+alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin'
+alias git-ls-untracked='git ls-files --others --exclude-standard'
+alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
 alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-pull-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
+alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
+alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
 
 ################################################################################
 # ls
@@ -64,7 +65,7 @@ alias update-k8s-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/inst
 
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 
-alias update-ubuntu='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
+alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 
 ################################################################################
 # Cheatsheets
@@ -87,7 +88,7 @@ alias k-yaml='yamllint -d "{extends: relaxed, rules: {document-start: disable, l
 
 alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
-alias k-degreen='find . -type f ! -iname "*.bat" ! -iname "*.exe" ! -iname "*.js" ! -iname "*.ps1" ! -iname "*.sh" ! -iname "*.ts" -print0 | xargs -0 chmod -x'
+alias k-degreen='find . -type f ! -iname "*.bat" ! -iname "*.exe" ! -iname "*.js" ! -iname "*.ps1" ! -iname "*.sh" ! -iname "*.ts" -not -path "*.git*" -print0 | xargs -0 chmod -x'
 
 alias k-firefox='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
