@@ -4,9 +4,11 @@
 WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 alias browser='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
+alias firefox='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
 ################################################################################
 # Docker
+
 alias docker-rm-all-unused-containers-and-images='docker system prune -a'
 alias docker-rm-containers-exited='docker rm $(docker ps -q -f status=exited)'
 alias docker-rm-images-untagged='docker images prune'
@@ -85,13 +87,11 @@ alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host re
 alias k-black='black --line-length=99'
 # W605 Invalid escape sequence
 alias k-flake8='flake8 --ignore W605 --max-line-length 99'
-alias k-yaml='yamllint -d "{extends: relaxed, rules: {document-start: disable, line-length: disable, truthy: disable}}" .'
+alias k-yamllint='yamllint -d "{extends: relaxed, rules: {document-start: disable, line-length: disable, truthy: disable}}" .'
 
 alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
-alias k-degreen='find . -type f ! -iname "*.bat" ! -iname "*.exe" ! -iname "*.js" ! -iname "*.ps1" ! -iname "*.sh" ! -iname "*.ts" -not -path "*.git*" -print0 | xargs -0 chmod -x'
-
-alias k-firefox='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
+alias k-degreen='. ${WORKSPACE_REPO_HOME}/ubuntu/degreen.sh'
 
 alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
 alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
