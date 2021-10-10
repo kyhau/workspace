@@ -11,7 +11,7 @@
 
 choco install -y ^
   awscli ^
-  awstools.powershell ^
+  awscli-session-manager ^
   docker-for-windows ^
   firefox ^
   git ^
@@ -21,18 +21,16 @@ choco install -y ^
   nano ^
   nodejs ^
   notepadplusplus ^
-  nordvpn ^
   protonvpn ^
   putty ^
   pycharm-community ^
-  python3 --version 3.8 -override --installarguments "'/quiet InstallAllUsers=1 TargetDir=c:\Python38'" ^
+  python3 --version 3.9 -override --installarguments "'/quiet InstallAllUsers=1 TargetDir=c:\Python39'" ^
   signal ^
   sysinternals --params "/InstallDir:C:\Sysinternals" ^
   vscode-insiders.install ^
   winrar
 ::  activepresenter ^
 ::  androidstudio ^
-::  avastfreeantivirus ^
 ::  cloudformation-guard --version=1.0.0 ^
 ::  cyberduck ^
 ::  dependencywalker ^
@@ -41,12 +39,12 @@ choco install -y ^
 ::  github-desktop ^
 ::  golang ^
 ::  googlechrome ^
-::  google-backup-and-sync ^
 ::  graphviz ^
 ::  jre8 ^
 ::  kdiff3 ^
 ::  keepassxc ^
 ::  lazydocker ^
+::  nordvpn ^
 ::  nosql-workbench ^
 ::  openvpn --params="'/SELECT_OPENVPNGUI=1'" ^
 ::  pgadmin4 ^
