@@ -111,6 +111,6 @@ alias k-is-ip-in-range='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/is
 alias k-ipam-helper='python ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
 alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
 
-alias k-rename-files='python ${WORKSPACE_REPO_HOME}/useful-tools/python/rename_files.py'
+alias k-rename-files='python ${WORKSPACE_REPO_HOME}/bin/rename_files.py'
 
 alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
