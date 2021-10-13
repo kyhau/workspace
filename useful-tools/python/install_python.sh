@@ -5,7 +5,7 @@
 #add-apt-repository -y ppa:deadsnakes/ppa
 
 # Install Python 3.9
-#sudo apt-get install -y python3.8 python3.8-dev && sudo apt-get -y clean
+#sudo apt-get install -y python3.9 python3.9-dev && sudo apt-get -y clean
 sudo apt install python3.9
 
 # Install pip via PyPA's recommended way rather than the outdated apt repos

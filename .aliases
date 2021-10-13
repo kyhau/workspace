@@ -41,7 +41,7 @@ alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.a
 ################################################################################
 # k8s
 alias k8s-kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
-alias k8s-kubectl-describe-secret-eks-admin="kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')"
+alias k8s-kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl-describe-secret-eks-admin.sh'
 alias k8s-kubectl-get-deployment='kubectl get deployment'
 alias k8s-kubectl-get-deployment-all-namespaces='kubectl get deployment --all-namespaces'
 alias k8s-kubectl-get-events='kubectl get events'
