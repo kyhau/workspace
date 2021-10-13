@@ -41,14 +41,18 @@ alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.a
 ################################################################################
 # k8s
 alias k8s-kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
+alias k8s-kubectl-describe-secret-eks-admin="kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')"
 alias k8s-kubectl-get-deployment='kubectl get deployment'
 alias k8s-kubectl-get-deployment-all-namespaces='kubectl get deployment --all-namespaces'
 alias k8s-kubectl-get-events='kubectl get events'
 alias k8s-kubectl-get-ingress='kubectl get ingress'
 alias k8s-kubectl-get-namespace='kubectl get namespace'
 alias k8s-kubectl-get-pods='kubectl get pods'
+alias k8s-kubectl-get-pods-all-namespaces='kubectl get pods --all-namespaces'
 alias k8s-kubectl-get-svc='kubectl get svc'
 alias k8s-kubectl-get-svc-all-namespaces='kubectl get svc --all-namespaces'
+alias k8s-kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller'
+alias k8s-kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
 
 ################################################################################
 # pip
