@@ -4,17 +4,17 @@
 
 set -e
 
-mkdir -p ~/.local/bin
+mkdir -p ${HOME}/.local/bin
 
-if [[ -d "~/.local/kubectx" ]]
+if [[ -d "${HOME}/.local/kubectx" ]]
 then
   echo "INFO: git pull"
-  cd ~/.local/kubectx
+  cd ${HOME}/.local/kubectx
   git pull
   cd -
 else
-  echo "INFO: git clone ahmetb/kubectx into ~/.local/kubectx"
-  git clone https://github.com/ahmetb/kubectx.git ~/.local/kubectx
-  ln -s ~/.local/kubectx/kubectx ~/.local/bin/kubectx
-  ln -s ~/.local/kubectx/kubens ~/.local/bin/kubens
+  echo "INFO: git clone ahmetb/kubectx into ${HOME}/.local/kubectx"
+  git clone https://github.com/ahmetb/kubectx.git ${HOME}/.local/kubectx
+  ln -sfn ${HOME}/.local/kubectx/kubectx ${HOME}/.local/bin/kubectx
+  ln -sfn ${HOME}/.local/kubectx/kubens ${HOME}/.local/bin/kubens
 fi

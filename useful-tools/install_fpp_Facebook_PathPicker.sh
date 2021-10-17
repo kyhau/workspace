@@ -3,21 +3,18 @@
 # https://github.com/facebook/PathPicker
 set -e
 
-WORKSPACE_DIR="$HOME/workspaces/github"
+mkdir -p ${HOME}/.local/bin
 
-pushd $WORKSPACE_DIR
+if [[ -d "${HOME}/.local/PathPicker" ]]
+then
+  echo "INFO: git pull"
+  cd ${HOME}/.local/PathPicker
+  git pull
+  cd -
+else
+  echo "INFO: git clone facebook/PathPicker into ${HOME}/.local/PathPicker"
+  git clone https://github.com/facebook/PathPicker ${HOME}/.local/PathPicker
+  ln -sfn ${HOME}/.local/PathPicker/fpp ${HOME}/.local/bin/fpp
+fi
 
-[[ -d "PathPicker" ]] || git clone https://github.com/facebook/PathPicker
-
-pushd PathPicker/debian
-./package.sh
-
-pushd ~/.local/bin/
-[ -e fpp ] && rm -f fpp
-ln -s ${WORKSPACE_DIR}/PathPicker/fpp .
-
-popd
-popd
-popd
-
-echo "TODO:  Add 'export EDITOR=nano' to ~/.bashrc"
+echo "TODO: Add 'export EDITOR=nano' to ${HOME}/.bashrc"

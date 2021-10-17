@@ -29,10 +29,10 @@ DOWNLOAD_URL="https://get.helm.sh/$HELM_DIST"
 echo "INFO: Downloading $DOWNLOAD_URL"
 curl -SsL "$DOWNLOAD_URL" -o $HELM_DIST
 
-echo "INFO: Moving binary to ~/.local/bin/"
+echo "INFO: Moving binary to ${HOME}/.local/bin/"
 mkdir -p tmp
 tar xf $HELM_DIST -C tmp
-cp tmp/$OS-$ARCH/helm ~/.local/bin/
+cp tmp/$OS-$ARCH/helm ${HOME}/.local/bin/
 rm -rf tmp
 rm ${HELM_DIST}
 
