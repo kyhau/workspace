@@ -116,3 +116,6 @@ alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_ap
 alias k-rename-files='python ${WORKSPACE_REPO_HOME}/bin/rename_files.py'
 
 alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
+
+alias k-whatismy-ipaddress='browser https://whatismyipaddress.com/'
+alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
