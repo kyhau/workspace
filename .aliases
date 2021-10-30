@@ -37,6 +37,7 @@ alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls
 alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ports.md'
 alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
 alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
+alias ls-unpurged-packages='dpkg --list | grep ^rc'
 
 ################################################################################
 # k8s
@@ -58,6 +59,16 @@ alias k8s-kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deploymen
 # pip
 
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
+
+################################################################################
+# rm-
+
+alias rm-cache-cdk='du -sh ${HOME}/.cdk/cache/ && rm -rf ${HOME}/.cdk/cache/'
+alias rm-cache-homebrew='du -sh ${HOME}/.cache/Homebrew/ && rm -rf ${HOME}/.cache/Homebrew/'
+alias rm-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pip/'
+alias rm-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/distshare'
+alias rm-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
+alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ print $2; }')"
 
 ################################################################################
 # update
@@ -95,18 +106,12 @@ alias k-black='black --line-length=99'
 alias k-flake8='flake8 --ignore W605 --max-line-length 99'
 alias k-yamllint='yamllint -d "{extends: relaxed, rules: {document-start: disable, line-length: disable, truthy: disable}}" .'
 
-alias k-cleanup-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
+alias k-rm-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
 
 alias k-degreen='. ${WORKSPACE_REPO_HOME}/ubuntu/degreen.sh'
 
 alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
 alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
-
-alias k-delete-cache-cdk='du -sh ${HOME}/.cdk/cache/ && rm -rf ${HOME}/.cdk/cache/'
-alias k-delete-cache-homebrew='du -sh ${HOME}/.cache/Homebrew/ && rm -rf ${HOME}/.cache/Homebrew/'
-alias k-delete-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pip/'
-alias k-delete-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/distshare'
-alias k-delete-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
 
 alias k-is-ip-in-range='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
 
