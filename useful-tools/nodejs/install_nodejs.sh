@@ -6,7 +6,7 @@ VERSION=16.x
 # Remove current installations, if any
 #sudo apt-get --purge remove node
 
-curl -fsSL https://deb.nodesource.com/setup_${VERSION} | sudo -E bash -
+curl -fsSL -k https://deb.nodesource.com/setup_${VERSION} | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "node version: $(node --version)"
