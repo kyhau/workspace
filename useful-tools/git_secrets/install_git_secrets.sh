@@ -1,24 +1,26 @@
 #!/bin/bash
-# Set to fail script if any command fails.
+# https://github.com/awslabs/git-secrets
+
 set -e
 
-WORKSPACE_DIR="$HOME/workspaces/github"
+INSTALL_BIN=${HOME}/.local/bin
+INSTALL_SRC_FOLDER=${HOME}/.local
 
-pushd $WORKSPACE_DIR
+mkdir -p ${INSTALL_BIN}/
 
-[[ -d "git-secrets" ]] || git clone https://github.com/awslabs/git-secrets
+echo "INFO: Get latest source from awslabs/git-secrets into ${INSTALL_SRC_FOLDER}/git-secrets"
 
-pushd git-secrets
-sudo make install
+[[ -d "${INSTALL_SRC_FOLDER}/git-secrets" ]] || git clone https://github.com/awslabs/git-secrets.git ${INSTALL_SRC_FOLDER}/git-secrets
 
-popd
-popd
+cd ${INSTALL_SRC_FOLDER}/git-secrets
+git pull
+cd -
+
+ln -sfn ${INSTALL_SRC_FOLDER}/git-secrets/git-secrets ${INSTALL_BIN}/git-secrets
 
 # Add a configuration template if you want to add hooks to all repositories you initialize or clone in the future.
-git secrets --register-aws --global
+echo "INFO: RUN git secrets --register-aws --global"
 
-# Add hooks to all your local repositories.
-git secrets --install -f  ~/.git-templates/git-secrets
-git config --global init.templateDir ~/.git-templates/git-secrets
-
-echo "Exiting ${0}"
+echo "INFO: To add hooks to all your local repositories"
+echo "INFO: RUN git secrets --install -f  ~/.git-templates/git-secrets"
+echo "INFO: RUN git config --global init.templateDir ~/.git-templates/git-secrets"
