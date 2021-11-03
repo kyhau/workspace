@@ -1,18 +1,24 @@
 #!/bin/bash
-set -e
-
-# Repo: https://github.com/wg/wrk
+# wrk - a HTTP benchmarking tool
+# https://github.com/wg/wrk
 # Install: https://medium.com/@felipedutratine/intelligent-benchmark-with-wrk-163986c1587f
 
-sudo apt-get install build-essential libssl-dev git -y
-git clone https://github.com/wg/wrk.git wrk
+set -e
 
-cd wrk
-sudo make
-# move the executable to somewhere in your PATH, ex:
-sudo cp wrk /usr/local/bin
-cd ..
+mkdir -p ${HOME}/.local/bin
 
-# E.g. This runs a benchmark for 30 seconds, using 12 threads, and keeping 400 HTTP connections open.
-# wrk -t12 -c400 -d30s --latency http://127.0.0.1:8080/index.html
+# sudo apt-get install -y build-essential libssl-dev git
 
+echo "INFO: Get latest source from wg/wrk into ${HOME}/.local/wrk"
+
+[[ -d "${HOME}/.local/wrk" ]] || git clone https://github.com/wg/wrk.git ${HOME}/.local/wrk
+
+cd ${HOME}/.local/wrk
+git pull
+make
+cd -
+
+ln -sfn ${HOME}/.local/wrk/wrk ${HOME}/.local/bin/wrk
+
+echo "INFO: Checking version"
+echo "wrk version: $(wrk --version)"
