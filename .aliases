@@ -36,7 +36,6 @@ alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking
 alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ip-ranges.md'
 alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ports.md'
 alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
-alias ls-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
 alias ls-unpurged-packages='dpkg --list | grep ^rc'
 
 ################################################################################
@@ -59,6 +58,12 @@ alias k8s-kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deploymen
 # pip
 
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
+
+################################################################################
+# python
+
+alias python-zoneinfo-available-timezones='python -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
+#alias python-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
 
 ################################################################################
 # rm-
