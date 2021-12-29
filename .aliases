@@ -32,9 +32,9 @@ alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_gith
 ################################################################################
 # ls
 
-alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ip-protocols.md'
-alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ip-ranges.md'
-alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/useful-tools/networking/ls-common-ports.md'
+alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-protocols.txt'
+alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ranges.txt'
+alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
 alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
 alias ls-unpurged-packages='dpkg --list | grep ^rc'
 

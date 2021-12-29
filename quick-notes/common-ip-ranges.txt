@@ -1,4 +1,4 @@
-## Private and Automatic IP Address Ranges
+# Private and Automatic IP Address Ranges
 ```
 A      10.0.0.0    to 10.255.255.255  (10.0.0.0/8)
 B      172.16.0.0  to 172.31.255.255  (172.16.0.0/12)
@@ -6,14 +6,14 @@ C      192.168.0.0 to 192.168.255.255 (192.168.0.0/16)
 APIPA  169.254.0.0 to 169.254.255.255 (169.254.0.0/16)
 ```
 
-## RFC 1918 private (non-publicly routable) CIDR blocks / IP addresses
+# RFC 1918 private (non-publicly routable) CIDR blocks / IP addresses
 ```
 - 10.0.0.0/8         10.0.0.0 – 10.255.255.255
 - 172.16.0.0/12      172.16.0.0 – 172.31.255.255
 - 192.168.0.0/16     192.168.0.0 – 192.168.255.255
 ```
 
-## AWS: Secondary IPv4 CIDR blocks
+# AWS: Secondary IPv4 CIDR blocks
 ```
 - Can use: non-RFC 1918, or 100.64.0.0/10 (RFC 6598)
 - Cannot use: 198.19.0.0/16
@@ -25,9 +25,9 @@ APIPA  169.254.0.0 to 169.254.255.255 (169.254.0.0/16)
 - Primary Non-RFC 1918, 100.64.0.0/10
 ```
 
-## Calculate IP range
+# Calculate IP range
 ```
-E.g. 10.0.8.0/21 encompasses addresses from 10.0.8.0 to 10.0.15.255. 
+E.g. 10.0.8.0/21 encompasses addresses from 10.0.8.0 to 10.0.15.255.
 Calculation: (Source)
 10.0.8.0 in binary:    00000010 00000000 00001000 00000000
 Network mask (21):     11111111 11111111 11111000 00000000 (twenty-one 1s)
