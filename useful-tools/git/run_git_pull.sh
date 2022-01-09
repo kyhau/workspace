@@ -12,4 +12,5 @@ for dir in $(find . -name .git -type d -prune); do
   run_git_commands
   cd - 2>&1 >/dev/null
   echo "----------------------------------------"
+  sleep 1
 done
