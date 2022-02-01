@@ -30,6 +30,13 @@ alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_
 alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
 
 ################################################################################
+# go
+
+alias go-get-aws='go get github.com/aws/aws-sdk-go-v2 && go get github.com/aws/aws-sdk-go-v2'
+alias go-mod-init='go mod init'
+alias go-run='go run'
+
+################################################################################
 # ls
 
 alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-protocols.txt'
