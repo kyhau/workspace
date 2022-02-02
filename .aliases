@@ -32,6 +32,7 @@ alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_gith
 ################################################################################
 # go
 
+alias go-build='go build'
 alias go-get-aws='go get github.com/aws/aws-sdk-go-v2 && go get github.com/aws/aws-sdk-go-v2'
 alias go-mod-init='go mod init'
 alias go-run='go run'
@@ -87,6 +88,8 @@ alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ pri
 
 alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
 alias update-git-secrets='. ${WORKSPACE_REPO_HOME}/useful-tools/git_secrets/install_git_secrets.sh'
+
+alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
 
 alias update-k8s-helm='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_helm.sh'
 alias update-k8s-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'

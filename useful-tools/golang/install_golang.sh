@@ -1,16 +1,26 @@
 #!/bin/bash
 
-# https://github.com/golang/go/wiki/Ubuntu
+# Approach 1: https://github.com/golang/go/wiki/Ubuntu
+#sudo add-apt-repository -y ppa:longsleep/golang-backports
+#sudo apt update
+#sudo apt-get install -y golang-go
+#sudo apt -y autoremove
 
-sudo apt update && sudo apt-get install -y \
-  software-properties-common
+# Approach 2: https://go.dev/doc/install
 
-# If have issue
-# edit first line of /usr/bin/add-apt-repository to use #!/usr/bin/python3.6
+VERSION="1.17.6"
+DOWNLOAD_LINK="https://go.dev/dl/go${VERSION}.linux-amd64.tar.gz"
 
-sudo add-apt-repository -y ppa:longsleep/golang-backports
+wget ${DOWNLOAD_LINK}
 
-sudo apt update && sudo apt-get install -y golang-go
-sudo apt -y autoremove
+mkdir -p ${HOME}/.local
+rm -rf ${HOME}/.local/go
+tar -C ${HOME}/.local -xzf go${VERSION}.linux-amd64.tar.gz
+rm go${VERSION}.linux-amd64.tar.gz
+
+ln -sfn ${HOME}/.local/go/bin/go ${HOME}/.local/bin/go
+ln -sfn ${HOME}/.local/go/bin/gofmt ${HOME}/.local/bin/gofmt
+
+echo "INFO: go version: $(go version)"
 
 go run test1.go

@@ -7,4 +7,4 @@
 #sudo npm uninstall -g npx
 
 sudo npm install -g npx --force
-echo "npx version: $(npx --version)"
+echo "INFO: npx version: $(npx --version)"

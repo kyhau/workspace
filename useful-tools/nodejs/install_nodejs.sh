@@ -9,5 +9,5 @@ VERSION=16.x
 curl -fsSL -k https://deb.nodesource.com/setup_${VERSION} | sudo -E bash -
 sudo apt-get install -y nodejs
 
-echo "node version: $(node --version)"
-echo "npm version: $(npm --version)"
+echo "INFO: node version: $(node --version)"
+echo "INFO: npm version: $(npm --version)"
