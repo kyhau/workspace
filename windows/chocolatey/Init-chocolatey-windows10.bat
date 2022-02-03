@@ -15,7 +15,8 @@ choco install -y ^
   docker-for-windows ^
   firefox ^
   git ^
-  gitkraken ^
+  github-desktop ^
+  golang ^
   itunes ^
   jq ^
   nano ^
@@ -23,8 +24,7 @@ choco install -y ^
   notepadplusplus ^
   protonvpn ^
   putty ^
-  pycharm-community ^
-  python3 --version 3.9 -override --installarguments "'/quiet InstallAllUsers=1 TargetDir=c:\Python39'" ^
+  python3 --version 3.10 -override --installarguments "'/quiet InstallAllUsers=1 TargetDir=c:\Python310'" ^
   signal ^
   sysinternals --params "/InstallDir:C:\Sysinternals" ^
   vscode-insiders.install ^
@@ -36,8 +36,7 @@ choco install -y ^
 ::  dependencywalker ^
 ::  everything ^
 ::  gh ^
-::  github-desktop ^
-::  golang ^
+::  gitkraken ^
 ::  googlechrome ^
 ::  graphviz ^
 ::  jre8 ^
@@ -49,6 +48,7 @@ choco install -y ^
 ::  openvpn --params="'/SELECT_OPENVPNGUI=1'" ^
 ::  pgadmin4 ^
 ::  postman ^
+::  pycharm-community ^
 ::  qgis ^
 ::  rdcman ^
 ::  saml2aws ^

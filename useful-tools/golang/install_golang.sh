@@ -8,7 +8,9 @@
 
 # Approach 2: https://go.dev/doc/install
 
-VERSION="1.17.6"
+# Read page, find the first occurrence of /golang/go/releases/tag/go not containing "beta"
+# e.g. <a href="/golang/go/releases/tag/go1.17.6">
+VERSION=$(curl --silent "https://github.com/golang/go/tags" --insecure -s | grep "/golang/go/releases/tag/go" | grep -v beta | head -1 | awk -F '"' '{print $2}' | cut -c 27-)
 DOWNLOAD_LINK="https://go.dev/dl/go${VERSION}.linux-amd64.tar.gz"
 
 wget ${DOWNLOAD_LINK}
@@ -21,6 +23,6 @@ rm go${VERSION}.linux-amd64.tar.gz
 ln -sfn ${HOME}/.local/go/bin/go ${HOME}/.local/bin/go
 ln -sfn ${HOME}/.local/go/bin/gofmt ${HOME}/.local/bin/gofmt
 
-echo "INFO: go version: $(go version)"
+echo "INFO: $(go version)"
 
-go run test1.go
+# go run test1.go
