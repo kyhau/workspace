@@ -33,9 +33,13 @@ alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_gith
 # go
 
 alias go-build='go build'
+alias go-clean-modcache='go clean -modcache'
 alias go-get-aws='go get github.com/aws/aws-sdk-go-v2 && go get github.com/aws/aws-sdk-go-v2'
+alias go-install='go install'
 alias go-mod-init='go mod init'
+alias go-mod-tidy='go mod tidy'
 alias go-run='go run'
+alias go-test='go test -v'
 
 ################################################################################
 # ls
