@@ -14,7 +14,7 @@ VERSION=$(curl "https://github.com/golang/go/tags" --insecure -s | grep "/golang
 GO_FILENAME=go${VERSION}.linux-amd64.tar.gz
 DOWNLOAD_LINK="https://go.dev/dl/${GO_FILENAME}"
 
-wget ${DOWNLOAD_LINK}
+wget -q ${DOWNLOAD_LINK} -O ${GO_FILENAME}
 
 mkdir -p ${HOME}/.local
 rm -rf ${HOME}/.local/go
