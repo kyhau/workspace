@@ -10,15 +10,16 @@
 
 # Read page, find the first occurrence of /golang/go/releases/tag/go not containing "beta"
 # e.g. <a href="/golang/go/releases/tag/go1.17.6">
-VERSION=$(curl --silent "https://github.com/golang/go/tags" --insecure -s | grep "/golang/go/releases/tag/go" | grep -v beta | head -1 | awk -F '"' '{print $2}' | cut -c 27-)
-DOWNLOAD_LINK="https://go.dev/dl/go${VERSION}.linux-amd64.tar.gz"
+VERSION=$(curl "https://github.com/golang/go/tags" --insecure -s | grep "/golang/go/releases/tag/go" | grep -v beta | head -1 | awk -F '"' '{print $2}' | cut -c 27-)
+GO_FILENAME=go${VERSION}.linux-amd64.tar.gz
+DOWNLOAD_LINK="https://go.dev/dl/${GO_FILENAME}"
 
-wget ${DOWNLOAD_LINK}
+curl ${DOWNLOAD_LINK} --output ${GO_FILENAME} --insecure -s
 
 mkdir -p ${HOME}/.local
 rm -rf ${HOME}/.local/go
-tar -C ${HOME}/.local -xzf go${VERSION}.linux-amd64.tar.gz
-rm go${VERSION}.linux-amd64.tar.gz
+tar -C ${HOME}/.local -xzf ${GO_FILENAME}
+rm ${GO_FILENAME}
 
 ln -sfn ${HOME}/.local/go/bin/go ${HOME}/.local/bin/go
 ln -sfn ${HOME}/.local/go/bin/gofmt ${HOME}/.local/bin/gofmt
