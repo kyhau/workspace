@@ -91,7 +91,6 @@ alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ pri
 # update
 
 alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
-alias update-git-secrets='. ${WORKSPACE_REPO_HOME}/useful-tools/git_secrets/install_git_secrets.sh'
 
 alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
 
