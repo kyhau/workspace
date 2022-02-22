@@ -16,18 +16,20 @@ alias docker-rm-images-untagged='docker images prune'
 ################################################################################
 # Git
 
+alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-clean='git checkout -- .'
+alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
 alias git-config-list='git config --list'
 alias git-config-show-user='git config user.name && git config user.email'
-alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
 alias git-commit='git commit -m'
 alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin'
 alias git-ls-untracked='git ls-files --others --exclude-standard'
-alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
-alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-pull-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
 alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
 alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
+alias git-secrets-list='git secrets --list'
+alias git-secrets-scan='git secrets --scan'
+alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
 
 ################################################################################
 # go
