@@ -21,7 +21,7 @@ case "$OS" in
   mingw*) OS='windows';;
 esac
 
-TAG=$(curl -Ls https://github.com/helm/helm/releases | grep 'href="/helm/helm/releases/tag/v3.[0-9]*.[0-9]*\"' | grep -v no-underline | head -n 1 | cut -d '"' -f 2 | awk '{n=split($NF,a,"/");print a[n]}' | awk 'a !~ $0{print}; {a=$0}')
+TAG=$(curl -Ls https://github.com/helm/helm/releases | grep 'href="/helm/helm/releases/tag/v3.[0-9]*.[0-9]*\"' | grep -v no-underline | head -n 1 | cut -d '"' -f 6 | awk '{n=split($NF,a,"/");print a[n]}' | awk 'a !~ $0{print}; {a=$0}')
 
 HELM_DIST="helm-$TAG-$OS-$ARCH.tar.gz"
 DOWNLOAD_URL="https://get.helm.sh/$HELM_DIST"
