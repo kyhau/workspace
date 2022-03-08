@@ -29,6 +29,9 @@ choco install -y ^
   sysinternals --params "/InstallDir:C:\Sysinternals" ^
   vscode-insiders.install ^
   winrar
+
+::  kubernetes-helm ^
+
 ::  activepresenter ^
 ::  androidstudio ^
 ::  cloudformation-guard --version=1.0.0 ^
