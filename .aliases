@@ -147,6 +147,8 @@ alias k-cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/bl
 
 alias dos2unix-r='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" -print0 | xargs -0 dos2unix'
 
+alias pem2crt='_func(){ openssl x509 -inform PEM -in "$1" -out $(basename "${1%.*}.crt"); }; _func'
+
 alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host registry.yarnpkg.com | awk '"'"'/has address/ { print $4 }'"'"' | head -n1) ; echo "${registryYarnpkgComIpAddress} registry.yarnpkg.com" | sudo tee -a /etc/hosts'
 
 alias k-black='black --line-length=99'
