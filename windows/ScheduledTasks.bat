@@ -20,3 +20,6 @@ python C:\Workspaces\github\workspace\useful-tools\firefox\backup_multi_containe
 pushd C:\Workspaces\github
 C:\Workspaces\github\workspace\git\run_git_pull.bat
 popd
+
+Get-ScheduledTask -TaskPath "\K\"
+Disable-ScheduledTask -TaskPath "\K\" -TaskName "pip-upgrade"
