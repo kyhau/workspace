@@ -102,12 +102,11 @@ alias update-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops
 alias update-kubectx-and-kubens='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
 alias update-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
 alias update-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_minikube.sh'
+alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_skaffold.sh'
 
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 
 alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
-
-alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/install_skaffold.sh'
 
 alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 
