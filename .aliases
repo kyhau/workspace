@@ -7,14 +7,29 @@ alias browser='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 alias firefox='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 
 ################################################################################
-# Docker
+# docker
 
 alias docker-rm-all-unused-containers-and-images='docker system prune -a'
 alias docker-rm-containers-exited='docker rm $(docker ps -q -f status=exited)'
 alias docker-rm-images-untagged='docker images prune'
 
 ################################################################################
-# Git
+# helm
+
+alias helm-install='helm install'
+alias helm-ls='helm ls'
+alias helm-package='helm package'
+alias helm-repo-update='helm repo update'
+alias helm-rollback='helm rollback'
+alias helm-search-hub='helm search hub'
+alias helm-search-repo='helm search repo'
+alias helm-show-all='helm show all'
+alias helm-status='helm status'
+alias helm-uninstall='helm uninstall'
+alias helm-upgrade='helm upgrade'
+
+################################################################################
+# git
 
 alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-clean='git checkout -- .'
@@ -53,20 +68,20 @@ alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-unit
 alias ls-unpurged-packages='dpkg --list | grep ^rc'
 
 ################################################################################
-# k8s
-alias k8s-kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
-alias k8s-kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl-describe-secret-eks-admin.sh'
-alias k8s-kubectl-get-deployment='kubectl get deployment'
-alias k8s-kubectl-get-deployment-all-namespaces='kubectl get deployment --all-namespaces'
-alias k8s-kubectl-get-events='kubectl get events'
-alias k8s-kubectl-get-ingress='kubectl get ingress'
-alias k8s-kubectl-get-namespace='kubectl get namespace'
-alias k8s-kubectl-get-pods='kubectl get pods'
-alias k8s-kubectl-get-pods-all-namespaces='kubectl get pods --all-namespaces'
-alias k8s-kubectl-get-svc='kubectl get svc'
-alias k8s-kubectl-get-svc-all-namespaces='kubectl get svc --all-namespaces'
-alias k8s-kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller'
-alias k8s-kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
+# kubectl
+alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
+alias kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl-describe-secret-eks-admin.sh'
+alias kubectl-get-deployment='kubectl get deployment'
+alias kubectl-get-deployment-all-namespaces='kubectl get deployment --all-namespaces'
+alias kubectl-get-events='kubectl get events'
+alias kubectl-get-ingress='kubectl get ingress'
+alias kubectl-get-namespace='kubectl get namespace'
+alias kubectl-get-pods='kubectl get pods'
+alias kubectl-get-pods-all-namespaces='kubectl get pods --all-namespaces'
+alias kubectl-get-svc='kubectl get svc'
+alias kubectl-get-svc-all-namespaces='kubectl get svc --all-namespaces'
+alias kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller'
+alias kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
 
 ################################################################################
 # pip
@@ -78,6 +93,16 @@ alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgr
 
 alias python-zoneinfo-available-timezones='python -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
 #alias python-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
+
+################################################################################
+# skaffold
+
+alias skaffold-apply='skaffold apply'
+alias skaffold-build='skaffold build'
+alias skaffold-deploy='skaffold deploy'
+alias skaffold-dev='skaffold dev'
+alias skaffold-render='skaffold render'
+alias skaffold-run='skaffold run'
 
 ################################################################################
 # rm-
