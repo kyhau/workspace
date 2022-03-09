@@ -3,6 +3,7 @@
 Quick setup for my development environment
 
 - [Useful tools for development](./useful-tools/)
+- [Useful aliases](./.aliases)
 - [Windows](#windows)
    - [WSL Ubuntu on Windows 10](#ubuntu-on-windows-10)
    - [Docker Desktop for Windows](#docker-desktop-for-windows)
