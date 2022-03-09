@@ -11,12 +11,12 @@ Quick setup for my development environment
 ---
 ## Windows
 
-Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat).
+- Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat)
 
 ### Ubuntu on Windows 10
 
-- [Install Windows Subsystem for Linux (WSL) on Windows 10](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide).
-- Git clone this repo to `/mnt/c/Workspaces/github/workspace`.
+- [Install Windows Subsystem for Linux (WSL) on Windows 10](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide)
+- Git clone this repo to `/mnt/c/Workspaces/github/workspace` (note: will change `/mnt/c` to `/c` in a later step)
 - Copy or create symlink from personal `.bashrc` to `$HOME/.bashrc`
 - Run [init_setup.sh](ubuntu/setup/init_setup.sh), which does
     - Set up `chmod/chown` support
@@ -46,7 +46,6 @@ Useful notes
 
 - For MacBook Pro Windows user, see
   [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?).
-- https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
 - For WSL 2, unset `DOCKER_HOST`, see https://stackoverflow.com/questions/60708229/wsl2-cannot-connect-to-the-docker-daemon
 - For WSL 1, export `DOCKER_HOST=tcp://localhost:2375`
 - For WSL 1, within the Hyper-V VM, the `C:` is mounted to `/c` instead of `/mnt/c`.
@@ -57,6 +56,7 @@ Useful notes
     - See https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
     - See https://github.com/microsoft/WSL/issues/1854#issuecomment-291845122
     - See https://github.com/aws/aws-sam-cli/issues/208
+- Volume mounts in Windows does not work? https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
 - docker-compose
    - To install `docker-compose`: `pip install docker-compose`
    - If see error `docker.credentials.errors.InitializationError: docker-credential-desktop.exe not installed or not available in PATH`
