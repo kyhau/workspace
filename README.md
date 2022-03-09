@@ -1,7 +1,14 @@
 # Workspace
 
-Quick development environment setup
+Quick setup for my development environment
 
+- [Useful tools for development](./useful-tools/)
+- [Windows](#windows)
+   - [WSL Ubuntu on Windows 10](#ubuntu-on-windows-10)
+   - [Docker Desktop for Windows](#docker-desktop-for-windows)
+   - [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
+
+---
 ## Windows
 
 Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat).
@@ -35,14 +42,14 @@ Useful notes
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH%
     ```
 
-### Docker-for-Windows
+### Docker Desktop for Windows
 
 - For MacBook Pro Windows user, see
   [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?).
 - https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
 - For WSL 2, unset `DOCKER_HOST`, see https://stackoverflow.com/questions/60708229/wsl2-cannot-connect-to-the-docker-daemon
 - For WSL 1, export `DOCKER_HOST=tcp://localhost:2375`
-- For WSL 1, within the Hyper-V VM, the `C:` is mounted to `/c` instead of `/mnt/c`. 
+- For WSL 1, within the Hyper-V VM, the `C:` is mounted to `/c` instead of `/mnt/c`.
     ```bash
     $ sudo mkdir /c
     $ sudo mount --bind /mnt/c /c
