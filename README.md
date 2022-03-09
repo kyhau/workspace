@@ -3,6 +3,7 @@
 Quick setup for my development environment
 
 - [Useful tools for development](./useful-tools/)
+- My tools/scripts for building with AWS - [kyhau/aws-tools](https://github.com/kyhau/aws-tools)
 - [Useful aliases](./.aliases)
 - [Windows](#windows)
    - [WSL Ubuntu on Windows 10](#ubuntu-on-windows-10)
