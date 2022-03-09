@@ -1,4 +1,6 @@
-Cross-Cluster Replication
+
+## Cross-Cluster Replication
+
 - [Kafka MirrorMaker 2.0 (MM2)](https://github.com/apache/kafka/tree/trunk/connect/mirror)
 - [Brooklin](https://github.com/linkedin/Brooklin/) from Linkedin
 - [Mirus](https://github.com/salesforce/mirus) from Salesforce
