@@ -11,15 +11,12 @@
 
 choco install -y ^
   awscli ^
-  awscli-session-manager ^
-  docker-for-windows ^
+  docker-desktop ^
   firefox ^
   git ^
   github-desktop ^
   golang ^
-  itunes ^
   jq ^
-  nano ^
   nodejs ^
   notepadplusplus ^
   protonvpn ^
@@ -34,6 +31,7 @@ choco install -y ^
 
 ::  activepresenter ^
 ::  androidstudio ^
+::  awscli-session-manager ^
 ::  cloudformation-guard --version=1.0.0 ^
 ::  cyberduck ^
 ::  dependencywalker ^
@@ -42,10 +40,12 @@ choco install -y ^
 ::  gitkraken ^
 ::  googlechrome ^
 ::  graphviz ^
+::  itunes ^
 ::  jre8 ^
 ::  kdiff3 ^
 ::  keepassxc ^
 ::  lazydocker ^
+::  nano ^
 ::  nordvpn ^
 ::  nosql-workbench ^
 ::  openvpn --params="'/SELECT_OPENVPNGUI=1'" ^
@@ -58,6 +58,7 @@ choco install -y ^
 ::  slack ^
 ::  sourcetree ^
 ::  superputty ^
+::  tor-browser ^
 ::  windirstat ^
 
 :: Install wireshark and winpcap (winpcap is the capture library required for wireshark)
