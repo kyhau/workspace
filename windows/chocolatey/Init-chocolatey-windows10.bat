@@ -33,6 +33,7 @@ choco install -y ^
 ::  activepresenter ^
 ::  androidstudio ^
 ::  awscli-session-manager ^
+::  aws-iam-authenticator ^
 ::  cloudformation-guard --version=1.0.0 ^
 ::  cyberduck ^
 ::  dependencywalker ^
