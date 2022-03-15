@@ -17,6 +17,8 @@ Jump to
     - A command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
 - [minikube](https://github.com/kubernetes/minikube)
     - minikube implements a local Kubernetes cluster on macOS, Linux, and Windows.
+- [k8slens.dev](https://k8slens.dev/)
+    - Lens - The Kubernetes IDE, provides the full situational awareness for everything that runs in Kubernetes.
 
 
 ---
@@ -82,7 +84,6 @@ Jump to
         - Querying and visualizing resource metrics from Kubernetes
         - Gathering cluster-level status information
         - Viewing logs from Kubernetes pods
-
 
 ---
 ## Networking

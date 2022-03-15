@@ -27,6 +27,7 @@ choco install -y ^
   vscode-insiders.install ^
   winrar
 
+::  lens ^
 ::  kubernetes-helm ^
 
 ::  activepresenter ^
