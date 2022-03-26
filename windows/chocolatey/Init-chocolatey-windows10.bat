@@ -27,14 +27,22 @@ choco install -y ^
   vscode-insiders.install ^
   winrar
 
-::  lens ^
-::  kubernetes-helm ^
-
-::  activepresenter ^
-::  androidstudio ^
+:: --- aws
 ::  awscli-session-manager ^
 ::  aws-iam-authenticator ^
 ::  cloudformation-guard --version=1.0.0 ^
+::  nosql-workbench ^
+::  saml2aws ^
+
+:: --- k8s
+::  lens ^
+::  kubernetes-helm ^
+
+::  --- Altair GraphQL Client
+::  altair-graphql ^
+
+::  activepresenter ^
+::  androidstudio ^
 ::  cyberduck ^
 ::  dependencywalker ^
 ::  everything ^
@@ -49,14 +57,12 @@ choco install -y ^
 ::  lazydocker ^
 ::  nano ^
 ::  nordvpn ^
-::  nosql-workbench ^
 ::  openvpn --params="'/SELECT_OPENVPNGUI=1'" ^
 ::  pgadmin4 ^
 ::  postman ^
 ::  pycharm-community ^
 ::  qgis ^
 ::  rdcman ^
-::  saml2aws ^
 ::  slack ^
 ::  sourcetree ^
 ::  superputty ^
