@@ -9,7 +9,7 @@ sudo apt install -y python3.10
 
 # Install pip via PyPA's recommended way rather than the outdated apt repos
 # See: https://pip.pypa.io/en/stable/installing/
-sudo apt install -y python3.10-venv python3-pip
+sudo apt install -y python3.10-dev python3.10-venv python3-pip
 
 curl https://bootstrap.pypa.io/get-pip.py --insecure -s -o ./get-pip.py && python3.10 get-pip.py && rm get-pip.py
 
@@ -28,6 +28,7 @@ sudo rm python && sudo ln -s python3.10 python
 sudo rm pydoc3 && sudo ln -s pydoc3.10 pydoc3
 sudo rm pygettext3 && sudo ln -s pygettext3.10 pygettext3
 sudo ln -s x86_64-linux-gnu-python3.10-config python3.10-config
+sudo rm python3-config && sudo ln -s python3.10-config python3-config
 
 cd -
 
