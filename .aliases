@@ -126,6 +126,9 @@ alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
 
 alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
 
+# docker related
+alias update-dive='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_dive.sh'
+
 # k8s related
 alias update-helm='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_helm.sh'
 alias update-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
