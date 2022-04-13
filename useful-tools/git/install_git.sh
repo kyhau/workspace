@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 git --version
 sudo add-apt-repository ppa:git-core/ppa -y
