@@ -122,6 +122,10 @@ alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ pri
 ################################################################################
 # update
 
+alias update-git='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git.sh'
+
+# github related
+alias update-act='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_act.sh'
 alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
 
 alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
@@ -139,8 +143,11 @@ alias update-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_
 alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_skaffold.sh'
 
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
+alias update-typescript='. ${WORKSPACE_REPO_HOME}/useful-tools/typescript/install_typescript.sh'
 
 alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
+
+alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
 
 alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 

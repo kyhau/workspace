@@ -1,8 +1,14 @@
 #!/bin/bash
 # Install https://github.com/serverless/serverless
 
+echo "INFO: serverless version"
+serverless --version
+
 sudo npm config set registry http://registry.npmjs.org/
 
 # sudo npm install -g npm
 
-npm install -g serverless
+sudo npm install -g serverless
+
+echo "INFO: serverless version"
+serverless --version

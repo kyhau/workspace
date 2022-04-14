@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Approach 1: https://github.com/golang/go/wiki/Ubuntu
 #sudo add-apt-repository -y ppa:longsleep/golang-backports
@@ -7,6 +8,12 @@
 #sudo apt -y autoremove
 
 # Approach 2: https://go.dev/doc/install
+
+if [ -x "$(command -v go)" ]; then
+  echo "INFO: $(go version)"
+else
+  echo "INFO: go not installed"
+fi
 
 # Read page, find the first occurrence of /golang/go/releases/tag/go not containing "beta"
 # e.g. <a href="/golang/go/releases/tag/go1.17.6">

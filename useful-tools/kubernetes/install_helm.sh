@@ -21,6 +21,12 @@ case "$OS" in
   mingw*) OS='windows';;
 esac
 
+if [ -x "$(command -v helm)" ]; then
+  echo "INFO: helm version: $(helm version)"
+else
+  echo "INFO: helm not installed"
+fi
+
 TAG=$(curl -Ls https://github.com/helm/helm/releases | grep 'href="/helm/helm/releases/tag/v3.[0-9]*.[0-9]*\"' | grep -v no-underline | head -n 1 | cut -d '"' -f 6 | awk '{n=split($NF,a,"/");print a[n]}' | awk 'a !~ $0{print}; {a=$0}')
 
 HELM_DIST="helm-$TAG-$OS-$ARCH.tar.gz"
@@ -36,5 +42,4 @@ cp tmp/$OS-$ARCH/helm ${HOME}/.local/bin/
 rm -rf tmp
 rm ${HELM_DIST}
 
-echo "INFO: Checking version"
-echo "helm version: $(helm version)"
+echo "INFO: helm version: $(helm version)"

@@ -2,6 +2,12 @@
 # See also https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 set -e
 
+if [ -x "$(command -v gh)" ]; then
+  echo "INFO: $(gh --version)"
+else
+  echo "INFO: gh not installed"
+fi
+
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
@@ -16,5 +22,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 #sudo python3.8 -m pip install --ignore-installed PyGObject
 
 #sudo apt-add-repository https://cli.github.com/packages
+
+echo "INFO: Updating gh"
 sudo apt update
 sudo apt install gh
+
+echo "INFO: $(gh --version)"
