@@ -7,10 +7,14 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 
 sudo apt install -y python3.10
 
+sudo apt install -y \
+  python3.10-dev \
+  python3.10-minimal \
+  python3.10-venv \
+  python3-pip
+
 # Install pip via PyPA's recommended way rather than the outdated apt repos
 # See: https://pip.pypa.io/en/stable/installing/
-sudo apt install -y python3.10-dev python3.10-venv python3-pip
-
 curl https://bootstrap.pypa.io/get-pip.py --insecure -s -o ./get-pip.py && python3.10 get-pip.py && rm get-pip.py
 
 # Upgrade pip and install virtualenv

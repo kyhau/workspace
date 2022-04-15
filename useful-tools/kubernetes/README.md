@@ -84,6 +84,9 @@ Jump to
         - Querying and visualizing resource metrics from Kubernetes
         - Gathering cluster-level status information
         - Viewing logs from Kubernetes pods
+- Netdata
+    - https://github.com/netdata/helmchart
+
 
 ---
 ## Networking

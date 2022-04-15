@@ -9,9 +9,10 @@ alias firefox='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 ################################################################################
 # docker
 
-alias docker-rm-all-unused-containers-and-images='docker system prune -a'
-alias docker-rm-containers-exited='docker rm $(docker ps -q -f status=exited)'
-alias docker-rm-images-untagged='docker images prune'
+alias docker-images-prune='docker images prune'
+alias docker-ps-q-f-status-exited-'docker ps -q -f status=exited'
+alias docker-rm-ps-q-f-status-exited='docker rm $(docker ps -q -f status=exited)'
+alias docker-system-prune-a='docker system prune -a'
 
 ################################################################################
 # helm
@@ -32,7 +33,7 @@ alias helm-upgrade='helm upgrade'
 # git
 
 alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
-alias git-clean='git checkout -- .'
+alias git-checkout--='git checkout -- .'
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
 alias git-config-list='git config --list'
 alias git-config-show-user='git config user.name && git config user.email'
