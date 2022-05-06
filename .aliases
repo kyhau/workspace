@@ -61,6 +61,7 @@ alias go-test='go test -v'
 
 ################################################################################
 # kubectl
+alias kubectl-describe-configmap-n-kube-system-aws-auth='kubectl describe configmap -n kube-system aws-auth'
 alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
 alias kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl-describe-secret-eks-admin.sh'
 alias kubectl-get-clusterrolebindings='kubectl get clusterrolebindings'
