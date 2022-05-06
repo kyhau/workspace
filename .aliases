@@ -60,15 +60,6 @@ alias go-run='go run'
 alias go-test='go test -v'
 
 ################################################################################
-# ls
-
-alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-protocols.txt'
-alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ranges.txt'
-alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
-alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
-alias ls-unpurged-packages='dpkg --list | grep ^rc'
-
-################################################################################
 # kubectl
 alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
 alias kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl-describe-secret-eks-admin.sh'
@@ -77,6 +68,7 @@ alias kubectl-get-clusterroles='kubectl get clusterroles'
 alias kubectl-get-deployment='kubectl get deployment'
 alias kubectl-get-deployment-a='kubectl get deployment -A'
 alias kubectl-get-events='kubectl get events'
+alias kubectl-get-endpoints-a='kubectl get endpoints -A'
 alias kubectl-get-ingress='kubectl get ingress'
 alias kubectl-get-ingress-a='kubectl get ingress -A'
 alias kubectl-get-namespace='kubectl get namespace'
@@ -89,6 +81,15 @@ alias kubectl-get-svc='kubectl get svc'
 alias kubectl-get-svc-a='kubectl get svc -A'
 alias kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller'
 alias kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
+
+################################################################################
+# ls
+
+alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-protocols.txt'
+alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ranges.txt'
+alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
+alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
+alias ls-unpurged-packages='dpkg --list | grep ^rc'
 
 ################################################################################
 # pip
