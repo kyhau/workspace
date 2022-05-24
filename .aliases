@@ -19,6 +19,8 @@ alias docker-system-prune-a='docker system prune -a'
 
 alias helm-install='helm install'
 alias helm-ls='helm ls'
+alias helm-ls-pending-='helm ls -a -A | grep -i pending'
+# helm uninstall kube-apps -n kube-apps
 alias helm-package='helm package'
 alias helm-repo-update='helm repo update'
 alias helm-rollback='helm rollback'
