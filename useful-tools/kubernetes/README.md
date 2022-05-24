@@ -66,6 +66,8 @@ Jump to
     - Kubernetes e2e testing on a well-known Bash test framework.
 - [KubeLibrary](https://github.com/devopsspiral/KubeLibrary)
     - RobotFramework library to test Kubernetes clusters.
+- Postman
+    - [Making calls to the Kube API through Postman](https://swiber.dev/automating-kubernetes-deployments-with-postman#the-big-reveal)
 
 ---
 ## MLA and Dashboards
