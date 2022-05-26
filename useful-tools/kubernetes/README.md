@@ -5,6 +5,7 @@ Jump to
 - [IaC and CICD](#iac-and-cicd)
 - [Infrastructure testing](#infrastructure-testing)
 - [MLA and Dashboards](#mla-and-dashboards)
+- [Access Control and Security](#access-control-and-security)
 - [Networking](#networking)
 - [Useful diagrams](#useful-diagrams)
 
@@ -88,6 +89,13 @@ Jump to
         - Viewing logs from Kubernetes pods
 - Netdata
     - https://github.com/netdata/helmchart
+
+
+---
+## Access Control and Security
+
+- [rbac-police](https://github.com/PaloAltoNetworks/rbac-police) - Retrieve the RBAC permissions of serviceAccounts, pods and nodes in a Kubernetes cluster, and evaluate them using policies written in Rego.
+- [Kubernetes Privilege Escalation: Excessive Permissions in Popular Platforms](https://www.paloaltonetworks.com/apps/pan/public/downloadResource?pagePath=/content/pan/en_US/resources/whitepapers/kubernetes-privilege-escalation-excessive-permissions-in-popular-platforms) White Paper,  Palo Alto Network, 2022
 
 
 ---
