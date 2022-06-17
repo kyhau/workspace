@@ -119,6 +119,12 @@ alias skaffold-render='skaffold render'
 alias skaffold-run='skaffold run'
 
 ################################################################################
+# yarn
+
+# see https://thomaschaplin.medium.com/how-to-fix-yarn-audit-issues-ff5840f712d1
+alias yarn-audit-fix='npm i --package-lock-only && rm yarn.lock && npm audit fix && yarn import && rm package-lock.json'
+
+################################################################################
 # rm-
 
 alias rm-cache-cdk='du -sh ${HOME}/.cdk/cache/ && rm -rf ${HOME}/.cdk/cache/'
