@@ -6,7 +6,7 @@ Quick setup for my development environment
 - My tools/scripts for building with AWS - [kyhau/aws-tools](https://github.com/kyhau/aws-tools)
 - [Useful aliases](./.aliases)
 - [Windows](#windows)
-   - [WSL Ubuntu on Windows 10](#ubuntu-on-windows-10-or-windows-11)
+   - [WSL Ubuntu on Windows 10 or Windows 11](#ubuntu-on-windows-10-or-windows-11)
    - [Docker Desktop for Windows](#docker-desktop-for-windows)
    - [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
 
