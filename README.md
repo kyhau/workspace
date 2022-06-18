@@ -15,7 +15,7 @@ Quick setup for my development environment
 
 - Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat)
 
-### Ubuntu on Windows 10
+### Ubuntu on Windows 10 or Windows 11
 
 - [Install Windows Subsystem for Linux (WSL) on Windows 10](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide)
 - Git clone this repo to `/mnt/c/Workspaces/github/workspace` (note: will change `/mnt/c` to `/c` in a later step)
