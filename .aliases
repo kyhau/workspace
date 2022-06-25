@@ -32,7 +32,7 @@ alias helm-uninstall='helm uninstall'
 alias helm-upgrade='helm upgrade'
 
 ################################################################################
-# git
+# git / gh
 
 alias git-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-checkout--='git checkout -- .'
@@ -48,6 +48,13 @@ alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_gith
 alias git-secrets-list='git secrets --list'
 alias git-secrets-scan='git secrets --scan'
 alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
+
+alias gh-auth-login='gh auth login'
+alias gh-pr-create='gh pr create --assignee @me'
+alias gh-pr-merge-squash='gh pr merge --squash'
+
+alias git-auto-branch='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else git branch $1 && git checkout $1; fi; }; _'
+alias git-auto-pr-merge='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else gh-pr-create && gh-pr-merge-squash && git checkout main && git-pull-all && git branch -D "$1"; fi; }; _'
 
 ################################################################################
 # go
