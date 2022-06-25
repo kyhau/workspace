@@ -5,17 +5,29 @@ Quick setup for my development environment
 - [Useful tools for development](./useful-tools/)
 - My tools/scripts for building with AWS - [kyhau/aws-tools](https://github.com/kyhau/aws-tools)
 - [Useful aliases](./.aliases)
+- [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
 - [Windows](#windows)
-   - [WSL Ubuntu on Windows 10 or Windows 11](#ubuntu-on-windows-10-or-windows-11)
-   - [Docker Desktop for Windows](#docker-desktop-for-windows)
-   - [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
+- [WSL Ubuntu on Windows 10 or Windows 11](#wsl-ubuntu-on-windows-10-or-windows-11)
+- [Docker Desktop for Windows](#docker-desktop-for-windows)
+
+---
+## Locations of some useful files or directories
+
+- Chrome History `%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\History`
+- Firefox container file: `%USERPROFILE%\AppData\Roaming\Mozilla\Firefox\Profiles\xx\containers.json`
+- Taskbar shortcuts pinned by admin (CustomTaskbarLayoutCollection): `%USERPROFILE%\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml`
+- WSL 1 Ubuntu home: `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_xxx\LocalState\rootfs\home\username`
+- WSL 2 Ubuntu home: `\\wsl$\Ubuntu`
+- GH (GitHub CLI) oauth_token location: `~/.config/gh/hosts.yml`
+- GH (GitHub CLI) oauth_token location: `%USERPROFILE%\AppData\Roaming\GitHub CLI`
 
 ---
 ## Windows
 
 - Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat)
 
-### Ubuntu on Windows 10 or Windows 11
+---
+## WSL Ubuntu on Windows 10 or Windows 11
 
 - [Install Windows Subsystem for Linux (WSL) on Windows 10](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide)
 - Git clone this repo to `/mnt/c/Workspaces/github/workspace` (note: will change `/mnt/c` to `/c` in a later step)
@@ -44,7 +56,8 @@ Useful notes
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH%
     ```
 
-### Docker Desktop for Windows
+---
+## Docker Desktop for Windows
 
 - For MacBook Pro Windows user, see
   [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?).
@@ -67,11 +80,3 @@ Useful notes
    - Go to Settings: Daemon, Advanced
    - Set the "experimental": true
    - Restart Docker
-
-### Locations of some useful files or directories
-
-- Chrome History `%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\History`
-- Firefox container file: `%USERPROFILE%\AppData\Roaming\Mozilla\Firefox\Profiles\xx\containers.json`
-- Taskbar shortcuts pinned by admin (CustomTaskbarLayoutCollection): `%USERPROFILE%\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml`
-- WSL 1 Ubuntu home: `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_xxx\LocalState\rootfs\home\username`
-- WSL 2 Ubuntu home: `\\wsl$\Ubuntu`
