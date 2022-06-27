@@ -55,6 +55,7 @@ alias git-ls-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branc
 alias git-ls-untracked='git ls-files --others --exclude-standard'
 
 alias gh-auth-login='gh auth login'
+alias gh-auth-status='gh auth status'
 alias gh-pr-create='gh pr create --assignee @me'
 alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
