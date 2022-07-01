@@ -59,6 +59,8 @@ alias gh-auth-status='gh auth status'
 alias gh-pr-create='gh pr create --assignee @me'
 alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
+alias gh-k='gh k'
+alias gh-work='gh work'
 
 alias git-auto-branch='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else git branch $1 && git checkout $1; fi; }; _'
 alias git-auto-pr-merge='function _(){ ORI_BRANCH=$(git-branch-current) && gh-pr-create && gh-pr-merge-squash && git-checkout-default && git-pull-all && git branch -D ${ORI_BRANCH}; }; _'
