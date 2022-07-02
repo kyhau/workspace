@@ -7,7 +7,6 @@ Jump to
 - [MLA and Dashboards](#mla-and-dashboards)
 - [Access Control and Security](#access-control-and-security)
 - [Networking](#networking)
-- [Useful diagrams](#useful-diagrams)
 
 
 ---
@@ -28,6 +27,8 @@ Jump to
 ## IaC and CICD
 
 - AWS resources (e.g. EKS, CDK, CDK8s) -> [kyhau/aws-tools/EKS](https://github.com/kyhau/aws-tools/tree/master/EKS)
+- GitHub Actions
+    - [actions-runner-controller](https://github.com/actions-runner-controller/actions-runner-controller) - This controller operates self-hosted runners for GitHub Actions on your Kubernetes cluster.
 - [Kustomize](https://kustomize.io/)
     - Kustomize uses a template-free approach to customize application configuration.
     - Kustomize traverses a Kubernetes manifest to add, remove or update configuration options without forking.
@@ -104,10 +105,3 @@ Jump to
 ## Networking
 
 - [Multus-CNI](https://github.com/k8snetworkplumbingwg/multus-cni) - Multus CNI enables attaching multiple network interfaces to pods in Kubernetes.
-
-
----
-## Useful diagrams
-
-### Overview of Kubernetes Architecture
-![Overview of Kubernetes Architecture](https://i.redd.it/cqud3rjkss361.png)
