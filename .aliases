@@ -68,7 +68,6 @@ alias git-auto-commit-pr-merge='function _(){ if [[ -z "$1" ]]; then echo "Missi
 
 alias git-auto-ci-all-changes='function _(){ if [[ -z "$1" ]] || [[ -z "$2" ]] ; then echo "Arguments: [BRANCH_NAME] [COMMIT_MESSAGE]"; else git-auto-branch "$1" && git add . && git-auto-commit-pr-merge "$2"; fi; }; _'
 
-
 ################################################################################
 # go
 
@@ -109,15 +108,6 @@ alias kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system dep
 alias kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
 
 ################################################################################
-# ls
-
-alias ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-protocols.txt'
-alias ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ranges.txt'
-alias ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
-alias ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
-alias ls-unpurged-packages='dpkg --list | grep ^rc'
-
-################################################################################
 # pip
 
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
@@ -152,6 +142,9 @@ alias rm-cache-homebrew='du -sh ${HOME}/.cache/Homebrew/ && rm -rf ${HOME}/.cach
 alias rm-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pip/'
 alias rm-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/distshare'
 alias rm-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
+
+alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
+
 alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ print $2; }')"
 
 ################################################################################
@@ -187,43 +180,68 @@ alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverles
 alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 
 ################################################################################
-# Cheatsheets
-
-alias k-cheatsheet-aws-network='browser https://github.com/kyhau/aws-notebook/blob/master/Networking.md'
-alias k-cheatsheet-docker='browser https://github.com/kyhau/docker-notebook/blob/master/README.md'
-alias k-cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/blob/master/README.md'
-
-################################################################################
 # custom scripts or commands
 
-alias dos2unix-r='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" -print0 | xargs -0 dos2unix'
+alias k-degreen='. ${WORKSPACE_REPO_HOME}/ubuntu/degreen.sh'
 
-alias pem2crt='_func(){ openssl x509 -inform PEM -in "$1" -out $(basename "${1%.*}.crt"); }; _func'
+alias k-dos2unix='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" -print0 | xargs -0 dos2unix'
 
-alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host registry.yarnpkg.com | awk '"'"'/has address/ { print $4 }'"'"' | head -n1) ; echo "${registryYarnpkgComIpAddress} registry.yarnpkg.com" | sudo tee -a /etc/hosts'
+alias k-rename-files='python ${WORKSPACE_REPO_HOME}/bin/rename_files.py'
+
+####
+# System
+
+alias k-lsb_release-d='lsb_release -d'
+alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
+
+####
+# Conversion
+
+alias k-pem2crt='_func(){ openssl x509 -inform PEM -in "$1" -out $(basename "${1%.*}.crt"); }; _func'
+alias k-timestamp2datetime='function _(){ if [[ -z "$1" ]]; then echo "Missing timestamp"; else date -d@$1; fi; }; _'
+
+####
+# Linting
 
 alias k-black='black --line-length=99'
 # W605 Invalid escape sequence
 alias k-flake8='flake8 --ignore W605 --max-line-length 99'
 alias k-yamllint='yamllint -d "{extends: relaxed, rules: {document-start: disable, line-length: disable, truthy: disable}}" -f parsable .'
 
-alias k-rm-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
+####
+# ls
 
-alias k-degreen='. ${WORKSPACE_REPO_HOME}/ubuntu/degreen.sh'
+alias k-ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-protocols.txt'
+alias k-ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ranges.txt'
+alias k-ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
+alias k-ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
+alias k-ls-unpurged-packages='dpkg --list | grep ^rc'
 
-alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
-alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
+####
+# Networking
 
-alias k-is-ip-in-range='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
+alias k-ip-in-range-check='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
+
+# what the outside world thinks your ip address is
+# or curl ifconfig.me
+# https://askubuntu.com/questions/430853/how-do-i-find-my-internal-ip-address
+alias k-ip-external='curl --silent http://checkip.amazonaws.com'
+# what your computer thinks its ip address is
+alias k-ip-local='. ${WORKSPACE_REPO_HOME}/ubuntu/get_local_ip.sh'
+
+alias k-whatismy-ipaddress='browser https://whatismyipaddress.com/'
+alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
 
 alias k-ipam-helper='python ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
 alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
 
-alias k-rename-files='python ${WORKSPACE_REPO_HOME}/bin/rename_files.py'
+alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
+alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
 
-alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
+alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host registry.yarnpkg.com | awk '"'"'/has address/ { print $4 }'"'"' | head -n1) ; echo "${registryYarnpkgComIpAddress} registry.yarnpkg.com" | sudo tee -a /etc/hosts'
 
-alias k-timestamp2datetime='function _(){ if [[ -z "$1" ]]; then echo "Missing timestamp"; else date -d@$1; fi; }; _'
+# Cheatsheets
 
-alias k-whatismy-ipaddress='browser https://whatismyipaddress.com/'
-alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
+alias k-cheatsheet-aws-network='browser https://github.com/kyhau/aws-notebook/blob/master/Networking.md'
+alias k-cheatsheet-docker='browser https://github.com/kyhau/docker-notebook/blob/master/README.md'
+alias k-cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/blob/master/README.md'

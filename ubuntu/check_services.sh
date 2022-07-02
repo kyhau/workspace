@@ -7,7 +7,7 @@ fi
 
 SERVICE=$1
 
-if [[ `lsb_release -c | grep trusty` ]]; then
+if [[ `lsb_release -c | grep focal` ]]; then
   ls /etc/init.d | grep ${SERVICE} | xargs -I "{}" sudo service "{}" status | grep " is "
 else
   for i in $( ls /etc/init.d | grep ${SERVICE} ); do
