@@ -1,5 +1,5 @@
 """
-Delete all workflow runs of a GitHub workflow
+Select and delete workflow runs of a GitHub workflow
 """
 import json
 import subprocess
