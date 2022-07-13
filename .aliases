@@ -36,6 +36,9 @@ alias helm-upgrade='helm upgrade'
 
 alias git-branch-default='gh repo view --json defaultBranchRef --jq .defaultBranchRef.name'
 alias git-branch-current='git branch --show-current'
+alias git-branch-rename-main2master='git branch -m main master && git push -u origin master && git push origin -d main'
+alias git-branch-rename-master2main='git branch -m master main && git push -u origin main && git push origin -d master'
+
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
 alias git-config-list='git config --list'
 alias git-config-show-user='git config user.name && git config user.email'
