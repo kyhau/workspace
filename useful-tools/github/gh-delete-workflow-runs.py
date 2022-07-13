@@ -71,14 +71,26 @@ def main(owner_repo, dryrun):
 
     # TODO Is workflow name unique?
     workflow_name_id_dict = {w["name"]: w["id"] for w in workflows_json["workflows"]}
-    selected_name = prompt_single_selection("workflow", workflow_name_id_dict.keys())["workflow"]
+
+    resp = prompt_single_selection("workflow", workflow_name_id_dict.keys())
+    if not resp:
+        print("Nothing selected")
+        return
+
+    selected_name = resp["workflow"]
     workflow_id = workflow_name_id_dict[selected_name]
 
     cmd_workflow_runs = f"gh api -X GET /repos/{owner_repo}/actions/workflows/{workflow_id}/runs --paginate"
     workflow_runs_json = call_check_output(cmd_workflow_runs)
 
     workflow_runs_runnum_id_dict = {str(w["run_number"]):w["id"] for w in workflow_runs_json["workflow_runs"]}
-    selected_runs = prompt_multi_selection("workflow-run", workflow_runs_runnum_id_dict)["workflow-runs"]
+
+    resp = prompt_multi_selection("workflow-run", workflow_runs_runnum_id_dict)
+    if not resp:
+        print("Nothing selected")
+        return
+
+    selected_runs = ["workflow-runs"]
 
     for run_number, run_id in workflow_runs_runnum_id_dict.items():
         if run_number in selected_runs:
