@@ -2,8 +2,7 @@ import json
 import logging
 import subprocess
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
+logging.getLogger().setLevel(logging.DEBUG)
 
 
 def call_check_output(command):
@@ -12,19 +11,19 @@ def call_check_output(command):
         output = subprocess.check_output(command_list, stderr=subprocess.STDOUT)
         return json.loads(output)
     except subprocess.CalledProcessError as err:
-        logger.error(err)
+        logging.error(err)
     except Exception as e:
-        logger.error(e)
+        logging.error(e)
 
 
 def call_run(command):
     command_list = command.split(" ")
     try:
-        logger.info(f"Running shell command: {command}")
+        logging.info(f"Running shell command: {command}")
         result = subprocess.run(command_list, stdout=subprocess.PIPE);
-        logger.info("Command output:\n---\n{}\n---".format(result.stdout.decode("UTF-8")))
+        logging.info("Command output:\n---\n{}\n---".format(result.stdout.decode("UTF-8")))
     except Exception as e:
-        logger.error(f"Exception: {e}")
+        logging.error(f"Exception: {e}")
         return False
     return True
 
