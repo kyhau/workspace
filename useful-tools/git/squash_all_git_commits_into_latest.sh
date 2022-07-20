@@ -5,7 +5,7 @@
 # This orphan branch forms the initial root commit of an entirely new and separate commit history tree,
 # which is effectively equivalent to squashing all of your commits:
 
-git checkout --orphan new-master master
+git checkout --orphan new-main main
 git commit -m "A new start"
-git branch -M new-master master
-git push origin master --force
+git branch -M new-main main
+git push origin main --force
