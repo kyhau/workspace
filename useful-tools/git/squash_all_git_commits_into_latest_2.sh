@@ -10,4 +10,4 @@ git init
 git add .
 git commit -m "Initial commit"
 git remote add origin ${github_url}
-git push -u --force origin master
+git push -u --force origin main

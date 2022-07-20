@@ -5,5 +5,4 @@
 git rebase -i HEAD~n
 
 # Change pick to squash for those oldest commits
-
-git push origin master --force
+git push origin main --force
