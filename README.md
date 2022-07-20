@@ -3,12 +3,13 @@
 Quick setup for my development environment
 
 - [Useful tools for development](./useful-tools/)
-- My tools/scripts for building with AWS - [kyhau/aws-tools](https://github.com/kyhau/aws-tools)
+- My tools/scripts for building with AWS - [kyhau/aws-tools](https://github.com/kyhau/aws-tools/)
 - [Useful aliases](./.aliases)
 - [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
 - [Windows](#windows)
 - [WSL Ubuntu on Windows 10 or Windows 11](#wsl-ubuntu-on-windows-10-or-windows-11)
 - [Docker Desktop for Windows](#docker-desktop-for-windows)
+- [Some useful links](./Useful-Links.md)
 
 ---
 ## Locations of some useful files or directories
@@ -24,7 +25,7 @@ Quick setup for my development environment
 ---
 ## Windows
 
-- Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](chocolatey/init_chocolatey_windows10.bat)
+- Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](./windows/chocolatey/Init-chocolatey-windows10.bat)
 
 ---
 ## WSL Ubuntu on Windows 10 or Windows 11
