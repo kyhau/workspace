@@ -25,7 +25,7 @@ Quick setup for my development environment
 ---
 ## Windows
 
-- Install [Chocolatey](https://chocolatey.org) and some packages with [init_chocolatey_windows10.bat](./windows/chocolatey/Init-chocolatey-windows10.bat)
+- Install [Chocolatey](https://chocolatey.org) and some packages with [Init-chocolatey-windows10.bat](./windows/chocolatey/Init-chocolatey-windows10.bat)
 
 ---
 ## WSL Ubuntu on Windows 10 or Windows 11
