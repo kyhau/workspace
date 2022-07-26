@@ -112,6 +112,14 @@ alias kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system dep
 alias kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
 
 ################################################################################
+# npm
+
+alias npm-audit='npm audit'
+alias npm-audit-fix='npm audit fix'
+alias npm-audit-signatures='npm audit signatures'
+alias npm-install='npm install'
+
+################################################################################
 # pip
 
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
