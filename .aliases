@@ -57,6 +57,11 @@ alias git-checkout-default='git checkout $(git-branch-default)'
 alias git-ls-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-ls-untracked='git ls-files --others --exclude-standard'
 
+alias gh-extension-list='gh extension list'
+alias gh-extension-install-gh-actions-cache='gh extension install actions/gh-actions-cache'
+alias gh-extension-remove-gh-actions-cache='gh extension remove actions/gh-actions-cache'
+alias gh-extension-upgrade-gh-actions-cache='gh extension upgrade actions/gh-actions-cache'
+
 alias gh-auth-login='gh auth login'
 alias gh-auth-status='gh auth status'
 alias gh-pr-create='gh pr create --assignee @me'
