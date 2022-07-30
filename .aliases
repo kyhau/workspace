@@ -125,6 +125,20 @@ alias npm-audit-signatures='npm audit signatures'
 alias npm-install='npm install'
 
 ################################################################################
+# nvm
+
+alias nvm-install-latest='nvm install node --reinstall-packages-from=node'
+alias nvm-install-latest-lts='nvm install "lts/*"'
+alias nvm-install-latest-npm='nvm install-latest-npm'
+alias nvm-ls='nvm ls'
+alias nvm-ls-remote-lts-14='nvm ls-remote --lts=Fermium'
+alias nvm-ls-remote-lts-16='nvm ls-remote --lts=Gallium'
+alias nvm-use-latest='nvm use node'
+alias nvm-use-lts='nvm use --lts'
+alias nvm-use-system='nvm use system'
+alias nvm-which-current='nvm which current'
+
+################################################################################
 # pip
 
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
@@ -187,6 +201,7 @@ alias update-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install
 alias update-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_minikube.sh'
 alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_skaffold.sh'
 
+alias update-nvm='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nvm.sh'
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 alias update-typescript='. ${WORKSPACE_REPO_HOME}/useful-tools/typescript/install_typescript.sh'
 
