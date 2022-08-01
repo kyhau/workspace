@@ -1,9 +1,12 @@
 #!/bin/bash
 # Install Homebrew on Ubuntu
-# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-linux.html
 set -e
 
-echo "INFO: brew version: $(brew --version | grep 'Homebrew ' | awk -F' ' '{print $2}')"
+if [ -x "$(command -v brew)" ]; then
+  echo "INFO: brew version: $(brew --version | grep 'Homebrew ' | awk -F' ' '{print $2}')"
+else
+  echo "INFO: brew not installed"
+fi
 
 echo "INFO: Installing Homebrew to /home/linuxbrew/.linuxbrew (default)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh --insecure)"
