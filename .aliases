@@ -203,8 +203,9 @@ alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_
 
 alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
 
-alias update-nvm='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nvm.sh'
+alias update-ncc='npm i -g @vercel/ncc'
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
+alias update-nvm='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nvm.sh'
 alias update-typescript='. ${WORKSPACE_REPO_HOME}/useful-tools/typescript/install_typescript.sh'
 
 alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
