@@ -203,8 +203,10 @@ alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_
 
 alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
 
-alias update-ncc='npm i -g @vercel/ncc'
+alias update-ncc='sudo npm i -g @vercel/ncc'
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
+alias update-npm='sudo npm i -g npm@latest'
+alias update-npx='sudo npm i -g npx'
 alias update-nvm='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nvm.sh'
 alias update-typescript='. ${WORKSPACE_REPO_HOME}/useful-tools/typescript/install_typescript.sh'
 
