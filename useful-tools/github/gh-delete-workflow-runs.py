@@ -38,7 +38,7 @@ def prompt_single_selection(name, options):
 
 def prompt_multi_selection(name, options):
     if not options:
-        raise ValueError("No roles retrieved for selection.")
+        raise ValueError("No options retrieved for selection.")
 
     questions = [
         {
@@ -84,13 +84,16 @@ def main(owner_repo, dryrun):
     workflow_runs_json = call_check_output(cmd_workflow_runs)
 
     workflow_runs_runnum_id_dict = {str(w["run_number"]):w["id"] for w in workflow_runs_json["workflow_runs"]}
+    if not workflow_runs_runnum_id_dict:
+        print("No workflow run returned")
+        return
 
     resp = prompt_multi_selection("workflow-run", workflow_runs_runnum_id_dict)
     if not resp:
         print("Nothing selected")
         return
 
-    selected_runs = ["workflow-runs"]
+    selected_runs = resp["workflow-runs"]
 
     for run_number, run_id in workflow_runs_runnum_id_dict.items():
         if run_number in selected_runs:
