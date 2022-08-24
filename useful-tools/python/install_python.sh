@@ -14,8 +14,8 @@ sudo apt install -y \
   python3-pip
 
 # Install pip via PyPA's recommended way rather than the outdated apt repos
-# See: https://pip.pypa.io/en/stable/installing/
-curl https://bootstrap.pypa.io/get-pip.py --insecure -s -o ./get-pip.py && python3.10 get-pip.py && rm get-pip.py
+# See: https://pip.pypa.io/en/stable/installation/
+curl -SsL https://bootstrap.pypa.io/get-pip.py -o ./get-pip.py && python3.10 get-pip.py && rm get-pip.py
 
 # Upgrade pip and install virtualenv
 python3.10 -m pip install -U pip virtualenvwrapper
