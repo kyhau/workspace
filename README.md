@@ -20,8 +20,8 @@
 
 - Chrome History `%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\History`
 - Firefox container file: `%USERPROFILE%\AppData\Roaming\Mozilla\Firefox\Profiles\xx\containers.json`
+- GitHub CLI (`gh`) oauth_token location (Windows): `%USERPROFILE%\AppData\Roaming\GitHub CLI`
+- GitHub CLI (`gh`) oauth_token location (WSL): `~/.config/gh/hosts.yml`
 - Taskbar shortcuts pinned by admin (CustomTaskbarLayoutCollection): `%USERPROFILE%\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml`
 - WSL 1 Ubuntu home: `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_xxx\LocalState\rootfs\home\username`
 - WSL 2 Ubuntu home: `\\wsl$\Ubuntu`
-- `gh` (GitHub CLI) oauth_token location: `~/.config/gh/hosts.yml`
-- `gh` (GitHub CLI) oauth_token location: `%USERPROFILE%\AppData\Roaming\GitHub CLI`
