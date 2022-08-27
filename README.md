@@ -7,11 +7,12 @@
 - Set up VS Code with my settings and user snippets in [kyhau/vscode-configs](https://github.com/kyhau/vscode-configs)
 - Set up `git` config for [multiple GitHub accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 - Set up `gh` (GitHub CLI) [multi-account switch](https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47)
-- Install other tools for specific development work
-    - [Useful tools for development](./useful-tools/)
-    - [kyhau/aws-tools](https://github.com/kyhau/aws-tools/) - my tools/scripts for building with AWS
-- [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
-- [Some useful links](./quick-notes/UsefulLinks.md)
+
+---
+## Set up tools for specific development work
+
+- [Useful tools for development](./useful-tools/)
+- [kyhau/aws-tools](https://github.com/kyhau/aws-tools/) - my tools/scripts for building with AWS
 
 ---
 ## Locations of some useful files or directories
@@ -23,3 +24,6 @@
 - Taskbar shortcuts pinned by admin (CustomTaskbarLayoutCollection): `%USERPROFILE%\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml`
 - WSL 1 Ubuntu home: `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_xxx\LocalState\rootfs\home\username`
 - WSL 2 Ubuntu home: `\\wsl$\Ubuntu`
+
+---
+## [Some useful links](./quick-notes/UsefulLinks.md)
