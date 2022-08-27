@@ -1,8 +1,6 @@
 #!/bin/bash
-# wrk - a HTTP benchmarking tool
-# https://github.com/wg/wrk
+# wrk - a HTTP benchmarking tool - https://github.com/wg/wrk
 # Install: https://medium.com/@felipedutratine/intelligent-benchmark-with-wrk-163986c1587f
-
 set -e
 
 mkdir -p ${HOME}/.local/bin
@@ -20,5 +18,4 @@ cd -
 
 ln -sfn ${HOME}/.local/wrk/wrk ${HOME}/.local/bin/wrk
 
-echo "INFO: Checking version"
-echo "wrk version: $(wrk --version)"
+echo "INFO: wrk version: $(wrk --version)"
