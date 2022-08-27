@@ -4,9 +4,7 @@
 - [Set up WSL Ubuntu dev environment](./WSL.md)
 - [Set up Docker Desktop WSL](./Docker.md)
 - [Set up aliases](./.aliases)
-- Some config files
-    - [VS Code settings and user snippets](https://github.com/kyhau/vscode-configs)
-    - [wsl.conf](./ubuntu/wsl.conf)
+- Set up VS Code with my settings and user snippets in [kyhau/vscode-configs](https://github.com/kyhau/vscode-configs)
 - Set up `git` config for [multiple GitHub accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 - Set up `gh` (GitHub CLI) [multi-account switch](https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47)
 - Install other tools for specific development work
