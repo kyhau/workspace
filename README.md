@@ -11,7 +11,7 @@
     - [Useful tools for development](./useful-tools/)
     - [kyhau/aws-tools](https://github.com/kyhau/aws-tools/) - my tools/scripts for building with AWS
 - [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
-- [Some useful links](./UsefulLinks.md)
+- [Some useful links](./quick-notes/UsefulLinks.md)
 
 ---
 ## Locations of some useful files or directories
