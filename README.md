@@ -2,33 +2,22 @@
 
 Quick setup for my development environment
 
+- [Set up Windows](#set-up-windows)
+- [Set up WSL Ubuntu dev environment](#set-up-windows)
+- [Set up Docker Desktop WSL](./Docker.md)
+- [Useful aliases](./.aliases)
 - [Useful tools for development](./useful-tools/)
 - My tools/scripts for building with AWS - [kyhau/aws-tools](https://github.com/kyhau/aws-tools/)
-- [Useful aliases](./.aliases)
 - [Locations of some useful files or directories](#locations-of-some-useful-files-or-directories)
-- [Windows](#windows)
-- [WSL Ubuntu on Windows 10 or Windows 11](#wsl-ubuntu-on-windows-10-or-windows-11)
-- [Docker Desktop for Windows](#docker-desktop-for-windows)
 - [Some useful links](./Useful-Links.md)
 
 ---
-## Locations of some useful files or directories
+## Set up Windows
 
-- Chrome History `%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\History`
-- Firefox container file: `%USERPROFILE%\AppData\Roaming\Mozilla\Firefox\Profiles\xx\containers.json`
-- Taskbar shortcuts pinned by admin (CustomTaskbarLayoutCollection): `%USERPROFILE%\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml`
-- WSL 1 Ubuntu home: `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_xxx\LocalState\rootfs\home\username`
-- WSL 2 Ubuntu home: `\\wsl$\Ubuntu`
-- GH (GitHub CLI) oauth_token location: `~/.config/gh/hosts.yml`
-- GH (GitHub CLI) oauth_token location: `%USERPROFILE%\AppData\Roaming\GitHub CLI`
+- Install [Chocolatey](https://chocolatey.org) and some packages with [Init-chocolatey-windows.bat](./windows/chocolatey/Init-chocolatey-windows.bat)
 
 ---
-## Windows
-
-- Install [Chocolatey](https://chocolatey.org) and some packages with [Init-chocolatey-windows10.bat](./windows/chocolatey/Init-chocolatey-windows10.bat)
-
----
-## WSL Ubuntu on Windows 10 or Windows 11
+## Set up WSL Ubuntu dev environment
 
 - [Install Windows Subsystem for Linux (WSL) on Windows 10](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide)
 - Git clone this repo to `/mnt/c/Workspaces/github/workspace` (note: will change `/mnt/c` to `/c` in a later step)
@@ -58,26 +47,12 @@ Useful notes
     ```
 
 ---
-## Docker Desktop for Windows
+## Locations of some useful files or directories
 
-- For MacBook Pro Windows user, see
-  [Turn on Hardware Virtualization on MacBook Pro for Windows using Boot Camp](https://apple.stackexchange.com/questions/120361/how-to-turn-on-hardware-virtualization-on-late-2013-macbook-pro-for-windows-8-1?).
-- For WSL 2, unset `DOCKER_HOST`, see https://stackoverflow.com/questions/60708229/wsl2-cannot-connect-to-the-docker-daemon
-- For WSL 1, export `DOCKER_HOST=tcp://localhost:2375`
-- For WSL 1, within the Hyper-V VM, the `C:` is mounted to `/c` instead of `/mnt/c`.
-    ```bash
-    $ sudo mkdir /c
-    $ sudo mount --bind /mnt/c /c
-    ```
-    - See https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
-    - See https://github.com/microsoft/WSL/issues/1854#issuecomment-291845122
-    - See https://github.com/aws/aws-sam-cli/issues/208
-- Volume mounts in Windows does not work? https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
-- docker-compose
-   - To install `docker-compose`: `pip install docker-compose`
-   - If see error `docker.credentials.errors.InitializationError: docker-credential-desktop.exe not installed or not available in PATH`
-      - Add `_` before `credsStore` in file ~/.docker/config.json, i.e. `{"_credsStore":"desktop.exe"}`
-- If see error [`no matching manifest for windows/amd64 in the manifest list entries`](https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-windows-amd64-in-the-manifest-list-entries)
-   - Go to Settings: Daemon, Advanced
-   - Set the "experimental": true
-   - Restart Docker
+- Chrome History `%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\History`
+- Firefox container file: `%USERPROFILE%\AppData\Roaming\Mozilla\Firefox\Profiles\xx\containers.json`
+- Taskbar shortcuts pinned by admin (CustomTaskbarLayoutCollection): `%USERPROFILE%\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml`
+- WSL 1 Ubuntu home: `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_xxx\LocalState\rootfs\home\username`
+- WSL 2 Ubuntu home: `\\wsl$\Ubuntu`
+- GH (GitHub CLI) oauth_token location: `~/.config/gh/hosts.yml`
+- GH (GitHub CLI) oauth_token location: `%USERPROFILE%\AppData\Roaming\GitHub CLI`
