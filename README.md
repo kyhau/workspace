@@ -1,6 +1,4 @@
-# Workspace
-
-Quick setup for my development environment
+# Quick setup for my development environment 💻
 
 - Set up Windows - install [Chocolatey](https://chocolatey.org) and some packages with [Init-chocolatey-windows.bat](./windows/chocolatey/Init-chocolatey-windows.bat)
 - [Set up WSL Ubuntu dev environment](./WSL.md)
