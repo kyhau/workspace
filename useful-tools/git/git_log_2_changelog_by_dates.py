@@ -35,6 +35,19 @@ def read_logs():
             this_date = datetime.datetime.strptime(f"{parts[5]} {parts[4]} {parts[7]}", "%d %b %Y").strftime("%Y-%m-%d")
 
         else:
+            ########################################
+            # Add additional filters here
+
+            if "dependabot" in this_author:
+                continue
+
+            tmp_line = line.lower()
+            if "merge branch" in tmp_line or "merge: " in tmp_line:
+                continue
+
+            # Additional filters end here
+            ########################################
+
             category = "Changed"
             tmp_line = line.lower()
             if "add" in tmp_line or "create" in tmp_line:
@@ -43,6 +56,8 @@ def read_logs():
                 category = "Removed"
             elif "bug" in tmp_line or "fix" in tmp_line:
                 category = "Fixed"
+
+            line = line.replace("* ", "")
 
             ret.append({
                 "Commit": this_commit,
@@ -64,9 +79,9 @@ def group_records_by_date_and_category(records):
         if this_date != record["Date"]:
             if this_date_records:
                 ret.append(this_date_records)
-                this_date = record["Date"]
+            this_date = record["Date"]
             this_date_records = {
-                "Date": record["Date"],
+                "Date": this_date,
                 "Added": [],
                 "Changed": [],
                 "Fixed": [],
@@ -83,11 +98,11 @@ def generate_changelog(dates_records):
     print("All notable changes to this project will be documented in this file.\n")
 
     for date_records in dates_records:
-        print(f"\n## {date_records['Date']}\n")
+        print(f"\n## {date_records['Date']}")
 
         for category in ["Added", "Changed", "Fixed", "Removed"]:
             if date_records.get(category):
-                print(f"### {category}\n")
+                print(f"\n### {category}\n")
 
                 for record in date_records.get(category, []):
                     commit = record['Commit'][:7]
