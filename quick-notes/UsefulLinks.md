@@ -49,5 +49,10 @@
 - [Website Hacking / Penetration Testing & Bug Bounty Hunting - Udemy](https://www.udemy.com/course/learn-website-hacking-penetration-testing-from-scratch/)
 - [Learn Ethical Hacking From Scratch - Udemy](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
 
+### Vulnerability Searching
+- https://www.exploit-db.com/
+- https://cve.mitre.org/
+- https://nvd.nist.gov/vuln/search
+
 ### AR/VR
 - https://aws.amazon.com/sumerian/
