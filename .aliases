@@ -174,7 +174,7 @@ alias rm-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pip/'
 alias rm-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/distshare'
 alias rm-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
 
-alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/ubuntu/cleanup_dev_env.sh'
+alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
 
 alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ print $2; }')"
 
@@ -220,13 +220,13 @@ alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && 
 ################################################################################
 # custom scripts or commands
 
-alias k-degreen='. ${WORKSPACE_REPO_HOME}/ubuntu/degreen.sh'
+alias k-degreen='. ${WORKSPACE_REPO_HOME}/scripts/sh/degreen.sh'
 
 alias k-dos2unix='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" -print0 | xargs -0 dos2unix'
 
 alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=node_modules "$@"'\'' _'
 
-alias k-rename-files='python ${WORKSPACE_REPO_HOME}/bin/rename_files.py'
+alias k-rename-files='python ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
 ####
 # System
