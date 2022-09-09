@@ -10,8 +10,8 @@ alias firefox='/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 # docker
 
 alias docker-images-prune='docker images prune'
-alias docker-ps-q-f-status-exited='docker ps -q -f status=exited'
-alias docker-rm-ps-q-f-status-exited='docker rm $(docker ps -q -f status=exited)'
+alias docker-rm-exited='docker rm $(docker ps -q -f status=exited)'
+alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
 alias docker-system-prune-a='docker system prune -a'
 
 ################################################################################
