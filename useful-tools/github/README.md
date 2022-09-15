@@ -1,4 +1,7 @@
 # Some GitHub notes
 
-GH CLI multi-account switch
-- https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47
+- GH CLI multi-account switch https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47
+
+- OpenID Configuration URI https://token.actions.githubusercontent.com/.well-known/openid-configuration
+
+- Json Web Key Service URI https://token.actions.githubusercontent.com/.well-known/jwks
