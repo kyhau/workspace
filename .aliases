@@ -69,7 +69,7 @@ alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
 alias gh-k='gh k'
 alias gh-work='gh work'
-alias gh-delete-workflow-runs='python ${WORKSPACE_REPO_HOME}/useful-tools/github/gh-delete-workflow-runs.py'
+alias gh-delete-workflow-runs='python ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
 alias gh-oidc-thumbprint-for-actions='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_actions.sh'
 alias gh-oidc-thumbprint-for-audit-log='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
 
@@ -95,7 +95,7 @@ alias go-test='go test -v'
 # kubectl
 alias kubectl-describe-configmap-n-kube-system-aws-auth='kubectl describe configmap -n kube-system aws-auth'
 alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
-alias kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl-describe-secret-eks-admin.sh'
+alias kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl_describe_secret_eks_admin.sh'
 alias kubectl-get-clusterrolebindings='kubectl get clusterrolebindings'
 alias kubectl-get-clusterroles='kubectl get clusterroles'
 alias kubectl-get-deployment='kubectl get deployment'
@@ -282,8 +282,8 @@ alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
 alias k-ipam-helper='python ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
 alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
 
-alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable-apt-ocsp-verification.sh'
-alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset-apt-ocsp-verification.sh'
+alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable_apt_ocsp_verification.sh'
+alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_apt_ocsp_verification.sh'
 
 alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host registry.yarnpkg.com | awk '"'"'/has address/ { print $4 }'"'"' | head -n1) ; echo "${registryYarnpkgComIpAddress} registry.yarnpkg.com" | sudo tee -a /etc/hosts'
 
