@@ -64,7 +64,7 @@ alias gh-extension-upgrade-gh-actions-cache='gh extension upgrade actions/gh-act
 
 alias gh-auth-login='gh auth login'
 alias gh-auth-status='gh auth status'
-alias gh-pr-create='gh pr create --assignee @me'
+alias gh-pr-create='gh pr create --assignee @me --body ""'
 alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
 alias gh-k='gh k'
