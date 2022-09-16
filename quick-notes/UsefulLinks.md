@@ -2,8 +2,6 @@
 
 - [Public Cloud Services Comparison](http://comparecloud.in/)
 - [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/)
-- https://www.digitalattackmap.com/
-- https://cybermap.kaspersky.com/
 
 ### Privacy Tools
 - [PrivacyTools](https://www.privacytools.io/)
@@ -13,18 +11,34 @@
 
 ### Online tools
 - [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
+- [Kaspersky Cyberthreat Map](https://cybermap.kaspersky.com/)
+- [Digital Attack Map](https://www.digitalattackmap.com/)
 
 ### Coding
-- Amazon Honeycode https://builder.honeycode.aws/
-- Heroku https://id.heroku.com/login
-- DockerHub https://hub.docker.com
-- SwaggerHub https://app.swaggerhub.com/search
-- Rapid API https://rapidapi.com/
-- Unofficial Windows Binaries for Python Extension Packages https://www.lfd.uci.edu/~gohlke/pythonlibs/
-- Google Colaboratory https://colab.research.google.com/notebooks/welcome.ipynb
-- Hackerrank https://www.hackerrank.com/
-- Leetcode https://leetcode.com/
-- Hacktoberfest https://hacktoberfest.digitalocean.com/
+- [Amazon Honeycode](https://builder.honeycode.aws/)
+- [Heroku](https://id.heroku.com/login)
+- [DockerHub](https://hub.docker.com)
+- [SwaggerHub](https://app.swaggerhub.com/search)
+- [Rapid API](https://rapidapi.com/)
+- [Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
+- [Google Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb)
+- [Hackerrank](https://www.hackerrank.com/)
+- [Leetcode](https://leetcode.com/)
+- [Hacktoberfest](https://hacktoberfest.digitalocean.com/)
+
+### Ethical Hacking
+- [Cybrary.it - The Cybersecurity and IT Career Development](https://www.cybrary.it/)
+- [Ethical Hacking - TutorialsPoint](https://www.tutorialspoint.com/ethical_hacking/index.htm)
+- [Web Security Academy - PortSwigger](https://portswigger.net/web-security)
+- [Website Hacking / Penetration Testing & Bug Bounty Hunting - Udemy](https://www.udemy.com/course/learn-website-hacking-penetration-testing-from-scratch/)
+- [Learn Ethical Hacking From Scratch - Udemy](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
+- [TryHackMe](https://tryhackme.com/)
+
+### Vulnerability Searching
+- https://www.exploit-db.com/
+- https://cve.mitre.org/
+- https://nvd.nist.gov/vuln/search
+
 
 ### Machine Learning
 - [Paperspace](https://www.paperspace.com/)
@@ -41,18 +55,6 @@
 - [Hyperledger Training and Certifications](https://www.hyperledger.org/resources/training)
 - [Ethereum Testnet Selection](https://testnet.etherscan.io/)
 - AWS Blockchain https://aws.amazon.com/blockchain/
-
-### Ethical Hacking
-- [Cybrary.it - The Cybersecurity and IT Career Development](https://www.cybrary.it/)
-- [Ethical Hacking - TutorialsPoint](https://www.tutorialspoint.com/ethical_hacking/index.htm)
-- [Web Security Academy - PortSwigger](https://portswigger.net/web-security)
-- [Website Hacking / Penetration Testing & Bug Bounty Hunting - Udemy](https://www.udemy.com/course/learn-website-hacking-penetration-testing-from-scratch/)
-- [Learn Ethical Hacking From Scratch - Udemy](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
-
-### Vulnerability Searching
-- https://www.exploit-db.com/
-- https://cve.mitre.org/
-- https://nvd.nist.gov/vuln/search
 
 ### AR/VR
 - https://aws.amazon.com/sumerian/
