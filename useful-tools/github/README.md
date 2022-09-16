@@ -6,6 +6,6 @@ For GitHub Actions
 - OpenID Configuration URI https://token.actions.githubusercontent.com/.well-known/openid-configuration
 - Json Web Key Service URI https://token.actions.githubusercontent.com/.well-known/jwks
 
-For Audit
+For [Audit Log](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#setting-up-streaming-to-s3-with-openid-connect)
 - OpenID Configuration URI https://oidc-configuration.audit-log.githubusercontent.com/.well-known/openid-configuration
 - Json Web Key Service URI https://oidc-configuration.audit-log.githubusercontent.com/.well-known/jwks
