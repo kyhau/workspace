@@ -40,6 +40,8 @@ alias git-branch-rename-main2master='git branch -m main master && git push -u or
 alias git-branch-rename-master2main='git branch -m master main && git push -u origin main && git push origin -d master'
 
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
+alias git-config-fileMode-false='git config core.fileMode false'
+alias git-config-fileMode-true='git config core.fileMode true'
 alias git-config-list='git config --list'
 alias git-config-show-user='git config user.name && git config user.email'
 alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin'
@@ -62,21 +64,22 @@ alias gh-extension-install-gh-actions-cache='gh extension install actions/gh-act
 alias gh-extension-remove-gh-actions-cache='gh extension remove actions/gh-actions-cache'
 alias gh-extension-upgrade-gh-actions-cache='gh extension upgrade actions/gh-actions-cache'
 
-alias gh-auth-login='gh auth login'
-alias gh-auth-status='gh auth status'
-alias gh-pr-create='gh pr create --assignee @me --fill'
-alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
-alias gh-k='gh k'
-alias gh-work='gh work'
-alias gh-delete-workflow-runs='python ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
 alias gh-oidc-thumbprint-for-actions='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_actions.sh'
 alias gh-oidc-thumbprint-for-audit-log='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
+
+alias gh-auth-login='gh auth login'
+alias gh-auth-status='gh auth status'
+alias gh-k='gh k'
+alias gh-work='gh work'
+
+alias gh-pr-create='gh pr create --assignee @me --fill'
+alias gh-pr-merge-squash='gh pr merge --squash'
+alias gh-delete-workflow-runs='python ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
 
 alias git-auto-branch='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else git branch $1 && git checkout $1; fi; }; _'
 alias git-auto-pr-merge='function _(){ ORI_BRANCH=$(git-branch-current) && gh-pr-create && gh-pr-merge-squash && git-checkout-default && git-pull-all && git branch -D ${ORI_BRANCH}; }; _'
 alias git-auto-commit-pr-merge='function _(){ if [[ -z "$1" ]]; then echo "Missing commit message"; else git commit -m "$1" && git push --set-upstream origin $(git-branch-current) && git-auto-pr-merge; fi; }; _'
-
 alias git-auto-ci-all-changes='function _(){ if [[ -z "$1" ]] || [[ -z "$2" ]] ; then echo "Arguments: [BRANCH_NAME] [COMMIT_MESSAGE]"; else git-auto-branch "$1" && git add . && git-auto-commit-pr-merge "$2"; fi; }; _'
 
 ################################################################################
