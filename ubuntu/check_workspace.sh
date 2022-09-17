@@ -3,26 +3,26 @@ set -e
 
 function check_e() {
   item=$1
-  status=NOT_EXIST
+  status="** [NOT_EXIST]"
   [ ! -e "$1" ] || status=OK
-  echo CHECK: $status ${1}
+  echo "CHECK: $status ${1}"
 }
 
 function check_x() {
   item=$1
-  status=NOT_INSTALLED
+  status="** [NOT_INSTALLED]"
   [ ! -x "$(command -v $1)" ] || status=OK
-  echo CHECK: $status ${1} - $(which $1)
+  echo "CHECK: $status ${1} - $(which $1)"
 }
 
 ########################################
 # Start checking
 
-echo INFO: whoami: $(whoami)
-echo INFO: HOME: ${HOME}
+echo "INFO: whoami: $(whoami)"
+echo "INFO: HOME: ${HOME}"
 
 ROOT_DIR="/c"
-echo INFO: ROOT_DIR: ${ROOT_DIR}
+echo "cINFO: ROOT_DIR: ${ROOT_DIR}"
 
 check_e /etc/wsl.conf
 
@@ -50,11 +50,12 @@ check_e ${HOME}/workspaces/
 
 ########################################
 # Check installations
-
 check_x aws
 check_x brew
+check_x cdk
 check_x docker
 check_x dos2unix
+check_x eksctl
 check_x gh
 check_x git
 check_x git-secrets
@@ -72,6 +73,9 @@ check_x pip
 check_x pip3
 check_x python
 check_x python3
+check_x sam
+check_x saml2aws
 check_x skaffold
+check_x tsc
 check_x yamllint
 check_x yarn
