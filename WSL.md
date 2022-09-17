@@ -3,7 +3,7 @@
 - [Install Linux on Windows with WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
 - Git clone this repo to `/mnt/c/Workspaces/github/workspace` (note: will change `/mnt/c` to `/c` in a later step)
 - Copy or create symlink from personal `.bashrc` to `$HOME/.bashrc`
-- Run [init_setup.sh](ubuntu/setup/init_setup.sh), which does
+- Run [init_setup.sh](ubuntu/init_setup.sh), which does
     - Set up `chmod/chown` support
     - Set up Python, Docker, Git, git_secrets, saml2aws, etc.
     - Set symlinks to the corresponding Windows home folders
