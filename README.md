@@ -8,13 +8,11 @@
 - Set up `git` config for [multiple GitHub accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 - Set up `gh` (GitHub CLI) [multi-account switch](https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47)
 
----
 ## Set up tools for specific development work
 
 - [Useful tools for development](./useful-tools/)
 - [kyhau/aws-tools](https://github.com/kyhau/aws-tools/) - my tools/scripts for building with AWS
 
----
 ## Locations of some useful files or directories
 
 - Chrome History `%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\History`
@@ -25,5 +23,4 @@
 - WSL 1 Ubuntu home: `%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_xxx\LocalState\rootfs\home\username`
 - WSL 2 Ubuntu home: `\\wsl$\Ubuntu`
 
----
 ## [Some useful links](./quick-notes/UsefulLinks.md)
