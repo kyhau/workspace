@@ -226,6 +226,8 @@ alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && 
 ################################################################################
 # custom scripts or commands
 
+alias k-check-workspace='. ${WORKSPACE_REPO_HOME}/ubuntu/check_workspace.sh'
+
 alias k-degreen='. ${WORKSPACE_REPO_HOME}/scripts/sh/degreen.sh'
 
 alias k-dos2unix='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" ! -path "*/node_modules/*" -print0 | xargs -0 dos2unix'

@@ -1,7 +1,11 @@
 #!/bin/bash
 set -e
 
-echo "INFO: $(git --version)"
+if [ -x "$(command -v git)" ]; then
+  echo "INFO: $(git --version)"
+else
+  echo "INFO: git not installed"
+fi
 
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
