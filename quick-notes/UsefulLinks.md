@@ -20,7 +20,7 @@
   | [PrivateBin](https://privatebin.info/)
 
 ### Coding
-- [Heroku](https://id.heroku.com/login)
+- [Heroku](https://id.heroku.com/login) | [Paperspace](https://www.paperspace.com/)
 - [DockerHub](https://hub.docker.com)
 - [SwaggerHub](https://app.swaggerhub.com/search) | [Rapid API](https://rapidapi.com/)
 - [Hackerrank](https://www.hackerrank.com/)
@@ -44,9 +44,7 @@
 - https://cve.mitre.org/
 - https://nvd.nist.gov/vuln/search
 
-
 ### Machine Learning
-- [Paperspace](https://www.paperspace.com/)
 - [fast.ai](https://www.fast.ai/)
 - [TensorFlow](https://www.tensorflow.org/get_started/)
 - [Machine Learning Crash Course @GoogleDevelopers](https://developers.google.com/machine-learning/crash-course/)
