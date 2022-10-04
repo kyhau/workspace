@@ -234,7 +234,7 @@ alias k-degreen='. ${WORKSPACE_REPO_HOME}/scripts/sh/degreen.sh'
 
 alias k-dos2unix='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" ! -path "*/node_modules/*" -print0 | xargs -0 dos2unix'
 
-alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=node_modules "$@"'\'' _'
+alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=cdk.out --exclude-dir=dist --exclude-dir=node_modules "$@"'\'' _'
 
 alias k-rename-files='python ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
