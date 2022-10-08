@@ -4,7 +4,7 @@
 echo "INFO: serverless version"
 serverless --version
 
-sudo npm config set registry http://registry.npmjs.org/
+sudo npm config set registry https://registry.npmjs.org/
 
 # sudo npm install -g npm
 
