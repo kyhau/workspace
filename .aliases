@@ -97,6 +97,11 @@ alias go-run='go run'
 alias go-test='go test -v'
 
 ################################################################################
+# k9s
+alias k9s-info='k9s info'
+alias k9s-readonly='k9s --readonly'
+
+################################################################################
 # kubectl
 alias kubectl-describe-configmap-n-kube-system-aws-auth='kubectl describe configmap -n kube-system aws-auth'
 alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
