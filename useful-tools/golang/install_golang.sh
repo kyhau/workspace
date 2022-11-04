@@ -17,7 +17,7 @@ fi
 
 # Read page, find the first occurrence of /golang/go/releases/tag/go not containing "beta"
 # e.g. <a href="/golang/go/releases/tag/go1.17.6">
-VERSION=$(curl "https://github.com/golang/go/tags" --insecure -s | grep "/golang/go/releases/tag/go" | grep -v beta | head -1 | awk -F '"' '{print $2}' | cut -c 27-)
+VERSION=$(curl "https://github.com/golang/go/tags" --insecure -s | grep "/golang/go/releases/tag/go" | grep -v beta | head -1 | awk -F 'tag/go' '{print $2}' | awk -F '"' '{print $1}')
 GO_FILENAME=go${VERSION}.linux-amd64.tar.gz
 DOWNLOAD_LINK="https://go.dev/dl/${GO_FILENAME}"
 
