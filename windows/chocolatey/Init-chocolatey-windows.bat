@@ -36,7 +36,13 @@ choco install -y ^
 
 :: --- k8s
 ::  lens ^
+::  k9s ^
 ::  kubernetes-helm ^
+
+:: --- github, git
+::  gh ^
+::  gitkraken ^
+::  sourcetree ^
 
 ::  --- Altair GraphQL Client
 ::  altair-graphql ^
@@ -46,8 +52,6 @@ choco install -y ^
 ::  cyberduck ^
 ::  dependencywalker ^
 ::  everything ^
-::  gh ^
-::  gitkraken ^
 ::  googlechrome ^
 ::  graphviz ^
 ::  itunes ^
@@ -64,7 +68,6 @@ choco install -y ^
 ::  qgis ^
 ::  rdcman ^
 ::  slack ^
-::  sourcetree ^
 ::  superputty ^
 ::  tor-browser ^
 ::  windirstat ^
