@@ -19,6 +19,8 @@ Jump to
     - minikube implements a local Kubernetes cluster on macOS, Linux, and Windows.
 - [k8slens.dev](https://k8slens.dev/)
     - Lens - The Kubernetes IDE, provides the full situational awareness for everything that runs in Kubernetes.
+- [k9s](https://github.com/derailed/k9s)
+    - K9s - K9s provides a terminal UI to interact with Kubernetes clusters.
 - [pixie](https://github.com/pixie-io/pixie)
     - Pixie is an open-source observability tool for Kubernetes applications.
 
