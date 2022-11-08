@@ -176,6 +176,7 @@ alias skaffold-run='skaffold run'
 
 # see https://thomaschaplin.medium.com/how-to-fix-yarn-audit-issues-ff5840f712d1
 alias yarn-audit-fix='npm i --package-lock-only && rm yarn.lock && npm audit fix && yarn import && rm package-lock.json'
+alias yarn-upgrade='yarn upgrade'
 
 ################################################################################
 # rm-
