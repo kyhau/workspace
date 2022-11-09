@@ -5,6 +5,7 @@ cfn-flip
 cfn-lint                  # require aws-sam-translator
 httpie                    # https://github.com/httpie/httpie
 pipx                      # https://github.com/pypa/pipx
+pyperf                    # https://github.com/psf/pyperf/
 yamllint
 yq                        # Command-line YAML/XML processor - jq wrapper for YAML/XML documents
 
