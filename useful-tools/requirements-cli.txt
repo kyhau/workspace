@@ -11,3 +11,4 @@ yq                        # Command-line YAML/XML processor - jq wrapper for YAM
 
 #demoshell                # https://github.com/dhellmann/demoshell
 #trufflehog               # https://github.com/trufflesecurity/truffleHog
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
