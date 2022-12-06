@@ -1,6 +1,7 @@
 # Useful Links
 
 ### GitHub
+- Software difference between Ubuntu 20 and Ubuntu 22  https://github.com/actions/runner-images/issues/5490
 - https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json
 - https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
 
