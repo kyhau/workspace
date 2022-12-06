@@ -1,5 +1,9 @@
 # Useful Links
 
+### GitHub
+- https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json
+- https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
+
 ### Real-time or continually-updated tracking tools
 - [Nextstrain](https://nextstrain.org/ncov/gisaid/global/6m) - Real-time tracking of pathogen evolution
 - [COVID-19 Dashboard](https://gisanddata.maps.arcgis.com/apps/dashboards/bda7594740fd40299423467b48e9ecf6) - by CSSE at Johns Hopkins University
