@@ -2,14 +2,20 @@
 
 ### GitHub
 - Software difference between Ubuntu 20 and Ubuntu 22  https://github.com/actions/runner-images/issues/5490
-- https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json
-- https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
+- GitHub runner supported
+    - Go version https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json
+    - Python version https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
 
 ### Real-time or continually-updated tracking tools
 - [Nextstrain](https://nextstrain.org/ncov/gisaid/global/6m) - Real-time tracking of pathogen evolution
 - [COVID-19 Dashboard](https://gisanddata.maps.arcgis.com/apps/dashboards/bda7594740fd40299423467b48e9ecf6) - by CSSE at Johns Hopkins University
 - [Kaspersky Cyberthreat Map](https://cybermap.kaspersky.com/)
-- [Digital Attack Map](https://www.digitalattackmap.com/)
+- [Akamai Cyberattack Maps & Threat Intelligence](https://www.akamai.com/internet-station/cyber-attacks)
+- [CheckPoint ThreatCoud Live Cyber Attack Threat map](https://threatmap.checkpoint.com/)
+- [Looking Glass Threat Map](https://map.lookingglasscyber.com/)
+- [Spamhaus / Deteque Botnet Threat Map](https://www.spamhaus.com/threat-map/)
+- [Bitdefender Live Cyber Threat Map](https://threatmap.bitdefender.com/)
+- [SonicWall Live Cyber Attacks Map](https://securitycenter.sonicwall.com/m/page/worldwide-attacks)
 
 ### Online tools
 - [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
