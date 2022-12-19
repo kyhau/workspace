@@ -9,6 +9,7 @@
     - Set symlinks to the corresponding Windows home folders
 
 Useful notes
+- [WSL 1 or WSL 2?](https://learn.microsoft.com/en-us/windows/wsl/compare-versions#exceptions-for-using-wsl-1-rather-than-wsl-2)
 - To check current distribution and version: `wsl -l -v`
 - To converting your distro from WSL 2 back to WSL 1: `wsl --set-version Ubuntu 1`
 - Setup `chmod/chown` support: use [`wsl.conf`](ubuntu/wsl.conf) as detailed in
