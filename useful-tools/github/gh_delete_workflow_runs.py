@@ -1,54 +1,42 @@
 """
 Select and delete workflow runs of a GitHub workflow
+
+Prerequisites
+- pip install click InquirerPy
+
 """
 import json
 import subprocess
 import sys
 
 import click
-from PyInquirer import Token, prompt, style_from_dict
-
-custom_style = style_from_dict(
-    {
-        Token.Separator: "#6C6C6C",
-        Token.QuestionMark: "#FF9D00 bold",
-        Token.Selected: "#5F819D",
-        Token.Pointer: "#FF9D00 bold",
-        Token.Instruction: "",  # default
-        Token.Answer: "#5F819D bold",
-        Token.Question: "",
-    }
-)
+from InquirerPy import inquirer
+from InquirerPy.base.control import Choice
 
 
 def prompt_single_selection(name, options):
     if not options:
         raise ValueError("No profiles retrieved for selection.")
 
-    questions = [
-        {
-            "choices": options,
-            "message": f"Please choose the {name}",
-            "name": name,
-            "type": "list",
-        }
-    ]
-    return prompt(questions, style=custom_style)
+    return inquirer.select(
+        message=f"Please choose the {name}",
+        choices=options,
+        default=None,
+    ).execute()
 
 
 def prompt_multi_selection(name, options):
     if not options:
         raise ValueError("No options retrieved for selection.")
 
-    questions = [
-        {
-            "choices": [{"name": option, "checked": False} for option in options],
-            "message": f"Please choose the {name}",
-            "name": f"{name}s",
-            "type": "checkbox",
-        }
-    ]
-    return prompt(questions, style=custom_style)
+    choices = [Choice(option, enabled=False) for option in options]
+
+    return inquirer.checkbox(
+        message=f"Please choose the {name}",
+        choices=choices,
+        cycle=True,
+        transformer=lambda result: f"{len(result)} {name} selected",
+    ).execute()
 
 
 def call_check_output(command, to_json=True):
@@ -72,12 +60,11 @@ def main(owner_repo, dryrun):
     # TODO Is workflow name unique?
     workflow_name_id_dict = {w["name"]: w["id"] for w in workflows_json["workflows"]}
 
-    resp = prompt_single_selection("workflow", workflow_name_id_dict.keys())
-    if not resp:
+    selected_name = prompt_single_selection("workflow", workflow_name_id_dict.keys())
+    if not selected_name:
         print("Nothing selected")
         return
 
-    selected_name = resp["workflow"]
     workflow_id = workflow_name_id_dict[selected_name]
 
     cmd_workflow_runs = f"gh api -X GET /repos/{owner_repo}/actions/workflows/{workflow_id}/runs --paginate"
@@ -88,12 +75,10 @@ def main(owner_repo, dryrun):
         print("No workflow run returned")
         return
 
-    resp = prompt_multi_selection("workflow-run", workflow_runs_runnum_id_dict)
-    if not resp:
+    selected_runs = prompt_multi_selection("workflow-run", workflow_runs_runnum_id_dict)
+    if not selected_runs:
         print("Nothing selected")
         return
-
-    selected_runs = resp["workflow-runs"]
 
     for run_number, run_id in workflow_runs_runnum_id_dict.items():
         if run_number in selected_runs:
