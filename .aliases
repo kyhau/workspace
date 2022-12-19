@@ -140,13 +140,14 @@ alias npm-install='npm install'
 # nvm
 
 alias nvm-install-latest='nvm install node --reinstall-packages-from=node'
-alias nvm-install-latest-lts='nvm install "lts/*"'
+alias nvm-install-latest-lts='nvm install --lts'
 alias nvm-install-latest-npm='nvm install-latest-npm'
 alias nvm-ls='nvm ls'
 alias nvm-ls-remote-lts-14='nvm ls-remote --lts=Fermium'
 alias nvm-ls-remote-lts-16='nvm ls-remote --lts=Gallium'
+alias nvm-ls-remote-lts-18='nvm ls-remote --lts=Hydrogen'
 alias nvm-use-latest='nvm use node'
-alias nvm-use-lts='nvm use --lts'
+alias nvm-use-latest-lts='nvm use --lts'
 alias nvm-use-system='nvm use system'
 alias nvm-which-current='nvm which current'
 
