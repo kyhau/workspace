@@ -153,7 +153,7 @@ alias nvm-which-current='nvm which current'
 ################################################################################
 # pip
 
-alias pip list-not-required='pip list --not-required'
+alias pip-list-not-required='pip list --not-required'
 alias pip-list-outdated='pip list --outdated'
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
 
