@@ -48,7 +48,7 @@ alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-o
 alias git-secrets-list='git secrets --list'
 alias git-secrets-scan='git secrets --scan'
 
-alias git-clear-reflog='git reflog expire --expire=now --all'
+alias git-rm-reflog='git reflog expire --expire=now --all'
 
 alias git-pull-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
 alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
