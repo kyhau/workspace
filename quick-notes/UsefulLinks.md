@@ -19,6 +19,7 @@
 
 ### Online tools
 - [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
+- [CyberChef](https://cyberchef.org/)
 
 ### Cloud
 - CNCF Cloud Native Interactive Landscape - https://landscape.cncf.io
