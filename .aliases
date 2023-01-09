@@ -80,7 +80,7 @@ alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-delete-workflow-runs='python ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
 
 alias git-auto-branch='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else git branch $1 && git checkout $1; fi; }; _'
-alias git-auto-pr-merge='function _(){ ORI_BRANCH=$(git-branch-current) && gh-pr-create && gh-pr-merge-squash && git-checkout-default && git-pull-all && git branch -D ${ORI_BRANCH}; }; _'
+alias git-auto-pr-merge='function _(){ ORI_BRANCH=$(git-branch-current) && gh-pr-create && gh-pr-merge-squash --admin && git-checkout-default && git-pull-all && git branch -D ${ORI_BRANCH}; }; _'
 alias git-auto-commit-pr-merge='function _(){ if [[ -z "$1" ]]; then echo "Missing commit message"; else git commit -m "$1" && git push --set-upstream origin $(git-branch-current) && git-auto-pr-merge; fi; }; _'
 alias git-auto-ci-all-changes='function _(){ if [[ -z "$1" ]] || [[ -z "$2" ]] ; then echo "Arguments: [BRANCH_NAME] [COMMIT_MESSAGE]"; else git-auto-branch "$1" && git add . && git-auto-commit-pr-merge "$2"; fi; }; _'
 
