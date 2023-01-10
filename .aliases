@@ -201,6 +201,7 @@ alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ pri
 alias update-brew='brew update'
 
 alias update-git='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git.sh'
+alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
 
 # github related
 alias update-act='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_act.sh'

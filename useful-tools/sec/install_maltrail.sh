@@ -1,5 +1,5 @@
 #!/bin/bash
-set -emaltrail
+set -e
 # https://github.com/stamparm/maltrail
 
 mkdir -p ${HOME}/.local/bin
