@@ -280,6 +280,7 @@ alias k-ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip
 alias k-ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ranges.txt'
 alias k-ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
 alias k-ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
+alias k-ls-timezones='. ${WORKSPACE_REPO_HOME}/scripts/sh/ls_timezones.sh'
 alias k-ls-unpurged-packages='dpkg --list | grep ^rc'
 
 ####
