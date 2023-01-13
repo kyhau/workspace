@@ -7,6 +7,7 @@ Jump to
 - [MLA and Dashboards](#mla-and-dashboards)
 - [Access Control and Security](#access-control-and-security)
 - [Networking](#networking)
+- [Kubernetes certifications](../../quick-notes/Certs-Kubernetes.md)
 
 
 ---
@@ -15,6 +16,7 @@ Jump to
 - AWS resources (e.g. EKS, CDK, CDK8s) -> [kyhau/aws-tools/EKS](https://github.com/kyhau/aws-tools/tree/master/EKS)
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
     - A command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+    - kubectl [Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [minikube](https://github.com/kubernetes/minikube)
     - minikube implements a local Kubernetes cluster on macOS, Linux, and Windows.
 - [k8slens.dev](https://k8slens.dev/)

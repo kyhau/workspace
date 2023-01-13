@@ -1,10 +1,19 @@
 # Useful Links
 
-### GitHub
-- Software difference between Ubuntu 20 and Ubuntu 22  https://github.com/actions/runner-images/issues/5490
-- GitHub runner supported
-    - Go version https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json
-    - Python version https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
+Jump to
+- [Real-time or continually-updated tracking tools](#real-time-or-continually-updated-tracking-tools)
+- [Online tools](#online-tools)
+- [Cloud](#cloud)
+- [Certifications](#certifications)
+- [GitHub](../useful-tools/github/README.md)
+- [Privacy Tools](#privacy-tools)
+- [Coding](#coding)
+- [Ethical Hacking](#ethical-hacking)
+- [Vulnerability Searching](#vulnerability-searching)
+- [AIML](#aiml)
+- [Blockchain (Ethereum, Hyperledger, etc)](#blockchain-ethereum-hyperledger-etc)
+
+---
 
 ### Real-time or continually-updated tracking tools
 - [Nextstrain](https://nextstrain.org/ncov/gisaid/global/6m) - Real-time tracking of pathogen evolution
@@ -25,6 +34,11 @@
 - CNCF Cloud Native Interactive Landscape - https://landscape.cncf.io
 - Public Cloud Services Comparison - http://comparecloud.in
 - MITRE ATT&CK Cloud Matrix (tactics and techniques) - https://attack.mitre.org/matrices/enterprise/cloud/
+
+### Certifications
+- Cloud - [AWS](https://aws.amazon.com/certification/), [Azure](https://learn.microsoft.com/en-us/certifications/), [GCP](https://cloud.google.com/certification/)
+- [Cybersecurity](./Certs-Cybersecurity.md)
+- [Kubernetes](./Certs-Kubernetes.md)
 
 ### Privacy Tools
 - [PrivacyTools.io](https://www.privacytools.io/)
@@ -58,7 +72,7 @@
 - https://cve.mitre.org/
 - https://nvd.nist.gov/vuln/search
 
-### Machine Learning
+### AIML
 - [fast.ai](https://www.fast.ai/)
 - [TensorFlow](https://www.tensorflow.org/get_started/)
 - [Machine Learning Crash Course @GoogleDevelopers](https://developers.google.com/machine-learning/crash-course/)
@@ -72,6 +86,3 @@
 - [Hyperledger Training and Certifications](https://www.hyperledger.org/resources/training)
 - [Ethereum Testnet Selection](https://testnet.etherscan.io/)
 - AWS Blockchain https://aws.amazon.com/blockchain/
-
-### AR/VR
-- https://aws.amazon.com/sumerian/
