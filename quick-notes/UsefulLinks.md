@@ -36,8 +36,9 @@ Jump to
 - MITRE ATT&CK Cloud Matrix (tactics and techniques) - https://attack.mitre.org/matrices/enterprise/cloud/
 
 ### Certifications
-- [kubernetes](https://kubernetes.io/training/)
-- [Cybersecurity]()
+- Cloud - [AWS](https://aws.amazon.com/certification/), [Azure](https://learn.microsoft.com/en-us/certifications/), [GCP](https://cloud.google.com/certification/)
+- [Cybersecurity](./Certs-Cybersecurity.md)
+- [Kubernetes](./Certs-Kubernetes.md)
 
 ### Privacy Tools
 - [PrivacyTools.io](https://www.privacytools.io/)
