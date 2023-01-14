@@ -1,6 +1,6 @@
 # Cybersecurity certifications
 
-https://hackr.io/blog/best-cybersecurity-certification
+Best Cybersecurity certifications (source: https://hackr.io/blog/best-cybersecurity-certification)
 
 Ordered by US job search on LinkedIn Dec 2022 (source: [coursera](https://www.coursera.org/articles/popular-cybersecurity-certifications))
 
