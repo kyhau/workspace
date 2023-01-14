@@ -15,6 +15,7 @@ Jump to
 - AWS resources (e.g. EKS, CDK, CDK8s) -> [kyhau/aws-tools/EKS](https://github.com/kyhau/aws-tools/tree/master/EKS)
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
     - A command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+    - kubectl [Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [minikube](https://github.com/kubernetes/minikube)
     - minikube implements a local Kubernetes cluster on macOS, Linux, and Windows.
 - [k8slens.dev](https://k8slens.dev/)
