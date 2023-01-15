@@ -18,9 +18,10 @@ https://kubernetes.io/training/
     - ACG https://learn.acloud.guru/course/certified-kubernetes-security-specialist/
     - Udemy https://www.udemy.com/course/certified-kubernetes-security-specialist/
     - Whizlabs https://www.whizlabs.com/certified-kubernetes-security-specialist-cks/
-- Practice material
-    - https://github.com/dgkanatsios/CKAD-exercises
-    - https://github.com/StenlyTU/K8s-training-official
-    - https://kodekloud.com/
-    - http://killer.sh/(Now [available with exam registration](https://training.linuxfoundation.org/announcements/linux-foundation-kubernetes-certifications-now-include-exam-simulator/?ref=hackernoon.com))
-    - https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+## Practice material
+- https://github.com/dgkanatsios/CKAD-exercises
+- https://github.com/StenlyTU/K8s-training-official
+- https://kodekloud.com/
+- http://killer.sh/ (Now [available with exam registration](https://training.linuxfoundation.org/announcements/linux-foundation-kubernetes-certifications-now-include-exam-simulator/?ref=hackernoon.com))
+- https://kubernetes.io/docs/reference/kubectl/cheatsheet/
