@@ -23,5 +23,5 @@ https://kubernetes.io/training/
 - https://github.com/dgkanatsios/CKAD-exercises
 - https://github.com/StenlyTU/K8s-training-official
 - https://kodekloud.com/
-- http://killer.sh/ (Now [available with exam registration](https://training.linuxfoundation.org/announcements/linux-foundation-kubernetes-certifications-now-include-exam-simulator/?ref=hackernoon.com))
+- https://killer.sh/ ([2 sessions included with exam registration](https://killer.sh/pricing))
 - https://kubernetes.io/docs/reference/kubectl/cheatsheet/

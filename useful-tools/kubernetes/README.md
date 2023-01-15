@@ -7,6 +7,7 @@ Jump to
 - [MLA and Dashboards](#mla-and-dashboards)
 - [Access Control and Security](#access-control-and-security)
 - [Networking](#networking)
+- [Kubernetes certifications](../../quick-notes/Certs-Kubernetes.md)
 
 
 ---
