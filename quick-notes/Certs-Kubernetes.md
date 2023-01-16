@@ -25,3 +25,9 @@ https://kubernetes.io/training/
 - https://kodekloud.com/
 - https://killer.sh/ ([2 sessions included with exam registration](https://killer.sh/pricing))
 - https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+## Documentation sites allowed during CKAD (bookmark them)
+- https://kubernetes.io/docs/
+- https://github.com/kubernetes
+- https://kubernetes.io/blog/
+- https://helm.sh/docs/
