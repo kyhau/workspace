@@ -77,7 +77,7 @@ alias gh-work='gh work'
 
 alias gh-pr-create='gh pr create --assignee @me --fill'
 alias gh-pr-merge-squash='gh pr merge --squash'
-alias gh-delete-workflow-runs='python ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
+alias gh-delete-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
 
 alias git-auto-branch='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else git branch $1 && git checkout $1; fi; }; _'
 alias git-auto-pr-merge='function _(){ ORI_BRANCH=$(git-branch-current) && gh-pr-create && gh-pr-merge-squash --admin && git-checkout-default && git-pull-all && git branch -D ${ORI_BRANCH}; }; _'
@@ -161,8 +161,8 @@ alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgr
 ################################################################################
 # python
 
-alias python-zoneinfo-available-timezones='python -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
-#alias python-timezones='python -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
+alias python-zoneinfo-available-timezones='python3 -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
+#alias python-timezones='python3 -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
 
 ################################################################################
 # skaffold
@@ -247,7 +247,7 @@ alias k-dos2unix='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.gi
 
 alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=cdk.out --exclude-dir=dist --exclude-dir=node_modules "$@"'\'' _'
 
-alias k-rename-files='python ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
+alias k-rename-files='python3 ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
 ####
 # System
@@ -286,7 +286,7 @@ alias k-ls-unpurged-packages='dpkg --list | grep ^rc'
 ####
 # Networking
 
-alias k-ip-in-range-check='python ${WORKSPACE_REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
+alias k-ip-in-range-check='python3 ${WORKSPACE_REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
 
 # what the outside world thinks your ip address is
 # or curl ifconfig.me
@@ -298,8 +298,8 @@ alias k-ip-local='. ${WORKSPACE_REPO_HOME}/ubuntu/get_local_ip.sh'
 alias k-whatismy-ipaddress='browser https://whatismyipaddress.com/'
 alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
 
-alias k-ipam-helper='python ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
-alias k-panos-helper='python ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
+alias k-ipam-helper='python3 ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
+alias k-panos-helper='python3 ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
 
 alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable_apt_ocsp_verification.sh'
 alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_apt_ocsp_verification.sh'
