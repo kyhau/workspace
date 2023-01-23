@@ -112,9 +112,12 @@ Jump to
 
 - [Multus-CNI](https://github.com/k8snetworkplumbingwg/multus-cni) - Multus CNI enables attaching multiple network interfaces to pods in Kubernetes.
 
+
 ---
 ## Backup
 - [Velero](https://velero.io/) - Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.
+- [backube/snapscheduler](https://github.com/backube/snapscheduler) - SnapScheduler provides scheduled snapshots for Kubernetes CSI-based volumes.
+
 
 ---
 ## Some good reads
