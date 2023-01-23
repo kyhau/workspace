@@ -7,6 +7,8 @@ Jump to
 - [MLA and Dashboards](#mla-and-dashboards)
 - [Access Control and Security](#access-control-and-security)
 - [Networking](#networking)
+- [Backup](#backup)
+- [Some good reads](#some-good-reads)
 - [Kubernetes certifications](../../quick-notes/Certs-Kubernetes.md)
 
 
@@ -109,3 +111,11 @@ Jump to
 ## Networking
 
 - [Multus-CNI](https://github.com/k8snetworkplumbingwg/multus-cni) - Multus CNI enables attaching multiple network interfaces to pods in Kubernetes.
+
+---
+## Backup
+- [Velero](https://velero.io/) - Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.
+
+---
+## Some good reads
+- [Server Side Apply Is Great And You Should Be Using It](https://kubernetes.io/blog/2022/10/20/advanced-server-side-apply/)
