@@ -127,6 +127,7 @@ alias kubectl-get-svc='kubectl get svc'
 alias kubectl-get-svc-a='kubectl get svc -A'
 alias kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller'
 alias kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
+alias kubectl-validate-yaml='kubectl create --dry-run --validate=true -f'
 
 ################################################################################
 # npm
