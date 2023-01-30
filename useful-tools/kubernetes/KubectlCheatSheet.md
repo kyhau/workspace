@@ -1,7 +1,12 @@
 # kubectl CheatSheet
 
 ```
+kubectl api-resources
+
 kubectl get all
+
+# Get doco for a resource type
+kubectl explain
 
 kubectl describe [pod | deployment] [pod-name | deployment-name]
 
@@ -12,6 +17,7 @@ kubectl describe [pod | deployment] [pod-name | deployment-name]
 kubectl apply -f xxx.yaml
 
 # Use --save-config when you want to use kubectl appply in the future
+kubectl create deploy <name> --image=<image> --replicas=<replicas>
 kubectl create -f xxx.yaml --save-config
 
 # List all Deployments and their labels
