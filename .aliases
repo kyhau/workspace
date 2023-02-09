@@ -217,6 +217,7 @@ alias update-lazydocker='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_la
 alias update-helm='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_helm.sh'
 alias update-k9s='curl -sS https://webinstall.dev/k9s | bash'
 alias update-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
+alias update-krew='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_krew.sh'
 alias update-kubectl='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectl.sh'
 alias update-kubectx-and-kubens='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
 alias update-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
