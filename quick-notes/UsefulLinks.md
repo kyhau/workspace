@@ -60,6 +60,7 @@ Jump to
 - Slack dev - [Slack Block Kit](https://api.slack.com/block-kit) | [Slack Block Kit Builder](https://app.slack.com/block-kit-builder)
 
 ### Ethical Hacking
+- [Hack The Box](https://www.hackthebox.com/)
 - [TryHackMe](https://tryhackme.com/)
 - [Cybrary.it](https://www.cybrary.it/)
 - [Ethical Hacking @TutorialsPoint](https://www.tutorialspoint.com/ethical_hacking/index.htm)
