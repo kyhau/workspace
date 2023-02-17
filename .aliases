@@ -59,6 +59,8 @@ alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all
 alias git-checkout--='git checkout -- .'
 alias git-checkout-default='git checkout $(git-branch-default)'
 
+alias git-clean-dfx='git clean -dfx'
+
 alias git-ls-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-ls-untracked='git ls-files --others --exclude-standard'
 
