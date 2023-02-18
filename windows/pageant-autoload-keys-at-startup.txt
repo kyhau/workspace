@@ -1,0 +1,19 @@
+# https://gist.github.com/chunter/3ec25dd802c2163265eacfcb6f53cb7d
+
+To make Pageant automatically run and load keys at startup:
+
+- Find the location of pageant.exe
+
+- Windows key + R to open the 'run' dialog box
+
+- Type: 'shell:startup' in the dialog box
+
+- Create a shortcut to the pageant.exe and put into this startup folder.
+
+- Right click on the shortcut and open 'Properties'
+
+- In 'Target' add: "<path to>/pageant.exe" --encrypted myprivatekeyname.ppk
+
+- In 'Start in' add: "<path to myprivatekeyname.ppk>"
+
+- Click on the shortcut link and check that Pageant has started and has loaded your keys
