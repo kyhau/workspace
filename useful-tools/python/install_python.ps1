@@ -11,7 +11,7 @@ if ($currentPath -notlike "*$LocalDir*")
 {
     $newPath = $currentPath
     if (-not ($newPath.EndsWith(";"))) {  $newPath = $newPath + ";"  }
-    $newPath = $newPath + "$LocalDir;$LocalDir/Scripts"
+    $newPath = $newPath + "$LocalDir;$LocalDir\Scripts"
     [Environment]::SetEnvironmentVariable("PATH", $newPath, "Machine")
 }
 

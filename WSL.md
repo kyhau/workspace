@@ -1,6 +1,7 @@
 # Set up WSL Ubuntu dev environment
 
 - [Install Linux on Windows with WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
+    - For WSL 1, install Ubuntu-20.04 distro first (which is WSL 1), then upgrade to Ubuntu-22.04.
 - Git clone this repo to `/mnt/c/Workspaces/github/workspace` (note: will change `/mnt/c` to `/c` in a later step)
 - Copy or create symlink from personal `.bashrc` to `$HOME/.bashrc`
 - Run [init_setup.sh](ubuntu/init_setup.sh), which does

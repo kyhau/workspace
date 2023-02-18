@@ -1,25 +1,20 @@
 :: Run as Administrator
 
 :: Installing chocolatey from CMD
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+:: @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 :: OR
 :: Installing chocolatey from Powershell
-:: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Packages - see https://chocolatey.org/packages
 
 choco install -y ^
-  awscli ^
   docker-desktop ^
   firefox ^
   git ^
   github-desktop ^
-  golang ^
-  jq ^
-  nodejs ^
   notepadplusplus ^
-  protonvpn ^
   putty ^
   python3 --version 3.10 -override --installarguments "'/quiet InstallAllUsers=1 TargetDir=c:\Python310'" ^
   signal ^
@@ -27,12 +22,24 @@ choco install -y ^
   vscode-insiders.install ^
   winrar
 
+:: --- VPN
+::  nordvpn ^
+::  openvpn --params="'/SELECT_OPENVPNGUI=1'" ^
+::  protonvpn ^
+
 :: --- aws
 ::  awscli-session-manager ^
 ::  aws-iam-authenticator ^
 ::  cloudformation-guard --version=1.0.0 ^
 ::  nosql-workbench ^
 ::  saml2aws ^
+
+:: --- Dev CLI / Languages
+::  awscli ^
+::  golang ^
+::  jre8 ^
+::  jq ^
+::  nodejs ^
 
 :: --- k8s
 ::  lens ^
@@ -55,13 +62,10 @@ choco install -y ^
 ::  googlechrome ^
 ::  graphviz ^
 ::  itunes ^
-::  jre8 ^
 ::  kdiff3 ^
 ::  keepassxc ^
 ::  lazydocker ^
 ::  nano ^
-::  nordvpn ^
-::  openvpn --params="'/SELECT_OPENVPNGUI=1'" ^
 ::  pgadmin4 ^
 ::  postman ^
 ::  pycharm-community ^
