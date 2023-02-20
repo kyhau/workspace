@@ -260,6 +260,7 @@ alias k-rename-files='python3 ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 alias k-du-hs='du -hs'
 alias k-du-h-max-depth-1='du -h --max-depth=1'
 alias k-df-h='df -h'
+alias k-lsb-release-a='lsb_release -a'
 alias k-lsb-release-d='lsb_release -d'
 alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
 
