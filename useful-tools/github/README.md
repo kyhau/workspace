@@ -25,6 +25,7 @@ For GitHub Actions
 - Software difference between Ubuntu 20 and Ubuntu 22  https://github.com/actions/runner-images/issues/5490
 - GitHub runner supported
     - Go version https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json
+    - Node version https://raw.githubusercontent.com/actions/node-versions/main/versions-manifest.json
     - Python version https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
 
 
