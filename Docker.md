@@ -11,9 +11,28 @@
     - See https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
     - See https://github.com/microsoft/WSL/issues/1854#issuecomment-291845122
     - See https://github.com/aws/aws-sam-cli/issues/208
-- Volume mounts in Windows does not work? https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
+    - Volume mounts in Windows does not work? https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/18
+- Docker Desktop settings
+    - General
+        - Expose daemon
+        - Use Docker Compose V2
+    - Docker Engine
+        ```
+        {
+          "builder": {
+            "gc": {
+              "defaultKeepStorage": "20GB",
+              "enabled": true
+            }
+          },
+          "experimental": false,
+          "features": {
+            "buildkit": true
+          }
+        }
+        ```
 - docker-compose
-    - To install `docker-compose`: `pip install docker-compose`
+    - To install: `pip install docker-compose`
     - If see error `docker.credentials.errors.InitializationError: docker-credential-desktop.exe not installed or not available in PATH`
         - Add `_` before `credsStore` in file ~/.docker/config.json, i.e. `{"_credsStore":"desktop.exe"}`
 - If see error [`no matching manifest for windows/amd64 in the manifest list entries`](https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-windows-amd64-in-the-manifest-list-entries)
