@@ -1,7 +1,7 @@
 # Recreate the Powershell Profile file
 New-Item -Path $Profile -Type File -Force
 
-$workspacesHome = $env:USERPROFILE
+$workspacesHome = 'C:\Workspaces'
 if (Test-Path '$workspacesHome') {
   $workspacesHome = $workspacesHome
 } elseif (Test-Path '$env:USERPROFILE\Workspaces') {
