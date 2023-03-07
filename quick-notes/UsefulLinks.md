@@ -29,6 +29,7 @@ Jump to
 ### Online tools
 - [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
 - [CyberChef](https://cyberchef.org/)
+- [Excalidraw](https://excalidraw.com/) - https://github.com/excalidraw/excalidraw
 
 ### Cloud
 - CNCF Cloud Native Interactive Landscape - https://landscape.cncf.io
