@@ -12,6 +12,7 @@ Jump to
 - [Vulnerability Searching](#vulnerability-searching)
 - [AIML](#aiml)
 - [Blockchain (Ethereum, Hyperledger, etc)](#blockchain-ethereum-hyperledger-etc)
+- [Free online games](./Games.md)
 
 ---
 
