@@ -10,5 +10,6 @@
 ---
 ## For Big Kids
 - https://mathgames67.github.io/
+    - [Stickman Boost by Y8](https://mathgames67.github.io/p/stickmanboost.html)
 - https://emulatoros.github.io/
 - https://github.com/topics/games
