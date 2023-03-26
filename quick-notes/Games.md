@@ -1,10 +1,10 @@
 # Free Online Games
 
 ## For Small Kids
-- [Math Playground](https://www.mathplayground.com/)
-  - [Tangram Puzzles](https://www.mathplayground.com/tangram_puzzles.html)
 - [Puzzle Playground](https://www.puzzleplayground.com/)
   - [Elemental tiles](https://www.puzzleplayground.com/elemental_tiles)
+- [Math Playground]([https://www.mathplayground.com/](https://www.mathplayground.com/game_directory.html))
+  - [Tangram Puzzles](https://www.mathplayground.com/tangram_puzzles.html)
 
 ---
 ## For Big Kids
