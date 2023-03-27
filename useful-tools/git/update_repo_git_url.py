@@ -31,10 +31,17 @@ def https_to_ssh():
     run(DIR_NAME, from_str, to_str, dry_run=False)
 
 
+def ssh_to_https():
+    # From https to ssh
+    from_str="git@github.com:"
+    to_str="https://github.com/"
+    run(DIR_NAME, from_str, to_str, dry_run=False)
+
+
 def replace_str():
     from_str="git@github.com"
     to_str="git@me.github.com"
     run(DIR_NAME, from_str, to_str, dry_run=False)
 
 
-replace_str()
+ssh_to_https()
