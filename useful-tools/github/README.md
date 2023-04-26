@@ -24,7 +24,9 @@ For GitHub Actions
 ---
 ## GitHub APIs
 
-- [GitHub GraphQL API Explorer](https://docs.github.com/en/enterprise-cloud@latest/graphql/overview/explorer)
+- GitHub GraphQL API Explorer
+    - https://docs.github.com/en/graphql/overview/explorer
+    - https://docs.github.com/en/enterprise-cloud@latest/graphql/overview/explorer
 - GitHub API metadata (IP ranges, etc.) - https://api.github.com/meta
 
 
