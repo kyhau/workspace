@@ -41,6 +41,7 @@ Jump to
 - Cloud - [AWS](https://aws.amazon.com/certification/), [Azure](https://learn.microsoft.com/en-us/certifications/), [GCP](https://cloud.google.com/certification/)
 - [Cybersecurity](./Certs-Cybersecurity.md)
 - [Kubernetes](./Certs-Kubernetes.md)
+- [Apollo Graph Developer](https://www.apollographql.com/tutorials/#certifications)
 
 ### Privacy Tools
 - [PrivacyTools.io](https://www.privacytools.io/)
