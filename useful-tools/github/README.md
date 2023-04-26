@@ -3,6 +3,7 @@
 Jump to
 - [GH CLI](#gh-cli)
 - [GitHub Actions](#github-actions)
+- [GitHub APIs](#github-apis)
 - [GitHub Runners](#github-runners)
 - [Audit Log](#audit-log)
 
@@ -18,6 +19,13 @@ Jump to
 For GitHub Actions
 - OpenID Configuration URI https://token.actions.githubusercontent.com/.well-known/openid-configuration
 - Json Web Key Service URI https://token.actions.githubusercontent.com/.well-known/jwks
+
+
+---
+## GitHub APIs
+
+- [GitHub GraphQL API Explorer](https://docs.github.com/en/enterprise-cloud@latest/graphql/overview/explorer)
+- GitHub API metadata (IP ranges, etc.) - https://api.github.com/meta
 
 
 ---
