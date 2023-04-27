@@ -12,9 +12,8 @@ Jump to
 ## GH CLI and Extensions
 
 - GH CLI multi-account switch https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47
-
-Useful GH CLI Extensions
 - https://github.com/Link-/gh-token - Create an installation access token for a GitHub app from your terminal
+    - can be used as CLI tool or as GH CLI extension
 
 
 ---
