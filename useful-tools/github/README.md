@@ -1,16 +1,20 @@
 # Some GitHub notes
 
 Jump to
-- [GH CLI](#gh-cli)
+- [GH CLI and Extensions](#gh-cli-and-extensions)
 - [GitHub Actions](#github-actions)
 - [GitHub APIs / GitHub Apps](#github-apis--github-apps)
 - [GitHub Runners](#github-runners)
 - [Audit Log](#audit-log)
 
+
 ---
-## GH CLI
+## GH CLI and Extensions
 
 - GH CLI multi-account switch https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47
+
+Useful GH CLI Extensions
+- https://github.com/Link-/gh-token - Create an installation access token for a GitHub app from your terminal
 
 
 ---
