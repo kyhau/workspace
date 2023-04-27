@@ -29,6 +29,11 @@ For GitHub Actions
     - https://docs.github.com/en/enterprise-cloud@latest/graphql/overview/explorer
 - GitHub API metadata (IP ranges, etc.) - https://api.github.com/meta
 
+Other tools
+- https://github.com/graphql/graphql-playground
+- https://github.com/EasyGraphQL/easygraphql-tester
+- https://www.apollographql.com
+
 
 ---
 ## GitHub Runners
