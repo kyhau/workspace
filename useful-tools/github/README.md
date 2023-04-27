@@ -3,7 +3,7 @@
 Jump to
 - [GH CLI](#gh-cli)
 - [GitHub Actions](#github-actions)
-- [GitHub APIs](#github-apis)
+- [GitHub APIs / GitHub Apps](#github-apis--github-apps)
 - [GitHub Runners](#github-runners)
 - [Audit Log](#audit-log)
 
@@ -22,17 +22,15 @@ For GitHub Actions
 
 
 ---
-## GitHub APIs
+## GitHub APIs / GitHub Apps
 
+- GitHub API metadata (IP ranges, etc.) - https://api.github.com/meta
+- GitHub Apps
+    - https://probot.github.io/
 - GitHub GraphQL API Explorer
     - https://docs.github.com/en/graphql/overview/explorer
     - https://docs.github.com/en/enterprise-cloud@latest/graphql/overview/explorer
-- GitHub API metadata (IP ranges, etc.) - https://api.github.com/meta
-
-Other tools
-- [Apollo Sandbox](https://www.apollographql.com/docs/graphos/explorer/sandbox/)
-- https://github.com/graphql/graphql-playground
-- https://github.com/EasyGraphQL/easygraphql-tester
+- [Other GraphQL tools](../graphql/README.md)
 
 
 ---
