@@ -30,9 +30,9 @@ For GitHub Actions
 - GitHub API metadata (IP ranges, etc.) - https://api.github.com/meta
 
 Other tools
+- [Apollo Sandbox](https://www.apollographql.com/docs/graphos/explorer/sandbox/)
 - https://github.com/graphql/graphql-playground
 - https://github.com/EasyGraphQL/easygraphql-tester
-- https://www.apollographql.com
 
 
 ---
