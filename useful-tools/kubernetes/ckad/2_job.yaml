@@ -1,0 +1,18 @@
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-job
+spec:
+  template:
+    spec:
+      containers:
+         - name: print
+           image: busybox:stable
+           command: ["echo", "This is a test!"]
+      restartPolicy: Never
+  backoffLimit: 4
+  activeDeadlineSeconds: 10
+
+  # kubectl apply -f 2_job.yaml
+

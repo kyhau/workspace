@@ -1,0 +1,22 @@
+
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: my-cronjob
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          constainers:
+            - name: print
+              image: busybox:stable
+              command: ["echo", "This is a test!"]
+          restartPolicy: Never
+      backoffLimit: 4
+      activeDeadlineSeconds: 10
+
+# kubectl apply -f 2_cronjob.yaml
+# kube get cronjob
+# kube get jobs
