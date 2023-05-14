@@ -6,20 +6,19 @@ spec:
   containers:
   - name: writer
     image: busybox:stable
-    command: ['sh', '-c', 'echo "The writer wrote this!" > /output/data.txt; while true; do sleep 5;
-    done']
+    command: ['sh', '-c', 'echo "The writer wrote this!" > /output/data.txt; while true; do sleep 5; done']
     volumeMounts:
-  - name: shared
-    mountPath: /output
+    - name: shared
+      mountPath: /output
   - name: sidecar
     image: busybox:stable
     command: ['sh', '-c', 'while true; do cat /input/data.txt; sleep 5; done']
     volumeMounts:
     - name: shared
       mountPath: /input
-volumes:
-- name: shared
-  emptyDir: {}
+  volumes:
+  - name: shared
+    emptyDir: {}
 
 # kubectl apply -f 2_sidecar-test.yaml
 # kubectl get pod 2_sidecar-test.yaml
