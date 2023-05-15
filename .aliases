@@ -316,4 +316,5 @@ alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host re
 
 alias k-cheatsheet-aws-network='browser https://github.com/kyhau/aws-notebook/blob/master/Networking.md'
 alias k-cheatsheet-docker='browser https://github.com/kyhau/docker-notebook/blob/master/README.md'
+alias k-cheatsheet-kubectl='browser https://kubernetes.io/docs/reference/kubectl/cheatsheet/'
 alias k-cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/blob/master/README.md'
