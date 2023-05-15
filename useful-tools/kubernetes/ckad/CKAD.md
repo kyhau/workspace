@@ -28,8 +28,8 @@ $ sudo apt install nano
 # Auto completion
 $ alias k='kubectl'
 $ source <(kubectl completion bash)
-$ echo "source <(kubectl completion bash)" >> ~/.bashrc
 $ complete -F __start_kubectl k
+$ echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 
 
