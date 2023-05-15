@@ -4,4 +4,4 @@ set -e
 update-minikube
 
 minikube start
-
+# minikube dashboard
