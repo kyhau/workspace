@@ -15,6 +15,9 @@ Jump to
     - https://kubernetes.io/blog/
     - https://helm.sh/docs
 
+### Quick links
+- kubectl Cheat Sheet - https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
 
 ---
 ## Pre-setup
