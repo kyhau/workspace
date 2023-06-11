@@ -48,6 +48,11 @@ Jump to
 - Pastebin Services:
     [CryptPad](https://cryptpad.org/instances/)
   | [PrivateBin](https://privatebin.info/)
+- Private DNS
+   - [Firefox DNS-over-HTTPS](https://support.mozilla.org/en-US/kb/firefox-dns-over-https)
+   - [Private DNS on Android](https://www.howtogeek.com/795644/how-to-enable-secure-private-dns-on-android/) - DNS providers:
+      - [Google Public DNS](https://developers.google.com/speed/public-dns/docs/using#android) (dns.google), or
+      - [Cloudflare](https://blog.cloudflare.com/enable-private-dns-with-1-1-1-1-on-android-9-pie/) (1dot1dot1dot1.cloudflare-dns.com) - Visit 1.1.1.1/help (or 1.0.0.1/help) to verify that "Using DNS over xxx" shows as "Yes".
 
 ### Coding
 - [Heroku](https://id.heroku.com/login) | [Paperspace](https://www.paperspace.com/)
