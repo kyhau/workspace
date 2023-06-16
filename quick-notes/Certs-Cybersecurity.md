@@ -34,6 +34,7 @@ Ordered by US job search on LinkedIn Dec 2022 (source: [coursera](https://www.co
         - C|EH Master
     - Requirements:
         - 2 years of experience in information security; graduates of EC-Council training
+    - More info: https://www.knowledgehut.com/blog/security/ethical-hacking-certification-cost
 1. CISM: Certified Information Security Manager (CISM)
     - Programmers interested in solidifying their managerial experience
     - $575 for members; $760 for non-members
