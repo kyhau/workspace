@@ -66,6 +66,12 @@ Jump to
 - [Google Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb)
 - [Amazon Honeycode](https://builder.honeycode.aws/)
 - Slack dev - [Slack Block Kit](https://api.slack.com/block-kit) | [Slack Block Kit Builder](https://app.slack.com/block-kit-builder)
+- AI Tooling
+   - GitHub Copilot
+   - Amazon CodeWhisper
+   - Sourcegraph Cody
+   - Tabnine
+   - Replit Ghostwriter
 
 ### Ethical Hacking
 - [Hack The Box](https://www.hackthebox.com/)
