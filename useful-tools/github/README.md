@@ -4,6 +4,7 @@ Jump to
 - [GH CLI and Extensions](#gh-cli-and-extensions)
 - [GitHub Actions](#github-actions)
 - [GitHub APIs / GitHub Apps](#github-apis--github-apps)
+- [GitHub Copilot](#github-copilot)
 - [GitHub Runners](#github-runners)
 - [Audit Log](#audit-log)
 
@@ -34,6 +35,13 @@ For GitHub Actions
     - https://docs.github.com/en/graphql/overview/explorer
     - https://docs.github.com/en/enterprise-cloud@latest/graphql/overview/explorer
 - [Other GraphQL tools](../graphql/README.md)
+
+
+---
+## GitHub Copilot
+
+- Copilot error: "GitHub Copilot could not connect to server. Extension activation failed: self-signed certificate in certificate chain"
+    - VSCode extension [Win-CA](https://marketplace.visualstudio.com/items?itemName=ukoloff.win-ca), Win-CA must be set to 'append' mode ([Source](https://stackoverflow.com/questions/71367058/self-signed-certificate-in-certificate-chain-on-github-copilot/72136715#72136715))
 
 
 ---
