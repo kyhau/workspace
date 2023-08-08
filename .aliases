@@ -82,6 +82,8 @@ alias gh-pr-create='gh pr create --assignee @me --fill'
 alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-delete-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
 
+alias git-auto-commit-merge='git add . && git commit -m "Updated" && git push'
+
 alias git-auto-branch='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else git branch $1 && git checkout $1; fi; }; _'
 alias git-auto-pr-merge='function _(){ ORI_BRANCH=$(git-branch-current) && gh-pr-create && gh-pr-merge-squash --admin && git-checkout-default && git-pull-all && git branch -D ${ORI_BRANCH}; }; _'
 alias git-auto-commit-pr-merge='function _(){ if [[ -z "$1" ]]; then echo "Missing commit message"; else git commit -m "$1" && git push --set-upstream origin $(git-branch-current) && git-auto-pr-merge; fi; }; _'
