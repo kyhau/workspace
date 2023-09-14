@@ -92,6 +92,7 @@ Jump to
 - [TensorFlow](https://www.tensorflow.org/get_started/)
 - [Machine Learning Crash Course @GoogleDevelopers](https://developers.google.com/machine-learning/crash-course/)
 - [Machine Learning @Coursera](https://www.coursera.org/learn/machine-learning)
+- [Amazon Machine Learning University (MLU)](https://mlu-explain.github.io/)
 - [Machine Learning and Deep Learning on AWS](https://aws.amazon.com/blogs/machine-learning/two-new-courses-are-now-available-for-machine-learning-and-deep-learning-on-aws/)
 - [AWS Deep Racer](https://aws.amazon.com/deepracer/)
 
