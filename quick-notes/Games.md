@@ -1,6 +1,7 @@
 # Free Online Games
 
 ## For Small Kids
+- [Poki Kids](https://kids.poki.com/)
 - [Puzzle Playground](https://www.puzzleplayground.com/)
    - [Elemental tiles](https://www.puzzleplayground.com/elemental_tiles)
    - [Box Kid](https://www.puzzleplayground.com/box_kid)
