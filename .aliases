@@ -202,6 +202,14 @@ alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
 alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ print $2; }')"
 
 ################################################################################
+# synk
+
+alias snyk-code-test='snyk code test'
+alias snyk-monitor='snyk monitor -d -insecure --all-projects --fail-fast --strict-out-of-sync=true --detection-depth=6'
+alias snyk-test='snyk test --all-projects --fail-fast --detection-depth=6'
+alias snyk-run-all='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
+
+################################################################################
 # update
 
 alias update-brew='brew update'
@@ -240,6 +248,8 @@ alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(
 alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
 
 alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
+
+alias update-snyk-cli='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/install-snyk-cli'
 
 alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 
