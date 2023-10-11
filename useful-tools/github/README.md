@@ -43,6 +43,10 @@ For GitHub Actions
 - Copilot error: "GitHub Copilot could not connect to server. Extension activation failed: self-signed certificate in certificate chain"
     - VSCode extension [Win-CA](https://marketplace.visualstudio.com/items?itemName=ukoloff.win-ca), Win-CA must be set to 'append' mode ([Source](https://stackoverflow.com/questions/71367058/self-signed-certificate-in-certificate-chain-on-github-copilot/72136715#72136715))
 
+External Researches and Surveys
+- [Research: quantifying GitHub Copilot’s impact on developer productivity and happiness](https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/), GitHub, 2022-09-07
+- [Survey reveals AI’s impact on the developer experience](https://github.blog/2023-06-13-survey-reveals-ais-impact-on-the-developer-experience/), GitHub, 2023-06-13
+- [Research: Quantifying GitHub Copilot’s impact on code quality](https://github.blog/2023-10-10-research-quantifying-github-copilots-impact-on-code-quality/), GitHub, 2023-10-10
 
 ---
 ## GitHub Runners
