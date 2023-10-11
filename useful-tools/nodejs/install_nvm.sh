@@ -5,15 +5,17 @@ set -e
 
 REPO=nvm-sh/nvm
 
-VERSION=$(curl --silent "https://api.github.com/repos/${REPO}/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+# This line would be better but may have Rate limit issue
+# VERSION=$(curl -s "https://api.github.com/repos/${REPO}/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+VERSION=$(curl -s https://github.com/nvm-sh/nvm/releases | grep "<h2 class=\"sr-only" | head -1 | awk -F '>' '{print $2}' | awk -F '<' '{print $1}')
 echo "INFO: nvm latest release ${VERSION}"
 
 if [ -x "$(command -v nvm)" ]; then
-  echo "INFO: $(nvm --version)"
+  echo "INFO: $(nvm -v)"
 else
   echo "INFO: nvm not installed"
 fi
 
 echo "INFO: Downloading nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/${VERSION}/install.sh | bash
-echo "INFO: $(nvm --version)"
+curl -o- https://raw.githubusercontent.com/${REPO}/${VERSION}/install.sh | bash
+echo "INFO: $(nvm -v)"
