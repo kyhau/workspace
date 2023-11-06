@@ -46,8 +46,10 @@ alias git-config-fileMode-true='git config core.fileMode true'
 alias git-config-list='git config --list'
 alias git-config-show-user='git config user.name && git config user.email'
 alias git-fetch='git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch --prune origin'
-alias git-secrets-list='git secrets --list'
-alias git-secrets-scan='git secrets --scan'
+alias git-secrets-list-config-current-repo='git secrets --list'
+alias git-secrets-list-config-global='git secrets --list --global'
+alias git-secrets-scan='git secrets --scan -r'
+alias git-secrets-scan-history='git secrets --scan-history'
 
 alias git-rm-reflog='git reflog expire --expire=now --all'
 
@@ -62,7 +64,8 @@ alias git-checkout-default='git checkout $(git-branch-default)'
 alias git-clean-dfx='git clean -dfx'
 
 alias git-ls-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
-alias git-ls-untracked='git ls-files --others --exclude-standard'
+alias git-ls-files='git ls-files'
+alias git-ls-files-untracked='git ls-files --others --exclude-standard'
 
 alias gh-extension-list='gh extension list'
 alias gh-extension-install-gh-actions-cache='gh extension install actions/gh-actions-cache'

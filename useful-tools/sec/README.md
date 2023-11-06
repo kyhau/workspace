@@ -10,6 +10,7 @@ Jump to
 ## Secret Scanners and Regex Lists
 
 - [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing passwords and other sensitive information to a git repository.
+- [trufflehog](https://github.com/trufflesecurity/trufflehog)
 - [secret-regex-list](https://github.com/h33tlit/secret-regex-list) - List of regex for scraping secret API keys and juicy information.
 
 

@@ -5,7 +5,7 @@ set -e
 mkdir -p ${HOME}/.local/bin
 
 sudo apt-get install git python3 python3-dev python3-pip python-is-python3 libpcap-dev build-essential procps schedtool
-sudo pip3 install pcapy#!/bin/bash
+sudo pip3 install pcapy
 
 echo "INFO: Get latest source from stamparm/maltrail into ${HOME}/.local/maltrail"
 
