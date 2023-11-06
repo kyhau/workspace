@@ -252,7 +252,9 @@ alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Faceb
 
 alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
 
+alias update-osc-scanner='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_osv_scanner.sh'
 alias update-snyk-cli='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/install-snyk-cli'
+alias update-trufflehog='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_trufflehog.sh'
 
 alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
 
