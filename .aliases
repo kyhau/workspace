@@ -193,15 +193,9 @@ alias yarn-upgrade='yarn upgrade'
 ################################################################################
 # rm-
 
+alias rm-cache='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_cache.sh'
 alias rm-cache-apt='sudo du -sh /var/cache/apt && sudo apt-get clean'
-alias rm-cache-cdk='du -sh ${HOME}/.cdk/cache/ && rm -rf ${HOME}/.cdk/cache/'
-alias rm-cache-homebrew='du -sh ${HOME}/.cache/Homebrew/ && rm -rf ${HOME}/.cache/Homebrew/'
-alias rm-cache-pip='du -sh ${HOME}/.cache/pip/ && rm -rf ${HOME}/.cache/pip/'
-alias rm-cache-tox='du -sh ${HOME}/.tox/distshare/ && rm -rf ${HOME}/.tox/distshare'
-alias rm-cache-yarn='du -sh ${HOME}/.cache/yarn/ && rm -rf ${HOME}/.cache/yarn/'
-
 alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
-
 alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ print $2; }')"
 
 ################################################################################
