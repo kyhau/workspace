@@ -3,17 +3,36 @@ set -e
 
 declare -a FOLDERS=(
   "${HOME}/.cache/"
+  "${HOME}/.cdk/"
+  "${HOME}/.ipython/"
+  "${HOME}/.kube/cache/"
+  "${HOME}/.kube/http-cache/"
+  "${HOME}/.npm/"
+  "${HOME}/.nuget/packages/"
+  "${HOME}/.nuget/plugins/"
+  "${HOME}/.nvm/.cache/"
+  "${HOME}/.pip-audit-cache/"
+  "${HOME}/.python_history"
+  "${HOME}/.serverless/"
   "${HOME}/.tox/"
+  "${HOME}/.viminfo"
+  "${HOME}/.yarn/berry/cache/"
 )
 
 for target in "${FOLDERS[@]}"; do
-  if [[ -d ${target} ]]; then
-      echo "INFO: Cleaning up ${target}"
+  echo "INFO: Checking ${target}"
+  if [[ -f ${target} ]]; then
+    du -sh ${target}
+    rm -f ${target}
+    echo "INFO: Removed ${target}"
+  elif [[ -d ${target} ]]; then
       cd $target
       for i in $( ls ); do
         du -sh ${i}
         rm -rf ${i}
       done
-      cd -
+      rm -rf ${target}
+      echo "INFO: Removed ${target}"
+      cd - 1> /dev/null
   fi
 done
