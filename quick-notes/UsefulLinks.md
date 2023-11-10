@@ -12,6 +12,7 @@ Jump to
 - [Vulnerability Searching](#vulnerability-searching)
 - [AIML](#aiml)
 - [Blockchain (Ethereum, Hyperledger, etc)](#blockchain-ethereum-hyperledger-etc)
+- [Team](#team)
 - [Free online games](./Games.md)
 
 ---
@@ -102,3 +103,6 @@ Jump to
 - [Hyperledger Training and Certifications](https://www.hyperledger.org/resources/training)
 - [Ethereum Testnet Selection](https://testnet.etherscan.io/)
 - AWS Blockchain https://aws.amazon.com/blockchain/
+
+### Team
+- [Atlassian Team Playbook](https://www.atlassian.com/team-playbook)
