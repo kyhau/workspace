@@ -13,8 +13,7 @@ else
 fi
 
 if [ "${VERSION}" != "${CURR_VERSION}" ]; then
-  echo "INFO: Installing to ${HOME}/.local/bin/"
-
+  echo "INFO: Downloading gitleaks"
   FILE_NAME=gitleaks_${VERSION}_linux_x64.tar.gz
   FILE_URL="https://github.com/gitleaks/gitleaks/releases/download/v${VERSION}/${FILE_NAME}"
   WORK_DIR=/tmp/tmp_workdir
@@ -23,6 +22,7 @@ if [ "${VERSION}" != "${CURR_VERSION}" ]; then
   mkdir -p ${WORK_DIR}
   tar xfz /tmp/${FILE_NAME} -C ${WORK_DIR}
 
+  echo "INFO: Installing to ${HOME}/.local/bin/"
   mkdir -p ${HOME}/.local/bin
   mv ${WORK_DIR}/gitleaks ${HOME}/.local/bin/
 
