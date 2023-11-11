@@ -8,12 +8,12 @@ else
   echo "INFO: snyk not installed"
 fi
 
+echo "INFO: Downloading snyk"
+curl -s --compressed https://static.snyk.io/cli/latest/snyk-linux -o snyk
+chmod +x snyk
+
+echo "INFO: Installing to ${HOME}/.local/bin/"
 mkdir -p ${HOME}/.local/bin
-
-echo "INFO: Installing snyk"
-
-curl --compressed https://static.snyk.io/cli/latest/snyk-linux -o snyk
-chmod +x ./snyk
-mv ./snyk ${HOME}/.local/bin/snyk
+mv snyk ${HOME}/.local/bin/
 
 echo "INFO: snyk version: $(snyk --version)"
