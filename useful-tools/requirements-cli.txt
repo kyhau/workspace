@@ -1,14 +1,14 @@
 ################################################################################
 # Useful tools
 
-cfn-flip
+cfn-flip                  # https://github.com/awslabs/aws-cfn-template-flip
 cfn-lint                  # require aws-sam-translator
+#demoshell                # https://github.com/dhellmann/demoshell
 httpie                    # https://github.com/httpie/httpie
-pipx                      # https://github.com/pypa/pipx
-pyperf                    # https://github.com/psf/pyperf/
+#pipx                     # https://github.com/pypa/pipx
+pre-commit                # https://pre-commit.com/
+#pyperf                   # https://github.com/psf/pyperf/
 yamllint
 yq                        # Command-line YAML/XML processor - jq wrapper for YAML/XML documents
 
-#demoshell                # https://github.com/dhellmann/demoshell
-#trufflehog               # https://github.com/trufflesecurity/truffleHog
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
