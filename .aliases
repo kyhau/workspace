@@ -90,6 +90,11 @@ alias git-auto-commit-pr-merge='function _(){ if [[ -z "$1" ]]; then echo "Missi
 alias git-auto-ci-all-changes='function _(){ if [[ -z "$1" ]] || [[ -z "$2" ]] ; then echo "Arguments: [BRANCH_NAME] [COMMIT_MESSAGE]"; else git-auto-branch "$1" && git add . && git-auto-commit-pr-merge "$2"; fi; }; _'
 
 ################################################################################
+# gitleaks
+
+alias gitleaks-detect='gitleaks detect --report-path gitleaks-report.json'
+
+################################################################################
 # go
 
 alias go-build='go build'
@@ -179,6 +184,12 @@ alias skaffold-deploy='skaffold deploy'
 alias skaffold-dev='skaffold dev'
 alias skaffold-render='skaffold render'
 alias skaffold-run='skaffold run'
+
+################################################################################
+# trufflehog
+
+alias trufflehog-filesystem='trufflehog filesystem'
+alias trufflehog-git-only-verified='trufflehog git -only-verified --json'
 
 ################################################################################
 # yarn
