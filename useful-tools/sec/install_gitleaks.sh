@@ -1,5 +1,6 @@
 #!/bin/bash
 # See https://github.com/gitleaks/gitleaks
+set -e
 
 VERSION=$(curl -s "https://api.github.com/repos/gitleaks/gitleaks/releases/latest" --insecure | grep -Po '"tag_name": "\K.*?(?=")' | sed 's/^v//')
 echo "INFO: gitleaks latest: ${VERSION}"
