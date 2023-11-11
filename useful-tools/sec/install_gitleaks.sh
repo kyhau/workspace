@@ -2,7 +2,7 @@
 # See https://github.com/gitleaks/gitleaks
 set -e
 
-VERSION=$(curl -s "https://api.github.com/repos/gitleaks/gitleaks/releases/latest" --insecure | grep -Po '"tag_name": "\K.*?(?=")' | sed 's/^v//')
+VERSION=$(curl -s "https://api.github.com/repos/gitleaks/gitleaks/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' | sed 's/^v//')
 echo "INFO: gitleaks latest: ${VERSION}"
 
 CURR_VERSION=
@@ -27,7 +27,7 @@ if [ "${VERSION}" != "${CURR_VERSION}" ]; then
   mkdir -p ${HOME}/.local/bin
   mv ${WORK_DIR}/gitleaks ${HOME}/.local/bin/
 
-  rm -rf ${WORK_DIR}
+  rm -rf ${WORK_DIR} /tmp/${FILE_NAME}
 
   echo "INFO: gitleaks installed: $(gitleaks version 2>&1)"
 fi
