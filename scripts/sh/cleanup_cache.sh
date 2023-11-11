@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-declare -a FOLDERS=(
+declare -a ITEMS=(
   "${HOME}/.cache/"
   "${HOME}/.cdk/"
   "${HOME}/.ipython/"
@@ -19,7 +19,7 @@ declare -a FOLDERS=(
   "${HOME}/.yarn/berry/cache/"
 )
 
-for target in "${FOLDERS[@]}"; do
+for target in "${ITEMS[@]}"; do
   echo "INFO: Checking ${target}"
   if [[ -f ${target} ]]; then
     du -sh ${target}
