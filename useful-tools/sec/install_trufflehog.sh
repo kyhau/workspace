@@ -2,7 +2,7 @@
 # https://github.com/trufflesecurity/trufflehog
 set -e
 
-VERSION=$(curl -s "https://api.github.com/repos/trufflesecurity/trufflehog/releases/latest" --insecure | grep -Po '"tag_name": "\K.*?(?=")' | sed 's/^v//')
+VERSION=$(curl -s "https://api.github.com/repos/trufflesecurity/trufflehog/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' | sed 's/^v//')
 echo "INFO: trufflehog latest: ${VERSION}"
 
 CURR_VERSION=
