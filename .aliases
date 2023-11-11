@@ -278,7 +278,7 @@ alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
 ####
 # Conversion
 
-alias k-oidc-thumbprint='. ${WORKSPACE_REPO_HOME}/scripts/sh/get_oidc_thumbprint.sh'
+alias k-oidc-thumbprint='. ${WORKSPACE_REPO_HOME}/useful-tools/oidc/get_oidc_thumbprint.sh'
 alias k-pem2crt='_func(){ openssl x509 -inform PEM -in "$1" -out $(basename "${1%.*}.crt"); }; _func'
 alias k-timestamp2datetime='function _(){ if [[ -z "$1" ]]; then echo "Missing timestamp"; else date -d@$1; fi; }; _'
 
