@@ -43,6 +43,7 @@ Jump to
 - [Cybersecurity](./Certs-Cybersecurity.md)
 - [Kubernetes](./Certs-Kubernetes.md)
 - [Apollo Graph Developer](https://www.apollographql.com/tutorials/#certifications)
+- [GitHub](https://resources.github.com/learn/certifications/)
 
 ### Privacy Tools
 - [PrivacyTools.io](https://www.privacytools.io/)
