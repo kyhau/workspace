@@ -170,6 +170,11 @@ alias pip-list-outdated='pip list --outdated'
 alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
 
 ################################################################################
+# pre-commit
+
+alias pre-commit-install='pre-commit install'
+
+################################################################################
 # python
 
 alias python-zoneinfo-available-timezones='python3 -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
