@@ -74,6 +74,7 @@ alias gh-oidc-thumbprint-for-actions='. ${WORKSPACE_REPO_HOME}/useful-tools/gith
 alias gh-oidc-thumbprint-for-audit-log='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
 
 alias gh-auth-login='gh auth login'
+alias gh-auth-logout='gh auth logout'
 alias gh-auth-status='gh auth status'
 alias gh-auth-switch='gh auth switch'
 alias gh-k='gh k'
