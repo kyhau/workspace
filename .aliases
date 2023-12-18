@@ -77,6 +77,7 @@ alias gh-auth-login='gh auth login'
 alias gh-auth-logout='gh auth logout'
 alias gh-auth-status='gh auth status'
 alias gh-auth-switch='gh auth switch'
+alias gh-login-current='gh api /user | jq .login'
 alias gh-k='gh k'
 alias gh-work='gh work'
 
