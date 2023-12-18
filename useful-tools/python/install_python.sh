@@ -1,10 +1,16 @@
 #!/bin/bash
 set -e
 
-#sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
-#sudo apt install software-properties-common -y
-#sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository ppa:deadsnakes/ppa
+
+# sudo apt install software-properties-common -y
+
+# https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+sudo apt install build-essential libssl-dev zlib1g-dev \
+  libbz2-dev libreadline-dev libsqlite3-dev curl \
+  libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
 sudo apt install -y python3.12
 
@@ -37,3 +43,5 @@ cd -
 
 echo "python version: $(python --version)"
 echo "python3 version: $(python3 --version)"
+
+python3.12 -m pip install -U setuptools virtualenvwrapper
