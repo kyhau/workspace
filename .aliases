@@ -251,6 +251,8 @@ alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_
 
 alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
 
+alias update-pyenv='pyenv update'
+
 alias update-ncc='sudo npm i -g @vercel/ncc'
 alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
 alias update-npm='sudo npm i -g npm@latest'
