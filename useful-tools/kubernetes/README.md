@@ -25,6 +25,8 @@ Jump to
     - Lens - The Kubernetes IDE, provides the full situational awareness for everything that runs in Kubernetes.
 - [k9s](https://github.com/derailed/k9s)
     - K9s - K9s provides a terminal UI to interact with Kubernetes clusters.
+- [cloudlens]([https://github.com/derailed/k9s](https://github.com/one2nc/cloudlens))
+    - Cloudlens - k9s like CLI for AWS and GCP.
 - [pixie](https://github.com/pixie-io/pixie)
     - Pixie is an open-source observability tool for Kubernetes applications.
 
