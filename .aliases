@@ -178,6 +178,15 @@ alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgr
 alias pre-commit-install='pre-commit install'
 
 ################################################################################
+# pyenv
+
+alias pyenv-commands='pyenv commands'
+alias pyenv-global-system='pyenv global system'
+alias pyenv-install-list='pyenv install --list'
+alias pyenv-versions='pyenv versions'
+alias pyenv-which='pyenv which'
+
+################################################################################
 # python
 
 alias python-zoneinfo-available-timezones='python3 -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
