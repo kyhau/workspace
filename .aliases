@@ -38,6 +38,8 @@ alias git-branch-rename-main2master='git branch -m main master && git push -u or
 alias git-branch-rename-master2main='git branch -m master main && git push -u origin main && git push origin -d master'
 
 alias git-chmod='sh -c '\''git update-index --chmod="$@"'\'' _'
+alias git-config-core-ignorecase-false='git config core.ignorecase false'
+alias git-config-core-ignorecase-true='git config core.ignorecase true'
 alias git-config-fileMode-false='git config core.fileMode false'
 alias git-config-fileMode-true='git config core.fileMode true'
 alias git-config-list='git config --list'
