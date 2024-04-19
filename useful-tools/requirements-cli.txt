@@ -6,6 +6,7 @@ cfn-lint                  # require aws-sam-translator
 #demoshell                # https://github.com/dhellmann/demoshell
 deptry                    # https://fpgmaas.github.io/deptry/
 httpie                    # https://github.com/httpie/httpie
+pip-audit                 # https://github.com/pypa/pip-audit
 #pipx                     # https://github.com/pypa/pipx
 pre-commit                # https://pre-commit.com/
 #pyperf                   # https://github.com/psf/pyperf/
