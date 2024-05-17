@@ -66,10 +66,9 @@ alias git-ls-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branc
 alias git-ls-files='git ls-files'
 alias git-ls-files-untracked='git ls-files --others --exclude-standard'
 
+alias gh-aliases='gh alias list'
+alias gh-aliases-reimport='gh alias import --clobber ${WORKSPACE_REPO_HOME}/.aliases-gh.yml'
 alias gh-extension-list='gh extension list'
-alias gh-extension-install-gh-actions-cache='gh extension install actions/gh-actions-cache'
-alias gh-extension-remove-gh-actions-cache='gh extension remove actions/gh-actions-cache'
-alias gh-extension-upgrade-gh-actions-cache='gh extension upgrade actions/gh-actions-cache'
 
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
 alias gh-oidc-thumbprint-for-actions='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_actions.sh'
@@ -80,8 +79,6 @@ alias gh-auth-logout='gh auth logout'
 alias gh-auth-status='gh auth status'
 alias gh-auth-switch='gh auth switch'
 alias gh-login-current='gh api /user | jq .login'
-alias gh-k='gh k'
-alias gh-work='gh work'
 
 alias gh-pr-create='gh pr create --assignee @me --fill'
 alias gh-pr-merge-squash='gh pr merge --squash'
