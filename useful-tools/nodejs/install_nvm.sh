@@ -12,7 +12,7 @@ function install_package() {
 
 # This line would be better but may have Rate limit issue
 # VERSION=$(curl -s "https://api.github.com/repos/${REPO}/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
-VERSION=$(curl -s https://github.com/${REPO}/releases | grep "<h2 class=\"sr-only" | head -1 | awk -F '>' '{print $2}' | awk -F '<' '{print $1}')
+VERSION=$(curl -s https://github.com/${REPO}/releases | grep "<h2 class=\"sr-only\" id" | head -1 | awk -F '>' '{print $2}' | awk -F '<' '{print $1}')
 echo "INFO: nvm latest release ${VERSION}"
 
 if [[ ! -z "$NVM_DIR" && -d "$NVM_DIR" ]]; then
