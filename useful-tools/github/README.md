@@ -13,11 +13,11 @@ Jump to
 ## GH CLI and Extensions
 
 - GH CLI multi-account switch https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47
-- https://github.com/Link-/gh-token - Create an installation access token for a GitHub app from your terminal
+- [go-token](https://github.com/Link-/gh-token) - Create an installation access token for a GitHub app from your terminal
     - can be used as CLI tool or as GH CLI extension
+- [gh-gei](https://github.com/github/gh-gei) - GitHub Enterprise Importer CLI
 
 
----
 ## GitHub Actions
 
 For GitHub Actions
@@ -25,7 +25,6 @@ For GitHub Actions
 - Json Web Key Service URI https://token.actions.githubusercontent.com/.well-known/jwks
 
 
----
 ## GitHub APIs / GitHub Apps
 
 - GitHub API metadata (IP ranges, etc.) - https://api.github.com/meta
@@ -37,7 +36,6 @@ For GitHub Actions
 - [Other GraphQL tools](../graphql/README.md)
 
 
----
 ## GitHub Copilot
 
 - Copilot error: "GitHub Copilot could not connect to server. Extension activation failed: self-signed certificate in certificate chain"
@@ -48,7 +46,7 @@ External Researches and Surveys
 - [Survey reveals AI’s impact on the developer experience](https://github.blog/2023-06-13-survey-reveals-ais-impact-on-the-developer-experience/), GitHub, 2023-06-13
 - [Research: Quantifying GitHub Copilot’s impact on code quality](https://github.blog/2023-10-10-research-quantifying-github-copilots-impact-on-code-quality/), GitHub, 2023-10-10
 
----
+
 ## GitHub Runners
 - Software difference between Ubuntu 20 and Ubuntu 22  https://github.com/actions/runner-images/issues/5490
 - GitHub runner supported
@@ -57,7 +55,6 @@ External Researches and Surveys
     - Python version https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
 
 
----
 ## Audit Log
 
 For [Audit Log](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#setting-up-streaming-to-s3-with-openid-connect)
