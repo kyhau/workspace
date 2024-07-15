@@ -292,6 +292,8 @@ alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=cdk.out --exclu
 
 alias k-rename-files='python3 ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
+alias k-repo-setup='. ${WORKSPACE_REPO_HOME}/ubuntu/setup_repo.sh'
+
 ####
 # System
 
