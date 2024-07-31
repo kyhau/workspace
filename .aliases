@@ -83,6 +83,7 @@ alias gh-login-current='gh api /user | jq .login'
 alias gh-pr-create='gh pr create --assignee @me --fill'
 alias gh-pr-merge-squash='gh pr merge --squash'
 alias gh-delete-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
+alias gh-force-cancel-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_force_cancel_workflow_runs.py'
 
 alias git-auto-commit-merge='git add . && git commit -m "Updated" && git push'
 
