@@ -86,7 +86,7 @@ def main(owner_repo, dryrun):
                 print(f"Dryrun: Force-cancel workflow run {selected_name}/{run_number} ({run_id})")
             else:
                 print(f"Force-cancel workflow run {selected_name}/{run_number} ({run_id})")
-                cmd_force_cancel_workflow_run = f"gh api -X POST /repos/{owner_repo}/actions/runs/{run_id}/force-cancel"
+                cmd_force_cancel_workflow_run = f"gh api --method POST /repos/{owner_repo}/actions/runs/{run_id}/force-cancel"
                 call_check_output(cmd_force_cancel_workflow_run, to_json=False)
 
 
