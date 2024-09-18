@@ -91,6 +91,7 @@ Jump to
 
 ### AIML
 - [Amazon Machine Learning University (MLU)](https://mlu-explain.github.io/)
+- [DeepLearning.AI Data Engineering Professional Certificate](https://www.coursera.org/professional-certificates/data-engineering)
 - [fast.ai](https://www.fast.ai/)
 - [TensorFlow](https://www.tensorflow.org/get_started/)
 - [Machine Learning Crash Course @GoogleDevelopers](https://developers.google.com/machine-learning/crash-course/)
