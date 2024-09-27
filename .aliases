@@ -275,7 +275,7 @@ alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Faceb
 alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
 
 alias update-gitleaks='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_gitleaks.sh'
-alias update-osc-scanner='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_osv_scanner.sh'
+alias update-osv-scanner='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_osv_scanner.sh'
 alias update-snyk-cli='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_snyk_cli.sh'
 alias update-trufflehog='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_trufflehog.sh'
 

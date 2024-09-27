@@ -235,36 +235,14 @@ alias snyk-run-all='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
 # update
 
 alias update-apps-macos='. ${WORKSPACE_REPO_HOME}/macos/install-or-upgrade-apps-macos.sh'
+
 alias update-brew='brew update'
 
-# alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
+alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
 
-# # github related
-# alias update-act='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_act.sh'
+alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
 
-# # docker related
-# alias update-dive='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_dive.sh'
-# alias update-lazydocker='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_lazydocker.sh'
-
-# # k8s related
-# alias update-k9s='curl -sS https://webinstall.dev/k9s | bash'
-# alias update-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
-# alias update-krew='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_krew.sh'
-# alias update-kubectx-and-kubens='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
-# alias update-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
-# alias update-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_minikube.sh'
-# alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_skaffold.sh'
-
-# alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
-
-# alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
-
-# alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
-
-# alias update-gitleaks='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_gitleaks.sh'
-# alias update-osc-scanner='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_osv_scanner.sh'
-# alias update-snyk-cli='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_snyk_cli.sh'
-# alias update-trufflehog='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_trufflehog.sh'
+alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
 
 ################################################################################
 # custom scripts or commands

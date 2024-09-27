@@ -2,18 +2,39 @@
 set -e
 
 app_list=(
-  # docker
   dos2unix
-  gh
   go
-  helm
   jq
-  kubectl
   nvm
   pyenv
   saml2aws
   readline  # for pyenv
   xz  # for pyenv
+
+  ## git / github related
+  # act
+  gh
+
+  ## scanner
+  # gitleaks
+  # osv-scanner
+  # snyk-cli
+  # trufflehog
+
+  ## docker related
+  # dive
+  # docker
+  # lazydocker
+
+  ## k8s related
+  helm
+  kubectl
+  # k9s
+  # kops
+  # krew
+  # kubectx
+  # minikube
+  # skaffold
 )
 
 cast_app_list=(
