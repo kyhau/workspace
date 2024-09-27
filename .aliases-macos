@@ -234,38 +234,27 @@ alias snyk-run-all='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
 ################################################################################
 # update
 
-# alias update-brew='brew update'
+alias update-apps-macos='. ${WORKSPACE_REPO_HOME}/macos/install-or-upgrade-apps-macos.sh'
+alias update-brew='brew update'
 
 # alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
 
 # # github related
 # alias update-act='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_act.sh'
-# alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
 
 # # docker related
 # alias update-dive='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_dive.sh'
 # alias update-lazydocker='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_lazydocker.sh'
 
 # # k8s related
-# alias update-helm='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_helm.sh'
 # alias update-k9s='curl -sS https://webinstall.dev/k9s | bash'
 # alias update-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
 # alias update-krew='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_krew.sh'
-# alias update-kubectl='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectl.sh'
 # alias update-kubectx-and-kubens='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
 # alias update-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
 # alias update-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_minikube.sh'
 # alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_skaffold.sh'
 
-# alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
-
-# alias update-pyenv='pyenv update'
-
-# alias update-ncc='sudo npm i -g @vercel/ncc'
-# alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
-# alias update-npm='sudo npm i -g npm@latest'
-# alias update-npx='sudo npm i -g npx --force'
-# alias update-nvm='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nvm.sh'
 # alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
 
 # alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
