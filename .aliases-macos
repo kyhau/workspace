@@ -1,7 +1,7 @@
 #!/bin/bash
 # Set aliases for some generic scripts
 
-WORKSPACE_REPO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+WORKSPACE_REPO_HOME="$(dirname "$(readlink -f "$0")")"
 
 ################################################################################
 # docker
@@ -222,7 +222,6 @@ alias yarn-upgrade='yarn upgrade'
 alias rm-cache='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_cache.sh'
 alias rm-cache-apt='sudo du -sh /var/cache/apt && sudo apt-get clean'
 alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
-alias rm-unpurged-packages="sudo apt purge $(dpkg --list | grep ^rc | awk '{ print $2; }')"
 
 ################################################################################
 # synk
@@ -235,51 +234,48 @@ alias snyk-run-all='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
 ################################################################################
 # update
 
-alias update-brew='brew update'
+# alias update-brew='brew update'
 
-alias update-git='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git.sh'
-alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
+# alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
 
-# github related
-alias update-act='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_act.sh'
-alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
+# # github related
+# alias update-act='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_act.sh'
+# alias update-gh='. ${WORKSPACE_REPO_HOME}/useful-tools/github/install_gh.sh'
 
-# docker related
-alias update-dive='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_dive.sh'
-alias update-lazydocker='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_lazydocker.sh'
+# # docker related
+# alias update-dive='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_dive.sh'
+# alias update-lazydocker='. ${WORKSPACE_REPO_HOME}/useful-tools/docker/install_lazydocker.sh'
 
-# k8s related
-alias update-helm='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_helm.sh'
-alias update-k9s='curl -sS https://webinstall.dev/k9s | bash'
-alias update-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
-alias update-krew='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_krew.sh'
-alias update-kubectl='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectl.sh'
-alias update-kubectx-and-kubens='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
-alias update-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
-alias update-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_minikube.sh'
-alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_skaffold.sh'
+# # k8s related
+# alias update-helm='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_helm.sh'
+# alias update-k9s='curl -sS https://webinstall.dev/k9s | bash'
+# alias update-kops='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kops.sh'
+# alias update-krew='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_krew.sh'
+# alias update-kubectl='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectl.sh'
+# alias update-kubectx-and-kubens='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kubectx_and_kubens.sh'
+# alias update-kustomize='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_kustomize.sh'
+# alias update-minikube='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_minikube.sh'
+# alias update-skaffold='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/install_skaffold.sh'
 
-alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
+# alias update-golang='. ${WORKSPACE_REPO_HOME}/useful-tools/golang/install_golang.sh'
 
-alias update-pyenv='pyenv update'
+# alias update-pyenv='pyenv update'
 
-alias update-ncc='sudo npm i -g @vercel/ncc'
-alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
-alias update-npm='sudo npm i -g npm@latest'
-alias update-npx='sudo npm i -g npx --force'
-alias update-nvm='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nvm.sh'
-alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
+# alias update-ncc='sudo npm i -g @vercel/ncc'
+# alias update-nodejs='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nodejs.sh'
+# alias update-npm='sudo npm i -g npm@latest'
+# alias update-npx='sudo npm i -g npx --force'
+# alias update-nvm='. ${WORKSPACE_REPO_HOME}/useful-tools/nodejs/install_nvm.sh'
+# alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
 
-alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
+# alias update-pathpicker='. ${WORKSPACE_REPO_HOME}/useful-tools/install_fpp_Facebook_PathPicker.sh'
 
-alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
+# alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
 
-alias update-gitleaks='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_gitleaks.sh'
-alias update-osc-scanner='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_osv_scanner.sh'
-alias update-snyk-cli='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_snyk_cli.sh'
-alias update-trufflehog='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_trufflehog.sh'
-
-alias update-ubuntu='sudo apt-get update && sudo apt install ca-certificates && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean'
+# alias update-gitleaks='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_gitleaks.sh'
+# alias update-osc-scanner='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_osv_scanner.sh'
+# alias update-snyk-cli='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_snyk_cli.sh'
+# alias update-trufflehog='. ${WORKSPACE_REPO_HOME}/useful-tools/sec/install_trufflehog.sh'
 
 ################################################################################
 # custom scripts or commands
@@ -329,7 +325,6 @@ alias k-ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ra
 alias k-ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
 alias k-ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
 alias k-ls-timezones='. ${WORKSPACE_REPO_HOME}/scripts/sh/ls_timezones.sh'
-alias k-ls-unpurged-packages='dpkg --list | grep ^rc'
 
 ####
 # Networking
