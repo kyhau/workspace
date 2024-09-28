@@ -65,6 +65,7 @@ setup_workspace() {
   cp ${CONFIGS_REPO}/.gitignore ~/.gitignore
 
   git config --global core.excludesFile '~/.gitignore'
+  git lfs install
 
   ################################################################################
   source ~/workspaces/github/workspace/.aliases

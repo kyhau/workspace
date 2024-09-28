@@ -13,6 +13,7 @@ app_list=(
 
   ## git / github related
   # act
+  git-lfs
   gh
 
   ## scanner
