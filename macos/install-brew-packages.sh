@@ -8,6 +8,7 @@ app_list=(
   nvm
   pyenv
   saml2aws
+  trufflehog
   readline  # for pyenv
   xz  # for pyenv
 

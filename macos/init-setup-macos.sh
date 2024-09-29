@@ -80,6 +80,21 @@ setup_dev_env() {
   source ${WORKSPACE_REPO}/.aliases-macos
 
   ################################################################################
+  echo "CheckPt $((step++)): Set up Python, NodeJS, etc"
+  . ${WORKSPACE_REPO}/macos/update-dev-env.sh
+
+  ################################################################################
+  echo "CheckPt $((step++)): Install pre-commit"
+  pip install pre-commit
+
+  ################################################################################
+  # trufflehog is installed with brew
+  echo "CheckPt $((step++)): Set up pre-commit and trufflehog on $WORKSPACES_REPO"
+  cd ${WORKSPACES_REPO}
+  pre-commit install
+  cd -
+
+  ################################################################################
   echo "CheckPt $((step++)): Set up kyhau/saml2aws-multi"
   cd ${WORKSPACES}/github/
   git clone https://github.com/kyhau/saml2aws-multi
@@ -91,6 +106,7 @@ setup_dev_env() {
   echo "CheckPt $((step++)): Set up kyhau/aws-tools"
   cd ${WORKSPACES}/github/
   git clone https://github.com/kyhau/aws-tools
+  pre-commit install
   cd -
 
   ################################################################################

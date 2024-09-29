@@ -27,3 +27,8 @@ echo "INFO: NPM version updated: $(npm --version)"
 ################################################################################
 echo "INFO: Sourcing ~/.zshrc"
 source ~/.zshrc
+
+################################################################################
+pip install -U \
+  pre-commit \
+  virtualenvwrapper
