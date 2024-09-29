@@ -7,6 +7,11 @@
     3. set up general config/dot files;
     4. set up aliases - [.aliases-macos](.aliases-macos);
     5. [macos/update-dev-env.sh](macos/update-dev-env.sh), for additional dev environment setups; e.g., defaylt python/nodejs versions.
+- Set up iTerm2
+    1. Install iTerm2 with brew
+    2. Enable iTerm2 in VS Code integrated terminal (zsh)
+    3. Set up [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) with advanced theme (recommended [Powerlevel10k](https://github.com/romkatv/powerlevel10k))
+        - see [useful-tools/oh-my-zsh/install-oh-my-zsh.macos.sh](./useful-tools/oh-my-zsh/install-oh-my-zsh.macos.sh)
 - Notes for non-admin setup
     - Two separate Applications folders
         1. `/Applications` usually requires admin to add apps there.
