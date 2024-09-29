@@ -5,7 +5,7 @@
     1. [macos/install-homebrew.sh](macos/install-homebrew.sh) - for non-admin setup (install things in `${HOME}/Applications/` instead);
     2. [macos/install-brew-packages.sh](macos/install-brew-packages.sh) - for installing selected apps/packages;
     3. set up general config/dot files;
-    4. set up aliases - [aliases-macos](.aliases-macos);
+    4. set up aliases - [.aliases-macos](.aliases-macos);
     5. [macos/update-dev-env.sh](macos/update-dev-env.sh), for additional dev environment setups; e.g., defaylt python/nodejs versions.
 - Notes for non-admin setup
     - Two separate Applications folders
