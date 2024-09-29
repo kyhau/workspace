@@ -232,11 +232,11 @@ alias snyk-test='snyk test --all-projects --fail-fast --detection-depth=6'
 alias snyk-run-all='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
 
 ################################################################################
-# update
-
-alias update-apps-macos='. ${WORKSPACE_REPO_HOME}/macos/install-or-upgrade-apps-macos.sh'
+# Update apps/packages
 
 alias update-brew='brew update'
+alias update-brew-packages='brew upgrade && brew cleanup'
+alias update-dev-env='. ${WORKSPACE_REPO_HOME}/macos/update-dev-env.sh'
 
 alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
 
