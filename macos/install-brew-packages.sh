@@ -7,10 +7,12 @@ app_list=(
   jq
   nvm
   pyenv
-  saml2aws
-  trufflehog
   readline  # for pyenv
   xz  # for pyenv
+
+  ## aws related
+  awscli
+  saml2aws
 
   ## git / github related
   # act
@@ -21,7 +23,7 @@ app_list=(
   # gitleaks
   # osv-scanner
   # snyk-cli
-  # trufflehog
+  trufflehog
 
   ## docker related
   # dive
