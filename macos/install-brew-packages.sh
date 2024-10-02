@@ -42,6 +42,7 @@ app_list=(
 )
 
 cast_app_list=(
+  cursor
   docker  # Docker Desktop
   lens
 )
