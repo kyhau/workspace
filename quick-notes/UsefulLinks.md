@@ -65,15 +65,17 @@ Jump to
   | [CareerCup](https://www.careercup.com/)
 - [Hacktoberfest](https://hacktoberfest.digitalocean.com/)
 - [Python Extension Packages (Unofficial Windows Binaries)](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
-- [Google Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb)
-- [Amazon Honeycode](https://builder.honeycode.aws/)
 - Slack dev - [Slack Block Kit](https://api.slack.com/block-kit) | [Slack Block Kit Builder](https://app.slack.com/block-kit-builder)
 - AI Tooling
+   - Cursor 
    - GitHub Copilot
    - Amazon CodeWhisper
    - Sourcegraph Cody
    - Tabnine
    - Replit Ghostwriter
+- Other dev tools
+   - [Arize Phoenix](https://docs.arize.com/phoenix) - AI Observability and Evaluation
+   - [Sentry](https://sentry.io/) - Application monitoring
 
 ### Ethical Hacking
 - [Hack The Box](https://www.hackthebox.com/)
