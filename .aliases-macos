@@ -52,17 +52,17 @@ alias git-secrets-scan-history='git secrets --scan-history'
 
 alias git-rm-reflog='git reflog expire --expire=now --all'
 
-alias git-pull-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
-alias git-repo-latest-release='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
-alias git-repo-latest-tag='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
-alias git-squash-new-start='. ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
+alias git-pull-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
+alias git-repo-latest-release='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
+alias git-repo-latest-tag='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
+alias git-squash-new-start='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
 
 alias git-checkout--='git checkout -- .'
 alias git-checkout-default='git checkout $(git-branch-default)'
 
 alias git-clean-dfx='git clean -dfx'
 
-alias git-ls-branch-all='. ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
+alias git-ls-branch-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
 alias git-ls-files='git ls-files'
 alias git-ls-files-untracked='git ls-files --others --exclude-standard'
 
@@ -71,8 +71,8 @@ alias gh-aliases-reimport='gh alias import --clobber ${WORKSPACE_REPO_HOME}/.ali
 alias gh-extension-list='gh extension list'
 
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
-alias gh-oidc-thumbprint-for-actions='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_actions.sh'
-alias gh-oidc-thumbprint-for-audit-log='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
+alias gh-oidc-thumbprint-for-actions='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_actions.sh'
+alias gh-oidc-thumbprint-for-audit-log='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
 
 alias gh-auth-login='gh auth login'
 alias gh-auth-logout='gh auth logout'
@@ -88,10 +88,10 @@ alias gh-force-cancel-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/useful-tools
 
 alias git-auto-commit-merge='git add . && git commit -m "Updated" && git push'
 
-alias git-auto-branch='function _(){ if [[ -z "$1" ]]; then echo "Missing branch name"; else git branch $1 && git checkout $1; fi; }; _'
-alias git-auto-pr-merge='function _(){ ORI_BRANCH=$(git-branch-current) && gh-pr-create && gh-pr-merge-squash --admin && git-checkout-default && git-pull-all && git branch -D ${ORI_BRANCH}; }; _'
-alias git-auto-commit-pr-merge='function _(){ if [[ -z "$1" ]]; then echo "Missing commit message"; else git commit -m "$1" && git push --set-upstream origin $(git-branch-current) && git-auto-pr-merge; fi; }; _'
-alias git-auto-ci-all-changes='function _(){ if [[ -z "$1" ]] || [[ -z "$2" ]] ; then echo "Arguments: [BRANCH_NAME] [COMMIT_MESSAGE]"; else git-auto-branch "$1" && git add . && git-auto-commit-pr-merge "$2"; fi; }; _'
+alias git-auto-branch='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-branch.sh'
+alias git-auto-pr-merge='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-pr-merge.sh'
+alias git-auto-commit-pr-merge='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-commit-pr-merge.sh'
+alias git-auto-ci-all-changes='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-ci-all-changes.sh'
 
 ################################################################################
 # gitleaks
@@ -119,7 +119,7 @@ alias k9s-readonly='k9s --readonly'
 # kubectl
 alias kubectl-describe-configmap-n-kube-system-aws-auth='kubectl describe configmap -n kube-system aws-auth'
 alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
-alias kubectl-describe-secret-eks-admin='. ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl_describe_secret_eks_admin.sh'
+alias kubectl-describe-secret-eks-admin='bash ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl_describe_secret_eks_admin.sh'
 alias kubectl-get-clusterrolebindings='kubectl get clusterrolebindings'
 alias kubectl-get-clusterroles='kubectl get clusterroles'
 alias kubectl-get-deployment='kubectl get deployment'
@@ -171,7 +171,7 @@ alias nvm-which-current='nvm which current'
 
 alias pip-list-not-required='pip list --not-required'
 alias pip-list-outdated='pip list --outdated'
-alias pip-upgrade-all='. ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
+alias pip-upgrade-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
 
 ################################################################################
 # pre-commit
@@ -219,9 +219,9 @@ alias yarn-upgrade='yarn upgrade'
 ################################################################################
 # rm-
 
-alias rm-cache='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_cache.sh'
+alias rm-cache='bash ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_cache.sh'
 alias rm-cache-apt='sudo du -sh /var/cache/apt && sudo apt-get clean'
-alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
+alias rm-dev-env='bash ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
 
 ################################################################################
 # synk
@@ -229,27 +229,27 @@ alias rm-dev-env='. ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
 alias snyk-code-test='snyk code test'
 alias snyk-monitor='snyk monitor -d -insecure --all-projects --fail-fast --strict-out-of-sync=true --detection-depth=6'
 alias snyk-test='snyk test --all-projects --fail-fast --detection-depth=6'
-alias snyk-run-all='. ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
+alias snyk-run-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
 
 ################################################################################
 # Update apps/packages
 
 alias update-brew='brew update'
 alias update-brew-packages='brew upgrade && brew cleanup'
-alias update-dev-env='. ${WORKSPACE_REPO_HOME}/macos/update-dev-env.sh'
+alias update-dev-env='bash ${WORKSPACE_REPO_HOME}/macos/update-dev-env.sh'
 
-alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
+alias update-git-sizer='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
 
 alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
 
-alias update-serverless='. ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
+alias update-serverless='bash ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
 
 ################################################################################
 # custom scripts or commands
 
-alias k-check-workspace='. ${WORKSPACE_REPO_HOME}/ubuntu/check_workspace.sh'
+alias k-check-workspace='bash ${WORKSPACE_REPO_HOME}/ubuntu/check_workspace.sh'
 
-alias k-degreen='. ${WORKSPACE_REPO_HOME}/scripts/sh/degreen.sh'
+alias k-degreen='bash ${WORKSPACE_REPO_HOME}/scripts/sh/degreen.sh'
 
 alias k-dos2unix='find . -type f ! -iname "*.ps1" ! -name "*.bat" ! -path "*/.git/*" ! -path "*/.idea/*" ! -path "*/node_modules/*" -print0 | xargs -0 dos2unix'
 
@@ -257,7 +257,7 @@ alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=cdk.out --exclu
 
 alias k-rename-files='python3 ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
-alias k-repo-setup='. ${WORKSPACE_REPO_HOME}/ubuntu/setup_repo.sh'
+alias k-repo-setup='bash ${WORKSPACE_REPO_HOME}/ubuntu/setup_repo.sh'
 
 ####
 # System
@@ -267,12 +267,12 @@ alias k-du-h-max-depth-1='du -h --max-depth=1'
 alias k-df-h='df -h'
 alias k-lsb-release-a='lsb_release -a'
 alias k-lsb-release-d='lsb_release -d'
-alias k-reset-clock='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
+alias k-reset-clock='bash ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
 
 ####
 # Conversion
 
-alias k-oidc-thumbprint='. ${WORKSPACE_REPO_HOME}/useful-tools/oidc/get_oidc_thumbprint.sh'
+alias k-oidc-thumbprint='bash ${WORKSPACE_REPO_HOME}/useful-tools/oidc/get_oidc_thumbprint.sh'
 alias k-pem2crt='_func(){ openssl x509 -inform PEM -in "$1" -out $(basename "${1%.*}.crt"); }; _func'
 alias k-timestamp2datetime='function _(){ if [[ -z "$1" ]]; then echo "Missing timestamp"; else date -d@$1; fi; }; _'
 
@@ -291,7 +291,7 @@ alias k-ls-common-ip-protocols='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip
 alias k-ls-common-ip-ranges='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ip-ranges.txt'
 alias k-ls-common-ports='cat ${WORKSPACE_REPO_HOME}/quick-notes/common-ports.txt'
 alias k-ls-mult-byte-units='cat ${WORKSPACE_REPO_HOME}/quick-notes/multi-byte-units.txt'
-alias k-ls-timezones='. ${WORKSPACE_REPO_HOME}/scripts/sh/ls_timezones.sh'
+alias k-ls-timezones='bash ${WORKSPACE_REPO_HOME}/scripts/sh/ls_timezones.sh'
 
 ####
 # Networking
@@ -303,7 +303,7 @@ alias k-ip-in-range-check='python3 ${WORKSPACE_REPO_HOME}/useful-tools/networkin
 # https://askubuntu.com/questions/430853/how-do-i-find-my-internal-ip-address
 alias k-ip-external='curl --silent http://checkip.amazonaws.com'
 # what your computer thinks its ip address is
-alias k-ip-local='. ${WORKSPACE_REPO_HOME}/ubuntu/get_local_ip.sh'
+alias k-ip-local='bash ${WORKSPACE_REPO_HOME}/ubuntu/get_local_ip.sh'
 
 alias k-whatismy-ipaddress='browser https://whatismyipaddress.com/'
 alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
@@ -311,8 +311,8 @@ alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
 alias k-ipam-helper='python3 ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
 alias k-panos-helper='python3 ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
 
-alias k-disable-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/disable_apt_ocsp_verification.sh'
-alias k-reset-apt-ocsp-verification='. ${WORKSPACE_REPO_HOME}/ubuntu/reset_apt_ocsp_verification.sh'
+alias k-disable-apt-ocsp-verification='bash ${WORKSPACE_REPO_HOME}/ubuntu/disable_apt_ocsp_verification.sh'
+alias k-reset-apt-ocsp-verification='bash ${WORKSPACE_REPO_HOME}/ubuntu/reset_apt_ocsp_verification.sh'
 
 alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host registry.yarnpkg.com | awk '"'"'/has address/ { print $4 }'"'"' | head -n1) ; echo "${registryYarnpkgComIpAddress} registry.yarnpkg.com" | sudo tee -a /etc/hosts'
 
