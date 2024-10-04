@@ -10,6 +10,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 :: Packages - see https://chocolatey.org/packages
 
 choco install -y ^
+  cursor ^
   docker-desktop ^
   firefox ^
   git ^
