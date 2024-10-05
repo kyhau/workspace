@@ -35,8 +35,8 @@ delete_stuff() {
   local targets=("$@")
   for target in "${targets[@]}"
   do
-    echo "Finding $target in current directory"
-    for item in $(find -name "${target}" -type ${option})
+    echo "Finding $target in current directory (option ${option})"
+    for item in $(find . -name "${target}" -type ${option})
     do
       echo "Removing ${item}"
       rm -rf ${item}
