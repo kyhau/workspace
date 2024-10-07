@@ -1,13 +1,13 @@
 # Useful Links
 
 Jump to
-- [Real-time or continually-updated tracking tools](#real-time-or-continually-updated-tracking-tools)
 - [Online tools](#online-tools)
+- [Coding](#coding)
+- [Real-time or continually-updated tracking tools](#real-time-or-continually-updated-tracking-tools)
 - [Cloud](#cloud)
 - [Certifications](#certifications)
 - [GitHub](../useful-tools/github/README.md)
 - [Privacy Tools](#privacy-tools)
-- [Coding](#coding)
 - [Ethical Hacking](#ethical-hacking)
 - [Vulnerability Searching](#vulnerability-searching)
 - [AIML](#aiml)
@@ -16,6 +16,34 @@ Jump to
 - [Free online games](./Games.md)
 
 ---
+
+### Online tools
+- [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
+- [CyberChef](https://cyberchef.org/)
+- [Excalidraw](https://excalidraw.com/) - https://github.com/excalidraw/excalidraw
+
+### Coding
+- [Heroku](https://id.heroku.com/login) | [Paperspace](https://www.paperspace.com/)
+- [DockerHub](https://hub.docker.com)
+- [SwaggerHub](https://app.swaggerhub.com/search) | [Rapid API](https://rapidapi.com/)
+- [Hackerrank](https://www.hackerrank.com/)
+  | [Leetcode](https://leetcode.com/)
+  | [CareerCup](https://www.careercup.com/)
+- [Hacktoberfest](https://hacktoberfest.digitalocean.com/)
+- [Python Extension Packages (Unofficial Windows Binaries)](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
+- Slack dev - [Slack Block Kit](https://api.slack.com/block-kit) | [Slack Block Kit Builder](https://app.slack.com/block-kit-builder)
+- AI Tooling
+   - Cursor 
+   - GitHub Copilot
+   - Amazon CodeWhisper
+   - Sourcegraph Cody
+   - Tabnine
+   - Replit Ghostwriter
+- [Mermaid Live](https://mermaid.live/)
+- MLTA
+   - [Arize Phoenix](https://docs.arize.com/phoenix) - AI Observability and Evaluation
+   - [Sentry](https://sentry.io/) - Application monitoring
+
 
 ### Real-time or continually-updated tracking tools
 - [Nextstrain](https://nextstrain.org/ncov/gisaid/global/6m) - Real-time tracking of pathogen evolution
@@ -27,11 +55,6 @@ Jump to
 - [Spamhaus / Deteque Botnet Threat Map](https://www.spamhaus.com/threat-map/)
 - [Bitdefender Live Cyber Threat Map](https://threatmap.bitdefender.com/)
 - [SonicWall Live Cyber Attacks Map](https://securitycenter.sonicwall.com/m/page/worldwide-attacks)
-
-### Online tools
-- [Subnet Calculator - mxtoolbox](https://mxtoolbox.com/subnetcalculator.aspx)
-- [CyberChef](https://cyberchef.org/)
-- [Excalidraw](https://excalidraw.com/) - https://github.com/excalidraw/excalidraw
 
 ### Cloud
 - CNCF Cloud Native Interactive Landscape - https://landscape.cncf.io
@@ -55,27 +78,6 @@ Jump to
    - [Private DNS on Android](https://www.howtogeek.com/795644/how-to-enable-secure-private-dns-on-android/) - DNS providers:
       - [Google Public DNS](https://developers.google.com/speed/public-dns/docs/using#android) (dns.google), or
       - [Cloudflare](https://blog.cloudflare.com/enable-private-dns-with-1-1-1-1-on-android-9-pie/) (1dot1dot1dot1.cloudflare-dns.com) - Visit 1.1.1.1/help (or 1.0.0.1/help) to verify that "Using DNS over xxx" shows as "Yes".
-
-### Coding
-- [Heroku](https://id.heroku.com/login) | [Paperspace](https://www.paperspace.com/)
-- [DockerHub](https://hub.docker.com)
-- [SwaggerHub](https://app.swaggerhub.com/search) | [Rapid API](https://rapidapi.com/)
-- [Hackerrank](https://www.hackerrank.com/)
-  | [Leetcode](https://leetcode.com/)
-  | [CareerCup](https://www.careercup.com/)
-- [Hacktoberfest](https://hacktoberfest.digitalocean.com/)
-- [Python Extension Packages (Unofficial Windows Binaries)](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
-- Slack dev - [Slack Block Kit](https://api.slack.com/block-kit) | [Slack Block Kit Builder](https://app.slack.com/block-kit-builder)
-- AI Tooling
-   - Cursor 
-   - GitHub Copilot
-   - Amazon CodeWhisper
-   - Sourcegraph Cody
-   - Tabnine
-   - Replit Ghostwriter
-- Other dev tools
-   - [Arize Phoenix](https://docs.arize.com/phoenix) - AI Observability and Evaluation
-   - [Sentry](https://sentry.io/) - Application monitoring
 
 ### Ethical Hacking
 - [Hack The Box](https://www.hackthebox.com/)
