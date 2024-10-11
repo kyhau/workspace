@@ -75,10 +75,9 @@ alias gh-oidc-thumbprint-for-actions='bash ${WORKSPACE_REPO_HOME}/useful-tools/g
 alias gh-oidc-thumbprint-for-audit-log='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
 
 alias gh-auth-login='gh auth login'
-alias gh-auth-logout='gh auth logout'
 alias gh-auth-setup-git='git auth setup-git'
 alias gh-auth-status='gh auth status'
-alias gh-auth-switch='gh auth switch'
+alias gh-switch='gh auth switch'
 alias gh-login-current='gh api /user | jq .login'
 
 alias gh-pr-create='gh pr create --assignee @me --fill'
