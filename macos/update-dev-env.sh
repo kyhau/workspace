@@ -3,7 +3,7 @@ set -e
 
 ################################################################################
 # Update Python
-PYENV_VERSION="3.12"
+PYENV_VERSION="3.13"
 echo "INFO: Updating Python $PYENV_VERSION"
 echo "INFO: Current Python version: $(python --version)"
 pyenv install -f "$PYENV_VERSION"
@@ -25,10 +25,11 @@ echo "INFO: Node.js version updated: $(node --version)"
 echo "INFO: NPM version updated: $(npm --version)"
 
 ################################################################################
-echo "INFO: Sourcing ~/.zshrc"
-source ~/.zshrc
-
-################################################################################
 pip install -U \
+  pip \
   pre-commit \
   virtualenvwrapper
+
+################################################################################
+echo "INFO: Sourcing ~/.zshrc"
+source ~/.zshrc

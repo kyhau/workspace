@@ -45,6 +45,7 @@ cast_app_list=(
   cursor
   docker  # Docker Desktop
   lens
+  visual-studio-code@insiders
 )
 
 # Check if the app is installed and install it if it is not with brew
