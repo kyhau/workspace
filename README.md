@@ -6,7 +6,7 @@
     2. [macos/install-brew-packages.sh](macos/install-brew-packages.sh) - for installing selected apps/packages;
     3. set up general config/dot files;
     4. set up aliases - [.aliases-macos](.aliases-macos);
-    5. [macos/update-dev-env.sh](macos/update-dev-env.sh), for additional dev environment setups; e.g., defaylt python/nodejs versions.
+    5. [macos/update-dev-env.sh](macos/update-dev-env.sh), for additional dev environment setups; e.g., default python/nodejs versions.
 - Set up iTerm2
     1. Install iTerm2 with brew
     2. Enable iTerm2 in VS Code integrated terminal (zsh)
