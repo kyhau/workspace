@@ -2,10 +2,12 @@
 set -e
 
 app_list=(
+  curl  # export PATH="$HOME/Applications/homebrew/opt/curl/bin:$PATH"
   dos2unix
   go
   jq
   nvm
+  # openjdk # export PATH="$HOME/Applications/homebrew/opt/openjdk/bin:$PATH"
   pyenv
   readline  # for pyenv
   xz  # for pyenv

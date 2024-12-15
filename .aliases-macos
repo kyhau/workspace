@@ -264,9 +264,6 @@ alias k-repo-setup='bash ${WORKSPACE_REPO_HOME}/ubuntu/setup_repo.sh'
 alias k-du-hs='du -hs'
 alias k-du-h-max-depth-1='du -h --max-depth=1'
 alias k-df-h='df -h'
-alias k-lsb-release-a='lsb_release -a'
-alias k-lsb-release-d='lsb_release -d'
-alias k-reset-clock='bash ${WORKSPACE_REPO_HOME}/ubuntu/reset_clock.sh'
 
 ####
 # Conversion
