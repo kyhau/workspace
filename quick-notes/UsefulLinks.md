@@ -33,7 +33,8 @@ Jump to
 - [Python Extension Packages (Unofficial Windows Binaries)](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
 - Slack dev - [Slack Block Kit](https://api.slack.com/block-kit) | [Slack Block Kit Builder](https://app.slack.com/block-kit-builder)
 - AI Tooling
-   - Cursor 
+   - Cursor
+   - [Windsurf](https://codeium.com/windsurf)
    - GitHub Copilot
    - Amazon CodeWhisper
    - Sourcegraph Cody
