@@ -8,6 +8,7 @@ WORKSPACE_REPO_HOME="$(dirname "$(readlink -f "$0")")"
 
 alias docker-images-prune='docker images prune'
 alias docker-rm-exited='docker rm $(docker ps -q -f status=exited)'
+alias docker-rmi-all='docker rmi -f $(docker images -aq)'
 alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
 alias docker-secret-list='docker secret list'
 alias docker-system-prune-a='docker system prune -a'
