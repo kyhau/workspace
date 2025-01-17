@@ -46,6 +46,7 @@ app_list=(
 cast_app_list=(
   cursor
   docker  # Docker Desktop
+  github  # GitHub Desktop
   lens
   visual-studio-code@insiders
 )
