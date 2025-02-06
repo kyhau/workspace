@@ -4,6 +4,15 @@
 WORKSPACE_REPO_HOME="$(dirname "$(readlink -f "$0")")"
 
 ################################################################################
+# codeql
+alias codeql-resolve-languages='codeql resolve languages'
+alias codeql-resolve-packs='codeql resolve packs'
+alias codeql-database-create-python='codeql database create --language=python'
+alias codeql-database-upgrade='codeql database upgrade'
+alias codeql-database-upgrade-python='codeql database upgrade --language=python'
+alias codeql-database-analyze='codeql database analyze --format sarif-latest --output output.sarif'
+
+################################################################################
 # docker
 
 alias docker-images-prune='docker images prune'
