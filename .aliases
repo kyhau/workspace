@@ -70,6 +70,7 @@ alias git-ls-files-untracked='git ls-files --others --exclude-standard'
 alias gh-aliases='gh alias list'
 alias gh-aliases-reimport='gh alias import --clobber ${WORKSPACE_REPO_HOME}/.aliases-gh.yml'
 alias gh-extension-list='gh extension list'
+alias gh-extension-upgrade-all='gh extension upgrade --all'
 
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
 alias gh-oidc-thumbprint-for-actions='. ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_actions.sh'
