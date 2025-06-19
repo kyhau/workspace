@@ -2,6 +2,7 @@
 
 Jump to
 - [GH CLI and Extensions](#gh-cli-and-extensions)
+- [GH Tools](#github-tools)
 - [GitHub Actions](#github-actions)
 - [GitHub APIs / GitHub Apps](#github-apis--github-apps)
 - [GitHub Copilot](#github-copilot)
@@ -17,6 +18,13 @@ Jump to
     - can be used as CLI tool or as GH CLI extension
 - [gh-gei](https://github.com/github/gh-gei) - GitHub Enterprise Importer CLI
 
+
+## GitHub Tools
+
+- [GitHub ToolBox](https://jackgkafaty.github.io/GitHub_ToolBox/)
+    - GitHub Copilot Premium Requests
+    - GitHub Actions
+    - GitHub Enterprise Cloud License & Add-on's
 
 ## GitHub Actions
 
