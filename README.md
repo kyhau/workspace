@@ -22,8 +22,8 @@
 
 ## Windows + WSL
 - Set up Windows - install [Chocolatey](https://chocolatey.org) and some packages with [Init-chocolatey-windows.bat](./windows/chocolatey/Init-chocolatey-windows.bat)
-- [Set up WSL Ubuntu dev environment](./WSL.md)
-- [Set up Docker Desktop WSL](./Docker.md)
+- [Set up WSL Ubuntu dev environment](./windows/WSL.md)
+- [Set up Docker Desktop WSL](./windows/Docker.md)
 - [Set up aliases](./.aliases)
 
 ## Set up tools for specific development work
