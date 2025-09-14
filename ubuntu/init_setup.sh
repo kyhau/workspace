@@ -117,7 +117,7 @@ setup_docker () {
   ################################################################################
   # Note that WSL2 has Docker Integration
   echo "CheckPt $((step++)): Install Docker"
-  . ${WIN_WORKSPACES}/github/workspace/useful-tools/install_docker.sh
+  . ${WIN_WORKSPACES}/github/workspace/tools/install_docker.sh
 }
 # setup_docker
 
@@ -125,7 +125,7 @@ setup_docker () {
 setup_dev () {
   ################################################################################
   echo "CheckPt $((step++)): Install Python, pip, virtualenvwrapper, etc."
-  . ${WIN_WORKSPACES}/github/workspace/useful-tools/python/install_python.sh
+  . ${WIN_WORKSPACES}/github/workspace/tools/python/install_python.sh
 
   ################################################################################
   echo "CheckPt $((step++)): Install saml2aws"
@@ -142,6 +142,6 @@ setup_dev () {
   # touch "${WIN_USER_HOME}/.git-secrets"
   # [[ -e "${WSL_USER_HOME}/.git-secrets" ]] || ln -sf "${WIN_USER_HOME}/.git-secrets" "${WSL_USER_HOME}/.git-secrets"
   # echo "CheckPt $((step++)): Install git_secrets"
-  # . ${WIN_WORKSPACES}/github/workspace/useful-tools/git_secrets/install_git_secrets.sh
+  # . ${WIN_WORKSPACES}/github/workspace/tools/git_secrets/install_git_secrets.sh
 }
 # setup_dev

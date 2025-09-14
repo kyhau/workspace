@@ -62,17 +62,17 @@ alias git-secrets-scan-history='git secrets --scan-history'
 
 alias git-rm-reflog='git reflog expire --expire=now --all'
 
-alias git-pull-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_pull.sh'
-alias git-repo-latest-release='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_release.sh'
-alias git-repo-latest-tag='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_repo_latest_tag.sh'
-alias git-squash-new-start='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/squash_all_git_commits_into_latest.sh'
+alias git-pull-all='bash ${WORKSPACE_REPO_HOME}/tools/git/run_git_pull.sh'
+alias git-repo-latest-release='bash ${WORKSPACE_REPO_HOME}/tools/github/get_github_repo_latest_release.sh'
+alias git-repo-latest-tag='bash ${WORKSPACE_REPO_HOME}/tools/github/get_github_repo_latest_tag.sh'
+alias git-squash-new-start='bash ${WORKSPACE_REPO_HOME}/tools/git/squash_all_git_commits_into_latest.sh'
 
 alias git-checkout--='git checkout -- .'
 alias git-checkout-default='git checkout $(git-branch-default)'
 
 alias git-clean-dfx='git clean -dfx'
 
-alias git-ls-branch-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/run_git_branch.sh'
+alias git-ls-branch-all='bash ${WORKSPACE_REPO_HOME}/tools/git/run_git_branch.sh'
 alias git-ls-files='git ls-files'
 alias git-ls-files-untracked='git ls-files --others --exclude-standard'
 
@@ -81,8 +81,8 @@ alias gh-aliases-reimport='gh alias import --clobber ${WORKSPACE_REPO_HOME}/.ali
 alias gh-extension-list='gh extension list'
 
 alias gh-api-rate-limit='gh api -H "Accept: application/vnd.github.v3+json" /rate_limit'
-alias gh-oidc-thumbprint-for-actions='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_actions.sh'
-alias gh-oidc-thumbprint-for-audit-log='bash ${WORKSPACE_REPO_HOME}/useful-tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
+alias gh-oidc-thumbprint-for-actions='bash ${WORKSPACE_REPO_HOME}/tools/github/get_github_oidc_thumbprint_for_actions.sh'
+alias gh-oidc-thumbprint-for-audit-log='bash ${WORKSPACE_REPO_HOME}/tools/github/get_github_oidc_thumbprint_for_audit_log.sh'
 
 alias gh-auth-login='gh auth login'
 alias gh-auth-setup-git='git auth setup-git'
@@ -92,15 +92,15 @@ alias gh-login-current='gh api /user | jq .login'
 
 alias gh-pr-create='gh pr create --assignee @me --fill'
 alias gh-pr-merge-squash='gh pr merge --squash'
-alias gh-delete-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_delete_workflow_runs.py'
-alias gh-force-cancel-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/useful-tools/github/gh_force_cancel_workflow_runs.py'
+alias gh-delete-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/tools/github/gh_delete_workflow_runs.py'
+alias gh-force-cancel-workflow-runs='python3 ${WORKSPACE_REPO_HOME}/tools/github/gh_force_cancel_workflow_runs.py'
 
 alias git-auto-commit-merge='git add . && git commit -m "Updated" && git push'
 
-alias git-auto-branch='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-branch.sh'
-alias git-auto-pr-merge='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-pr-merge.sh'
-alias git-auto-commit-pr-merge='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-commit-pr-merge.sh'
-alias git-auto-ci-all-changes='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/git-auto-ci-all-changes.sh'
+alias git-auto-branch='bash ${WORKSPACE_REPO_HOME}/tools/git/git-auto-branch.sh'
+alias git-auto-pr-merge='bash ${WORKSPACE_REPO_HOME}/tools/git/git-auto-pr-merge.sh'
+alias git-auto-commit-pr-merge='bash ${WORKSPACE_REPO_HOME}/tools/git/git-auto-commit-pr-merge.sh'
+alias git-auto-ci-all-changes='bash ${WORKSPACE_REPO_HOME}/tools/git/git-auto-ci-all-changes.sh'
 
 ################################################################################
 # gitleaks
@@ -128,7 +128,7 @@ alias k9s-readonly='k9s --readonly'
 # kubectl
 alias kubectl-describe-configmap-n-kube-system-aws-auth='kubectl describe configmap -n kube-system aws-auth'
 alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
-alias kubectl-describe-secret-eks-admin='bash ${WORKSPACE_REPO_HOME}/useful-tools/kubernetes/kubectl_describe_secret_eks_admin.sh'
+alias kubectl-describe-secret-eks-admin='bash ${WORKSPACE_REPO_HOME}/tools/kubernetes/kubectl_describe_secret_eks_admin.sh'
 alias kubectl-get-clusterrolebindings='kubectl get clusterrolebindings'
 alias kubectl-get-clusterroles='kubectl get clusterroles'
 alias kubectl-get-deployment='kubectl get deployment'
@@ -180,7 +180,7 @@ alias nvm-which-current='nvm which current'
 
 alias pip-list-not-required='pip list --not-required'
 alias pip-list-outdated='pip list --outdated'
-alias pip-upgrade-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/python/run_pip_upgrade_all.sh'
+alias pip-upgrade-all='bash ${WORKSPACE_REPO_HOME}/tools/python/run_pip_upgrade_all.sh'
 
 ################################################################################
 # pre-commit
@@ -238,7 +238,7 @@ alias rm-dev-env='bash ${WORKSPACE_REPO_HOME}/scripts/sh/cleanup_dev_env.sh'
 alias snyk-code-test='snyk code test'
 alias snyk-monitor='snyk monitor -d -insecure --all-projects --fail-fast --strict-out-of-sync=true --detection-depth=6'
 alias snyk-test='snyk test --all-projects --fail-fast --detection-depth=6'
-alias snyk-run-all='bash ${WORKSPACE_REPO_HOME}/useful-tools/snyk/run-snyk.sh'
+alias snyk-run-all='bash ${WORKSPACE_REPO_HOME}/tools/snyk/run-snyk.sh'
 
 ################################################################################
 # Update apps/packages
@@ -247,11 +247,11 @@ alias update-brew='brew update'
 alias update-brew-packages='brew upgrade && brew cleanup'
 alias update-dev-env='bash ${WORKSPACE_REPO_HOME}/macos/update-dev-env.sh'
 
-alias update-git-sizer='bash ${WORKSPACE_REPO_HOME}/useful-tools/git/install_git_sizer.sh'
+alias update-git-sizer='bash ${WORKSPACE_REPO_HOME}/tools/git/install_git_sizer.sh'
 
 alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
 
-alias update-serverless='bash ${WORKSPACE_REPO_HOME}/useful-tools/install_serverless.sh'
+alias update-serverless='bash ${WORKSPACE_REPO_HOME}/tools/install_serverless.sh'
 
 ################################################################################
 # custom scripts or commands
@@ -278,7 +278,7 @@ alias k-df-h='df -h'
 ####
 # Conversion
 
-alias k-oidc-thumbprint='bash ${WORKSPACE_REPO_HOME}/useful-tools/oidc/get_oidc_thumbprint.sh'
+alias k-oidc-thumbprint='bash ${WORKSPACE_REPO_HOME}/tools/oidc/get_oidc_thumbprint.sh'
 alias k-pem2crt='_func(){ openssl x509 -inform PEM -in "$1" -out $(basename "${1%.*}.crt"); }; _func'
 alias k-timestamp2datetime='function _(){ if [[ -z "$1" ]]; then echo "Missing timestamp"; else date -d@$1; fi; }; _'
 
@@ -302,7 +302,7 @@ alias k-ls-timezones='bash ${WORKSPACE_REPO_HOME}/scripts/sh/ls_timezones.sh'
 ####
 # Networking
 
-alias k-ip-in-range-check='python3 ${WORKSPACE_REPO_HOME}/useful-tools/networking/is_ip_in_range.py'
+alias k-ip-in-range-check='python3 ${WORKSPACE_REPO_HOME}/tools/networking/is_ip_in_range.py'
 
 # what the outside world thinks your ip address is
 # or curl ifconfig.me

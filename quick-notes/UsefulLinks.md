@@ -6,7 +6,7 @@ Jump to
 - [Real-time or continually-updated tracking tools](#real-time-or-continually-updated-tracking-tools)
 - [Cloud](#cloud)
 - [Certifications](#certifications)
-- [GitHub](../useful-tools/github/README.md)
+- [GitHub](../tools/github/README.md)
 - [Privacy Tools](#privacy-tools)
 - [Ethical Hacking](#ethical-hacking)
 - [Vulnerability Searching](#vulnerability-searching)
