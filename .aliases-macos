@@ -268,20 +268,6 @@ alias k-rename-files='python3 ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
 alias k-repo-setup='bash ${WORKSPACE_REPO_HOME}/ubuntu/setup_repo.sh'
 
-alias k-backup-all-configs='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/backup-all-configs-macos.sh'
-alias k-backup-cursor='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/backup-cursor-macos.sh'
-alias k-backup-vscode='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/backup-vscode-macos.sh'
-alias k-backup-windsurf='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/backup-windsurf-macos.sh'
-
-alias k-diff-cursor-config='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/diff-cursor-config-macos.sh'
-alias k-diff-vscode-config='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/diff-vscode-config-macos.sh'
-alias k-diff-windsurf-config='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/diff-windsurf-config-macos.sh'
-
-alias k-restore-all-configs='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/restore-all-configs-macos.sh'
-alias k-restore-cursor='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/restore-cursor-macos.sh'
-alias k-restore-vscode='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/restore-vscode-macos.sh'
-alias k-restore-windsurf='bash ${WORKSPACE_REPO_HOME}/k-configs/ide/_scripts/macos/restore-windsurf-macos.sh'
-
 ####
 # System
 
