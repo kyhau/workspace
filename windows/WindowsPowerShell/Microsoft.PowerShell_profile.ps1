@@ -79,7 +79,7 @@ if (Test-Path 'C:\Program Files\Microsoft VS Code Insiders\Code - Insiders.exe' 
 }
 
 if (Test-Path $workspacesHome\github\workspace -PathType Container) {
-  Set-Alias -Name pip-upgrade-all -Value '$workspacesHome\github\workspace\useful-tools\python\run_pip_upgrade_all.bat'
+  Set-Alias -Name pip-upgrade-all -Value '$workspacesHome\github\workspace\tools\python\run_pip_upgrade_all.bat'
 }
 
 if (Test-Path $workspacesHome\github\vscode-configs -PathType Container) {

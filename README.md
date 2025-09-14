@@ -11,7 +11,7 @@
     1. Install iTerm2 with brew
     2. Enable iTerm2 in VS Code integrated terminal (zsh)
     3. Set up [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) with advanced theme (recommended [Powerlevel10k](https://github.com/romkatv/powerlevel10k))
-        - see [useful-tools/oh-my-zsh/install-oh-my-zsh.macos.sh](./useful-tools/oh-my-zsh/install-oh-my-zsh.macos.sh)
+        - see [tools/oh-my-zsh/install-oh-my-zsh.macos.sh](./tools/oh-my-zsh/install-oh-my-zsh.macos.sh)
 - Notes for non-admin setup
     - Two separate Applications folders
         1. `/Applications` usually requires admin to add apps there.
@@ -30,7 +30,7 @@
 - Set up VS Code with my settings and user snippets in [kyhau/vscode-configs](https://github.com/kyhau/vscode-configs)
 - Set up `git` config for [multiple GitHub accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 - Set up `gh` (GitHub CLI) [multi-account switch](https://gist.github.com/yermulnik/017837c01879ed3c7489cc7cf749ae47)
-- Some of my scripts for installing [Useful tools for development](./useful-tools/)
+- Some of my scripts for installing [Useful tools for development](./tools/)
 - [kyhau/aws-tools](https://github.com/kyhau/aws-tools/) - my tools/scripts for building with AWS
 
 ## Locations of some useful files or directories
