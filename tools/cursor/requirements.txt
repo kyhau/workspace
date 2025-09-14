@@ -1,0 +1,15 @@
+# Requirements for VS Code Insiders to Cursor Import Tools
+# These scripts use only Python standard library modules, so no external dependencies are required.
+
+# Python 3.7+ is required for:
+# - pathlib.Path (Python 3.4+)
+# - f-strings (Python 3.6+)
+# - argparse (Python 2.7+)
+# - shutil (Python 2.7+)
+# - json (Python 2.7+)
+# - platform (Python 2.7+)
+# - datetime (Python 2.7+)
+# - os (Python 2.7+)
+# - sys (Python 2.7+)
+
+# No external packages required - all functionality uses standard library
