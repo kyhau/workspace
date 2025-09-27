@@ -8,9 +8,12 @@ app_list=(
   jq
   nvm
   # openjdk # export PATH="$HOME/Applications/homebrew/opt/openjdk/bin:$PATH"
-  pyenv
-  readline  # for pyenv
-  xz  # for pyenv
+
+  ## python related
+  uv
+  # pyenv
+  # readline  # for pyenv
+  # xz  # for pyenv
 
   ## aws related
   awscli
@@ -44,11 +47,14 @@ app_list=(
 )
 
 cast_app_list=(
+  amazon-q  # Amazon Q
   cursor
+  cursor-cli
   docker  # Docker Desktop
   github  # GitHub Desktop
   lens
   visual-studio-code@insiders
+  # windsurf  # Windsurf
 )
 
 # Check if the app is installed and install it if it is not with brew
