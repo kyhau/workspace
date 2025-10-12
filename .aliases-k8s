@@ -1,0 +1,62 @@
+#!/bin/bash
+# Set aliases for some generic scripts
+WORKSPACE_REPO_HOME="$(dirname "$(readlink -f "$0")")"
+
+alias k-cheatsheet-kubectl='browser https://kubernetes.io/docs/reference/kubectl/cheatsheet/'
+
+################################################################################
+# helm
+alias helm-install='helm install'
+alias helm-ls='helm ls'
+alias helm-ls-pending-='helm ls -a -A | grep -i pending'
+alias helm-package='helm package'
+alias helm-repo-update='helm repo update'
+alias helm-rollback='helm rollback'
+alias helm-search-hub='helm search hub'
+alias helm-search-repo='helm search repo'
+alias helm-show-all='helm show all'
+alias helm-status='helm status'
+alias helm-uninstall='helm uninstall'
+alias helm-upgrade='helm upgrade'
+
+################################################################################
+# k9s
+alias k9s-info='k9s info'
+alias k9s-readonly='k9s --readonly'
+
+################################################################################
+# kubectl
+alias kubectl-describe-configmap-n-kube-system-aws-auth='kubectl describe configmap -n kube-system aws-auth'
+alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
+alias kubectl-describe-secret-eks-admin='bash ${WORKSPACE_REPO_HOME}/tools/kubernetes/kubectl_describe_secret_eks_admin.sh'
+alias kubectl-get-clusterrolebindings='kubectl get clusterrolebindings'
+alias kubectl-get-clusterroles='kubectl get clusterroles'
+alias kubectl-get-deployment='kubectl get deployment'
+alias kubectl-get-deployment-a='kubectl get deployment -A'
+alias kubectl-get-events='kubectl get events'
+alias kubectl-get-endpoints-a='kubectl get endpoints -A'
+alias kubectl-get-ingress='kubectl get ingress'
+alias kubectl-get-ingress-a='kubectl get ingress -A'
+alias kubectl-get-namespace='kubectl get namespace'
+alias kubectl-get-pods='kubectl get pods'
+alias kubectl-get-pods-a='kubectl get pods -A'
+alias kubectl-get-pods-o-wide='kubectl get pods -o wide'
+alias kubectl-get-pods-o-wide-a='kubectl get pods -o wide -A'
+alias kubectl-get-pods-show-labels='kubectl get pods --show-labels'
+alias kubectl-get-pods-show-labels-a='kubectl get pods --show-labels -A'
+alias kubectl-get-rolebindings-a='kubectl get rolebindings -A'
+alias kubectl-get-roles-a='kubectl get roles -A'
+alias kubectl-get-svc='kubectl get svc'
+alias kubectl-get-svc-a='kubectl get svc -A'
+alias kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller'
+alias kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
+alias kubectl-validate-yaml='kubectl create --dry-run --validate=true -f'
+
+################################################################################
+# skaffold
+alias skaffold-apply='skaffold apply'
+alias skaffold-build='skaffold build'
+alias skaffold-deploy='skaffold deploy'
+alias skaffold-dev='skaffold dev'
+alias skaffold-render='skaffold render'
+alias skaffold-run='skaffold run'
