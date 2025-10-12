@@ -5,12 +5,13 @@ WORKSPACE_REPO_HOME="$(dirname "$(readlink -f "$0")")"
 
 ################################################################################
 # codeql
-alias codeql-resolve-languages='codeql resolve languages'
-alias codeql-resolve-packs='codeql resolve packs'
-alias codeql-database-create-python='codeql database create --language=python'
-alias codeql-database-upgrade='codeql database upgrade'
-alias codeql-database-upgrade-python='codeql database upgrade --language=python'
-alias codeql-database-analyze='codeql database analyze --format sarif-latest --output output.sarif'
+
+# alias codeql-resolve-languages='codeql resolve languages'
+# alias codeql-resolve-packs='codeql resolve packs'
+# alias codeql-database-create-python='codeql database create --language=python'
+# alias codeql-database-upgrade='codeql database upgrade'
+# alias codeql-database-upgrade-python='codeql database upgrade --language=python'
+# alias codeql-database-analyze='codeql database analyze --format sarif-latest --output output.sarif'
 
 ################################################################################
 # docker
@@ -21,23 +22,6 @@ alias docker-rmi-all='docker rmi -f $(docker images -aq)'
 alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
 alias docker-secret-list='docker secret list'
 alias docker-system-prune-a='docker system prune -a'
-
-################################################################################
-# helm
-
-alias helm-install='helm install'
-alias helm-ls='helm ls'
-alias helm-ls-pending-='helm ls -a -A | grep -i pending'
-# helm uninstall kube-apps -n kube-apps
-alias helm-package='helm package'
-alias helm-repo-update='helm repo update'
-alias helm-rollback='helm rollback'
-alias helm-search-hub='helm search hub'
-alias helm-search-repo='helm search repo'
-alias helm-show-all='helm show all'
-alias helm-status='helm status'
-alias helm-uninstall='helm uninstall'
-alias helm-upgrade='helm upgrade'
 
 ################################################################################
 # git / gh
@@ -110,47 +94,14 @@ alias gitleaks-detect='gitleaks detect --report-path gitleaks-report.json'
 ################################################################################
 # go
 
-alias go-build='go build'
-alias go-clean-modcache='go clean -modcache'
-alias go-get-aws='go get github.com/aws/aws-sdk-go-v2 && go get github.com/aws/aws-sdk-go-v2'
-alias go-install='go install'
-alias go-mod-init='go mod init'
-alias go-mod-tidy='go mod tidy'
-alias go-run='go run'
-alias go-test='go test -v'
-
-################################################################################
-# k9s
-alias k9s-info='k9s info'
-alias k9s-readonly='k9s --readonly'
-
-################################################################################
-# kubectl
-alias kubectl-describe-configmap-n-kube-system-aws-auth='kubectl describe configmap -n kube-system aws-auth'
-alias kubectl-describe-pod='sh -c '\''kubectl describe pod "$@"'\'' _'
-alias kubectl-describe-secret-eks-admin='bash ${WORKSPACE_REPO_HOME}/tools/kubernetes/kubectl_describe_secret_eks_admin.sh'
-alias kubectl-get-clusterrolebindings='kubectl get clusterrolebindings'
-alias kubectl-get-clusterroles='kubectl get clusterroles'
-alias kubectl-get-deployment='kubectl get deployment'
-alias kubectl-get-deployment-a='kubectl get deployment -A'
-alias kubectl-get-events='kubectl get events'
-alias kubectl-get-endpoints-a='kubectl get endpoints -A'
-alias kubectl-get-ingress='kubectl get ingress'
-alias kubectl-get-ingress-a='kubectl get ingress -A'
-alias kubectl-get-namespace='kubectl get namespace'
-alias kubectl-get-pods='kubectl get pods'
-alias kubectl-get-pods-a='kubectl get pods -A'
-alias kubectl-get-pods-o-wide='kubectl get pods -o wide'
-alias kubectl-get-pods-o-wide-a='kubectl get pods -o wide -A'
-alias kubectl-get-pods-show-labels='kubectl get pods --show-labels'
-alias kubectl-get-pods-show-labels-a='kubectl get pods --show-labels -A'
-alias kubectl-get-rolebindings-a='kubectl get rolebindings -A'
-alias kubectl-get-roles-a='kubectl get roles -A'
-alias kubectl-get-svc='kubectl get svc'
-alias kubectl-get-svc-a='kubectl get svc -A'
-alias kubectl-logs-aws-load-balancer-controller='kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller'
-alias kubectl-logs-cluster-autoscaler='kubectl logs -n kube-system deployment.apps/cluster-autoscaler'
-alias kubectl-validate-yaml='kubectl create --dry-run --validate=true -f'
+# alias go-build='go build'
+# alias go-clean-modcache='go clean -modcache'
+# alias go-get-aws='go get github.com/aws/aws-sdk-go-v2 && go get github.com/aws/aws-sdk-go-v2'
+# alias go-install='go install'
+# alias go-mod-init='go mod init'
+# alias go-mod-tidy='go mod tidy'
+# alias go-run='go run'
+# alias go-test='go test -v'
 
 ################################################################################
 # npm
@@ -176,44 +127,25 @@ alias nvm-use-system='nvm use system'
 alias nvm-which-current='nvm which current'
 
 ################################################################################
-# pip
-
-alias pip-list-not-required='pip list --not-required'
-alias pip-list-outdated='pip list --outdated'
-alias pip-upgrade-all='bash ${WORKSPACE_REPO_HOME}/tools/python/run_pip_upgrade_all.sh'
-
-################################################################################
 # pre-commit
 
 alias pre-commit-install='pre-commit install'
 
 ################################################################################
-# python
+# q
 
-alias python-zoneinfo-available-timezones='python3 -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
-#alias python-timezones='python3 -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
-
-################################################################################
-# skaffold
-
-alias skaffold-apply='skaffold apply'
-alias skaffold-build='skaffold build'
-alias skaffold-deploy='skaffold deploy'
-alias skaffold-dev='skaffold dev'
-alias skaffold-render='skaffold render'
-alias skaffold-run='skaffold run'
+alias q-agent-validate='q agent validate'
+alias q-agent-list='q agent list'
+alias q-chat-agent='q chat --agent'
+alias q-mcp-list='q mcp list'
+alias q-mcp-status='q mcp status --name'
+alias q-settings='q settings'
 
 ################################################################################
 # trufflehog
 
-alias trufflehog-filesystem='trufflehog filesystem'
-alias trufflehog-git-only-verified='trufflehog git -only-verified --json'
-
-################################################################################
-# uv
-
-# uv Virtual Environment Management
-alias uvm='bash ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh'
+# alias trufflehog-filesystem='trufflehog filesystem'
+# alias trufflehog-git-only-verified='trufflehog git -only-verified --json'
 
 ################################################################################
 # yarn
@@ -251,12 +183,12 @@ alias update-git-sizer='bash ${WORKSPACE_REPO_HOME}/tools/git/install_git_sizer.
 
 alias update-typescript='sudo npm i -g typescript && echo "INFO: tsc version: $(tsc --version)"'
 
+alias update-q='q update'
+
 alias update-serverless='bash ${WORKSPACE_REPO_HOME}/tools/install_serverless.sh'
 
 ################################################################################
 # custom scripts or commands
-
-alias k-check-workspace='bash ${WORKSPACE_REPO_HOME}/ubuntu/check_workspace.sh'
 
 alias k-degreen='bash ${WORKSPACE_REPO_HOME}/scripts/sh/degreen.sh'
 
@@ -266,7 +198,6 @@ alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=cdk.out --exclu
 
 alias k-rename-files='python3 ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
-alias k-repo-setup='bash ${WORKSPACE_REPO_HOME}/ubuntu/setup_repo.sh'
 
 ####
 # System
@@ -285,9 +216,6 @@ alias k-timestamp2datetime='function _(){ if [[ -z "$1" ]]; then echo "Missing t
 ####
 # Linting
 
-alias k-black='black --line-length=99'
-# W605 Invalid escape sequence
-alias k-flake8='flake8 --ignore W605 --max-line-length 99'
 alias k-yamllint='yamllint -d "{extends: default, rules: {document-start: disable, line-length: disable, truthy: disable}}" -f parsable .'
 
 ####
@@ -314,17 +242,5 @@ alias k-ip-local='bash ${WORKSPACE_REPO_HOME}/ubuntu/get_local_ip.sh'
 alias k-whatismy-ipaddress='browser https://whatismyipaddress.com/'
 alias k-whatismy-proxy='browser http://www.whatismyproxy.com/'
 
-alias k-ipam-helper='python3 ${WORKSPACE_REPO_HOME}/../phpipam-api-helper/phpipam_api_helper.py'
-alias k-panos-helper='python3 ${WORKSPACE_REPO_HOME}/../panos-api-helper/panos_api_helper.py'
-
 alias k-disable-apt-ocsp-verification='bash ${WORKSPACE_REPO_HOME}/ubuntu/disable_apt_ocsp_verification.sh'
 alias k-reset-apt-ocsp-verification='bash ${WORKSPACE_REPO_HOME}/ubuntu/reset_apt_ocsp_verification.sh'
-
-alias k-add-registry-yarnpkg-to-etc-hosts='registryYarnpkgComIpAddress=$(host registry.yarnpkg.com | awk '"'"'/has address/ { print $4 }'"'"' | head -n1) ; echo "${registryYarnpkgComIpAddress} registry.yarnpkg.com" | sudo tee -a /etc/hosts'
-
-# Cheatsheets
-
-alias k-cheatsheet-aws-network='browser https://github.com/kyhau/aws-notebook/blob/master/Networking.md'
-alias k-cheatsheet-docker='browser https://github.com/kyhau/docker-notebook/blob/master/README.md'
-alias k-cheatsheet-kubectl='browser https://kubernetes.io/docs/reference/kubectl/cheatsheet/'
-alias k-cheatsheet-python='browser https://github.com/gto76/python-cheatsheet/blob/master/README.md'

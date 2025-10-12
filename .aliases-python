@@ -1,0 +1,43 @@
+#!/bin/bash
+# Set aliases for some generic scripts
+
+WORKSPACE_REPO_HOME="$(dirname "$(readlink -f "$0")")"
+
+################################################################################
+# pip
+
+alias pip-list-not-required='pip list --not-required'
+alias pip-list-outdated='pip list --outdated'
+alias pip-upgrade-all='bash ${WORKSPACE_REPO_HOME}/tools/python/run_pip_upgrade_all.sh'
+
+################################################################################
+# python
+
+alias python-zoneinfo-available-timezones='python3 -c "import zoneinfo; print(\"\n\".join(tz for tz in sorted(zoneinfo.available_timezones())))"'
+#alias python-timezones='python3 -c "import pytz;print(\"\n\".join(tz for tz in pytz.all_timezones))"'
+
+################################################################################
+# uv
+
+# uv Virtual Environment Management
+alias uvm='bash ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh'
+alias uvm-list='bash ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh list'
+alias uvm-create='bash ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh create'
+alias uvm-delete='bash ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh delete'
+alias uvm-info='bash ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh info'
+
+# uv activation functions (must use source)
+uvm-activate() {
+  source ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh activate "$@"
+}
+
+uvm-global-313() {
+  source ${WORKSPACE_REPO_HOME}/tools/python/uv-venvs.sh activate global-3.13
+}
+
+####
+# Linting
+
+alias k-black='black --line-length=99'
+# W605 Invalid escape sequence
+alias k-flake8='flake8 --ignore W605 --max-line-length 99'
