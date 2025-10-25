@@ -40,4 +40,4 @@ def main(cidr, cidr_file, ip, ip_file):
 
 
 if __name__ == "__main__":
-     main()
+    main()

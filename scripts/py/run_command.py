@@ -20,7 +20,7 @@ def call_run(command):
     command_list = command.split(" ")
     try:
         logging.info(f"Running shell command: {command}")
-        result = subprocess.run(command_list, stdout=subprocess.PIPE);
+        result = subprocess.run(command_list, stdout=subprocess.PIPE)
         logging.info("Command output:\n---\n{}\n---".format(result.stdout.decode("UTF-8")))
     except Exception as e:
         logging.error(f"Exception: {e}")
@@ -33,5 +33,6 @@ def main():
 
     call_check_output("aws elbv2 describe-load-balancers")
 
+
 if __name__ == "__main__":
-     main()
+    main()

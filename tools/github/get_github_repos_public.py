@@ -1,6 +1,7 @@
 """
 Environment variables:
-- GITHUB_TOKEN - A GitHub PAT token with sufficient privileges to be able to pull a list of members in a given organization.
+- GITHUB_TOKEN - A GitHub PAT token with sufficient privileges to be able to
+  pull a list of members in a given organization.
 
 To run:
 > python3 get_github_repos_public.py ${GITHUB ORGANISATION NAME}
@@ -16,7 +17,7 @@ TOKEN = os.getenv("GITHUB_TOKEN")
 HEADERS = {
     "Content-Type": "application/json; charset=utf-8",
     "X-GitHub-Api-Version": "2022-11-28",
-    "Authorization": f"token {TOKEN}"
+    "Authorization": f"token {TOKEN}",
 }
 
 
@@ -64,7 +65,8 @@ def main(organization):
         if len(user_repos):
             repos_list = [
                 {"Url": x["html_url"], "Description": x.get("description", "")}
-                for x in user_repos if x["fork"] == False
+                for x in user_repos
+                if not x["fork"]
             ]
             if len(repos_list):
                 public_repo_dict.update({username: repos_list})

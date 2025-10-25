@@ -12,7 +12,9 @@ def call_ping(url):
         return 200, {"TotalDurationInMs": duration_ms}
 
     except subprocess.CalledProcessError as err:
-        fail_lines = filter(lambda x: x.startswith("ping"), err.output.decode("utf-8").splitlines())
+        fail_lines = filter(
+            lambda x: x.startswith("ping"), err.output.decode("utf-8").splitlines()
+        )
         logging.error(", ".join(fail_lines))
         return err.returncode, {}
 
@@ -24,9 +26,9 @@ def call_ping_2(url):
 
     print("Results --------------------------------------------------------------------------")
     if response == 0:
-        print(url, 'is up!')
+        print(url, "is up!")
     else:
-        print(url, 'is down!')
+        print(url, "is down!")
 
 
 code, data = call_ping("google.com")

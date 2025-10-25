@@ -23,6 +23,7 @@ def copy_files(src_files, dest_path):
         print(f"Copied {f} to {dest_file}")
         cnt += 1
 
+
 if len(sys.argv) <= 1 or "help" in sys.argv[1].lower():
     print(f"Usage: {sys.argv[0]} <output_folder>")
     sys.exit(1)
@@ -31,9 +32,10 @@ dest_path = sys.argv[1]
 
 profiles_path = f"{getenv('APPDATA')}\Mozilla\Firefox\Profiles"
 
-print(f"Started backing up Firefox Multi-Account Containers settings for profiles in {profiles_path}")
+print(
+    f"Started backing up Firefox Multi-Account Containers settings for profiles in {profiles_path}"
+)
 print(f"Backup folder: {dest_path}")
 
 for f in ["containers.json", "cookies.sqlite"]:
     copy_files(Path(profiles_path).rglob(f), dest_path)
-
