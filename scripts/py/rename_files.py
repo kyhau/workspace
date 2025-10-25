@@ -39,7 +39,8 @@ def rename(from_string, to_string, exclude_string, dryrun):
                 continue
 
             file_path = os.path.join(subdir, filename)
-            new_file_path = file_path.replace(from_string, to_string)
+            new_filename = filename.replace(from_string, to_string)
+            new_file_path = os.path.join(subdir, new_filename)
             print(f"mv {file_path} to {new_file_path}")
 
             if dryrun is False:
