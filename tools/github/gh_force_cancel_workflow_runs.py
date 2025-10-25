@@ -49,11 +49,10 @@ def call_check_output(command, to_json=True):
         raise
 
 
-@click.command(f"gh helper", help=f"{sys.argv[0]} OWNER/REPO")
+@click.command("gh helper", help=f"{sys.argv[0]} OWNER/REPO")
 @click.argument("OWNER_REPO")
 @click.option("--dryrun", "-d", is_flag=True, help="Dry run")
 def main(owner_repo, dryrun):
-
     cmd_workflows = f"gh api -X GET /repos/{owner_repo}/actions/workflows"
     workflows_json = call_check_output(cmd_workflows)
 
@@ -67,10 +66,14 @@ def main(owner_repo, dryrun):
 
     workflow_id = workflow_name_id_dict[selected_name]
 
-    cmd_workflow_runs = f"gh api -X GET /repos/{owner_repo}/actions/workflows/{workflow_id}/runs --paginate"
+    cmd_workflow_runs = (
+        f"gh api -X GET /repos/{owner_repo}/actions/workflows/{workflow_id}/runs --paginate"
+    )
     workflow_runs_json = call_check_output(cmd_workflow_runs)
 
-    workflow_runs_runnum_id_dict = {str(w["run_number"]):w["id"] for w in workflow_runs_json["workflow_runs"]}
+    workflow_runs_runnum_id_dict = {
+        str(w["run_number"]): w["id"] for w in workflow_runs_json["workflow_runs"]
+    }
     if not workflow_runs_runnum_id_dict:
         print("No workflow run returned")
         return
@@ -86,7 +89,9 @@ def main(owner_repo, dryrun):
                 print(f"Dryrun: Force-cancel workflow run {selected_name}/{run_number} ({run_id})")
             else:
                 print(f"Force-cancel workflow run {selected_name}/{run_number} ({run_id})")
-                cmd_force_cancel_workflow_run = f"gh api --method POST /repos/{owner_repo}/actions/runs/{run_id}/force-cancel"
+                cmd_force_cancel_workflow_run = (
+                    f"gh api --method POST /repos/{owner_repo}/actions/runs/{run_id}/force-cancel"
+                )
                 call_check_output(cmd_force_cancel_workflow_run, to_json=False)
 
 

@@ -198,6 +198,7 @@ alias k-grep='sh -c '\''grep -R --exclude-dir=.git --exclude-dir=cdk.out --exclu
 
 alias k-rename-files='python3 ${WORKSPACE_REPO_HOME}/scripts/py/rename_files.py'
 
+alias k-copy-rules='python3 ${WORKSPACE_REPO_HOME}/tools/rules-helper/copy_rules.py'
 
 ####
 # System

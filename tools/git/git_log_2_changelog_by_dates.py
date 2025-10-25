@@ -32,7 +32,9 @@ def read_logs():
         elif line.startswith("Date:"):
             # E.g. Date:   Sat Aug 27 13:42:29 2022 +1000
             parts = line.split(" ")
-            this_date = datetime.datetime.strptime(f"{parts[5]} {parts[4]} {parts[7]}", "%d %b %Y").strftime("%Y-%m-%d")
+            this_date = datetime.datetime.strptime(
+                f"{parts[5]} {parts[4]} {parts[7]}", "%d %b %Y"
+            ).strftime("%Y-%m-%d")
 
         else:
             ########################################
@@ -59,13 +61,15 @@ def read_logs():
 
             line = line.replace("* ", "")
 
-            ret.append({
-                "Commit": this_commit,
-                "Author": this_author,
-                "Date": this_date,
-                "Category": category,
-                "Message": line,
-            })
+            ret.append(
+                {
+                    "Commit": this_commit,
+                    "Author": this_author,
+                    "Date": this_date,
+                    "Category": category,
+                    "Message": line,
+                }
+            )
 
     return ret
 
@@ -85,7 +89,7 @@ def group_records_by_date_and_category(records):
                 "Added": [],
                 "Changed": [],
                 "Fixed": [],
-                "Removed": []
+                "Removed": [],
             }
 
         this_date_records[record["Category"]].append(record)
@@ -105,7 +109,7 @@ def generate_changelog(dates_records):
                 print(f"\n### {category}\n")
 
                 for record in date_records.get(category, []):
-                    commit = record['Commit'][:7]
+                    commit = record["Commit"][:7]
                     print(f"   * {record['Message']} ({commit} from {record['Author']})")
 
 

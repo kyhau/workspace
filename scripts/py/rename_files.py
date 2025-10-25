@@ -6,12 +6,20 @@ import os
 
 
 @click.command()
-@click.option("--from-string", "-f", required=True, help="Substring in the filename to be replaced from")
-@click.option("--to-string", "-t", required=True, help="Substring in the filename to be replaced to")
-@click.option("--exclude-string", "-e", multiple=True, help="Skip renaming if filename contains the given string (support multiple)")
+@click.option(
+    "--from-string", "-f", required=True, help="Substring in the filename to be replaced from"
+)
+@click.option(
+    "--to-string", "-t", required=True, help="Substring in the filename to be replaced to"
+)
+@click.option(
+    "--exclude-string",
+    "-e",
+    multiple=True,
+    help="Skip renaming if filename contains the given string (support multiple)",
+)
 @click.option("--dryrun", "-d", is_flag=True, help="Run without taking real action")
 def rename(from_string, to_string, exclude_string, dryrun):
-    
     def skip(filename, exclude_string_list):
         if not exclude_string_list:
             return False
@@ -31,16 +39,18 @@ def rename(from_string, to_string, exclude_string, dryrun):
                 continue
 
             file_path = os.path.join(subdir, filename)
-            new_file_path = file_path.replace(from_string, to_string)
+            new_filename = filename.replace(from_string, to_string)
+            new_file_path = os.path.join(subdir, new_filename)
             print(f"mv {file_path} to {new_file_path}")
-            
+
             if dryrun is False:
                 os.rename(file_path, new_file_path)
                 done += 1
             cnt += 1
-    
+
     print(f"Files matched: {cnt}")
     print(f"Files changed: {done}")
 
 
-if __name__ == "__main__": rename()
+if __name__ == "__main__":
+    rename()

@@ -15,7 +15,6 @@ def run(dir_name, from_str, to_str, dry_run):
             content = file.read()
 
         if from_str in content:
-
             print(f"Updating {p}")
 
             if dry_run is False:
@@ -26,21 +25,21 @@ def run(dir_name, from_str, to_str, dry_run):
 
 def https_to_ssh():
     # From https to ssh
-    from_str="https://github.com/"
-    to_str="git@github.com:"
+    from_str = "https://github.com/"
+    to_str = "git@github.com:"
     run(DIR_NAME, from_str, to_str, dry_run=False)
 
 
 def ssh_to_https():
     # From https to ssh
-    from_str="git@github.com:"
-    to_str="https://github.com/"
+    from_str = "git@github.com:"
+    to_str = "https://github.com/"
     run(DIR_NAME, from_str, to_str, dry_run=False)
 
 
 def replace_str():
-    from_str="git@github.com"
-    to_str="git@me.github.com"
+    from_str = "git@github.com"
+    to_str = "git@me.github.com"
     run(DIR_NAME, from_str, to_str, dry_run=False)
 
 
