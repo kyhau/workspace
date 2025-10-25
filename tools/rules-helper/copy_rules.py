@@ -26,6 +26,9 @@ def copy_rules(source_dir: Path, targets: list[str], project_dir: Path):
     print(f"📁 Found {len(rule_files)} rule file(s) in {source_dir}")
 
     for target in targets:
+        if target not in ASSISTANTS:
+            print(f"❌ Unknown target: {target}")
+            continue
         target_path = project_dir / ASSISTANTS[target]
         target_path.mkdir(parents=True, exist_ok=True)
 
