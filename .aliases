@@ -246,6 +246,9 @@ alias update-git-sizer='. ${WORKSPACE_REPO_HOME}/tools/git/install_git_sizer.sh'
 alias update-act='. ${WORKSPACE_REPO_HOME}/tools/github/install_act.sh'
 alias update-gh='. ${WORKSPACE_REPO_HOME}/tools/github/install_gh.sh'
 
+# github copilot
+alias update-copilot-cli='npm install -g @github/copilot'
+
 # cursor
 alias update-cursor-cli='curl https://cursor.com/install -fsS | bash'
 
