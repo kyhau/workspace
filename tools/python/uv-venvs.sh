@@ -41,7 +41,7 @@ show_usage() {
     echo "  list                    List all virtual environments"
     echo "  create <name> [python_version] Create a new virtual environment"
     echo "  delete <name>           Delete an existing virtual environment"
-    echo "  activate <name>         Show activation command for environment"
+    echo "  activate <name>         Activate a virtual environment (requires sourcing)"
     echo "  info <name>             Show information about an environment"
     echo "  help                    Show this help message"
     echo ""
@@ -51,7 +51,8 @@ show_usage() {
     echo "  $0 create myproject 3.12              # Uses Python 3.12"
     echo "  $0 create myproject 3.11              # Uses Python 3.11"
     echo "  $0 delete oldproject"
-    echo "  $0 activate myproject"
+    echo "  source $0 activate myproject          # Activate environment"
+    echo "  eval \$($0 activate myproject --source) # Alternative activation"
     echo ""
     echo "Environment:"
     echo "  UV_VENVS_DIR: $UV_VENVS_DIR"
@@ -94,7 +95,7 @@ list_venvs() {
                 python_version=$("$venv/bin/python" --version 2>&1 | grep -oE '[0-9]+\.[0-9]+' | head -1)
             fi
 
-            echo "  📁 $venv_name (Python $python_version)"
+            echo "  $venv_name (Python $python_version)"
             ((count++))
         fi
     done
@@ -185,29 +186,44 @@ delete_venv() {
     fi
 }
 
-# Function to show activation command
+# Function to activate virtual environment
 activate_venv() {
     local venv_name="$1"
+    local source_mode="$2"
 
     if [[ -z "$venv_name" ]]; then
         print_error "Virtual environment name is required"
-        echo "Usage: $0 activate <name>"
+        echo "Usage: source $0 activate <name>"
         return 1
     fi
 
     local venv_path="$UV_VENVS_DIR/$venv_name"
-
     # Check if environment exists
     if [[ ! -d "$venv_path" ]]; then
         print_error "Virtual environment '$venv_name' does not exist at $venv_path"
         return 1
     fi
 
-    print_info "To activate virtual environment '$venv_name':"
-    echo "  source $venv_path/bin/activate"
-    echo ""
-    print_info "To deactivate:"
-    echo "  deactivate"
+    # If --source flag is provided, just output the source command for eval
+    if [[ "$source_mode" == "--source" ]]; then
+        echo "source $venv_path/bin/activate"
+        return 0
+    fi
+
+    # Check if script is being sourced
+    if [[ "${BASH_SOURCE[0]}" != "${0}" ]] || [[ -n "$ZSH_VERSION" && "${(%):-%x}" != "${0}" ]]; then
+        # Script is being sourced, activate the environment
+        print_info "Activating virtual environment '$venv_name'..."
+        source "$venv_path/bin/activate"
+        print_success "Virtual environment '$venv_name' activated"
+    else
+        # Script is being executed, show instructions
+        print_warning "To activate the environment, you must source this script:"
+        echo "  source $0 activate $venv_name"
+        echo ""
+        print_info "Or use with eval:"
+        echo "  eval \$($0 activate $venv_name --source)"
+    fi
 }
 
 # Function to show environment information
@@ -267,7 +283,7 @@ main() {
             delete_venv "$2"
             ;;
         "activate")
-            activate_venv "$2"
+            activate_venv "$2" "$3"
             ;;
         "info")
             info_venv "$2"
